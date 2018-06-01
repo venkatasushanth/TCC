@@ -1,0 +1,183 @@
+\providecommand{\abntreprintinfo}[1]{%
+ \citeonline{#1}}
+\setlength{\labelsep}{0pt}\begin{thebibliography}{}
+\providecommand{\abntrefinfo}[3]{}
+\providecommand{\abntbstabout}[1]{}
+\abntbstabout{v-1.9.1 }
+
+\bibitem[Abbas et al. 2015]{abbas:15}
+\abntrefinfo{Abbas et al.}{ABBAS et al.}{2015}
+{ABBAS, Z. et al. Optimal nbti degradation and pvt variation resistant device
+  sizing in a full adder cell. In:  IEEE. \textbf{Reliability, Infocom
+  Technologies and Optimization (ICRITO)(Trends and Future Directions), 2015
+  4th International Conference on}. [S.l.], 2015. p.~1--6.}
+
+\bibitem[Aghababa, Afzali-Kusha and Forouzandeh 2009]{aghababa2009static}
+\abntrefinfo{Aghababa, Afzali-Kusha and Forouzandeh}{AGHABABA; AFZALI-KUSHA;
+  FOROUZANDEH}{2009}
+{AGHABABA, H.; AFZALI-KUSHA, A.; FOROUZANDEH, B. Static power optimization of a
+  full-adder under front-end of line systematic variations. In:  IEEE.
+  \textbf{Design and Test Workshop (IDT), 2009 4th International}. [S.l.],
+  2009. p.~1--6.}
+
+\bibitem[Ahmad et al. 2016]{ahmad2016single}
+\abntrefinfo{Ahmad et al.}{AHMAD et al.}{2016}
+{AHMAD, S. et al. Single-ended schmitt-trigger-based robust low-power sram
+  cell. In:  . [S.l.]: IEEE, 2016. v.~24, n.~8, p. 2634--2642.}
+
+\bibitem[Ahmadi, Alizadeh and Forouzandeh 2017]{ahmadi2017hybrid}
+\abntrefinfo{Ahmadi, Alizadeh and Forouzandeh}{AHMADI; ALIZADEH;
+  FOROUZANDEH}{2017}
+{AHMADI, M.; ALIZADEH, B.; FOROUZANDEH, B. A hybrid time borrowing technique to
+  improve the performance of digital circuits in the presence of variations.
+  In:  . [S.l.]: IEEE, 2017. v.~64, n.~1, p. 100--110.}
+
+\bibitem[Alioto and Palumbo 2007]{alioto2007delay}
+\abntrefinfo{Alioto and Palumbo}{ALIOTO; PALUMBO}{2007}
+{ALIOTO, M.; PALUMBO, G. Delay variability due to supply variations in
+  transmission-gate full adders. In:  IEEE. \textbf{Circuits and Systems, 2007.
+  ISCAS 2007. IEEE International Symposium on}. [S.l.], 2007. p. 3732--3735.}
+
+\bibitem[Ames et al. 2016]{ames2016investigating}
+\abntrefinfo{Ames et al.}{AMES et al.}{2016}
+{AMES, S.~O. et al. Investigating pvt variability effects on full adders. In:
+  IEEE. \textbf{Power and Timing Modeling, Optimization and Simulation
+  (PATMOS), 2016 26th International Workshop on}. [S.l.], 2016. p. 155--161.}
+
+\bibitem[Beckett 2002]{beckett2002fine}
+\abntrefinfo{Beckett}{BECKETT}{2002}
+{BECKETT, P. A fine-grained reconfigurable logic array based on double gate
+  transistors. In:  IEEE. \textbf{Field-Programmable Technology, 2002.(FPT).
+  Proceedings. 2002 IEEE International Conference on}. [S.l.], 2002. p.
+  260--267.}
+
+\bibitem[Cockrill 2011]{WinNT}
+\abntrefinfo{Cockrill}{COCKRILL}{2011}
+{COCKRILL, C. \textbf{Understanding Schmitt Triggers - Application Report}.
+  2011.
+Available from Internet: \url{http://www.ti.com/lit/an/scea046/scea046.pdf}.}
+
+\bibitem[Devadas and Kishore 2017]{devadas2017design}
+\abntrefinfo{Devadas and Kishore}{DEVADAS; KISHORE}{2017}
+{DEVADAS, M.; KISHORE, K.~L. Design topologies for low power cmos full adder.
+  In:  IEEE. \textbf{Inventive Systems and Control (ICISC), 2017 International
+  Conference on}. [S.l.], 2017. p.~1--4.}
+
+\bibitem[Dokania, Imran and Islam 2013]{dokania2013investigation}
+\abntrefinfo{Dokania, Imran and Islam}{DOKANIA; IMRAN; ISLAM}{2013}
+{DOKANIA, V.; IMRAN, A.; ISLAM, A. Investigation of robust full adder cell in
+  16-nm cmos technology node. In:  IEEE. \textbf{Multimedia, Signal Processing
+  and Communication Technologies (IMPACT), 2013 International Conference on}.
+  [S.l.], 2013. p. 207--211.}
+
+\bibitem[Dokania and Islam 2015]{dokania2015circuit}
+\abntrefinfo{Dokania and Islam}{DOKANIA; ISLAM}{2015}
+{DOKANIA, V.; ISLAM, A. Circuit-level design technique to mitigate impact of
+  process, voltage and temperature variations in complementary metal-oxide
+  semiconductor full adder cells. In:  . [S.l.]: IET, 2015. v.~9, n.~3, p.
+  204--212.}
+
+\bibitem[Doki 1984]{doki1984cmos}
+\abntrefinfo{Doki}{DOKI}{1984}
+{DOKI, B.~L. Cmos schmitt triggers. In:  IET. \textbf{IEE Proceedings
+  G-Electronic Circuits and Systems}. [S.l.], 1984. v.~131, n.~5, p. 197--202.}
+
+\bibitem[Federspiel et al. 2012]{federspiel201228nm}
+\abntrefinfo{Federspiel et al.}{FEDERSPIEL et al.}{2012}
+{FEDERSPIEL, X. et al. 28nm node bulk vs fdsoi reliability comparison. In:
+  IEEE. \textbf{Reliability Physics Symposium (IRPS), 2012 IEEE International}.
+  [S.l.], 2012. p. 3B--1.}
+
+\bibitem[Guduri and Islam 2015]{guduri2015design}
+\abntrefinfo{Guduri and Islam}{GUDURI; ISLAM}{2015}
+{GUDURI, M.; ISLAM, A. Design of hybrid full adder in deep subthreshold region
+  for ultralow power applications. In:  IEEE. \textbf{Signal Processing and
+  Integrated Networks (SPIN), 2015 2nd International Conference on}. [S.l.],
+  2015. p. 931--935.}
+
+\bibitem[Islam et al. 2010]{islam:10}
+\abntrefinfo{Islam et al.}{ISLAM et al.}{2010}
+{ISLAM, A. et al. Design and analysis of robust dual threshold cmos full adder
+  circuit in 32nm technology. In:  IEEE. \textbf{Advances in Recent
+  Technologies in Communication and Computing (ARTCom), 2010 International
+  Conference on}. [S.l.], 2010. p. 418--420.}
+
+\bibitem[Islam, Akram and Hasan 2011]{islam2011variability}
+\abntrefinfo{Islam, Akram and Hasan}{ISLAM; AKRAM; HASAN}{2011}
+{ISLAM, A.; AKRAM, M.~W.; HASAN, M. Variability immune finfet-based full adder
+  design in subthreshold region. In:  IEEE. \textbf{Devices and Communications
+  (ICDeCom), 2011 International Conference on}. [S.l.], 2011. p.~1--5.}
+
+\bibitem[Islam and Hasan 2011]{islam2011design}
+\abntrefinfo{Islam and Hasan}{ISLAM; HASAN}{2011}
+{ISLAM, A.; HASAN, M. Design and analysis of power and variability aware
+  digital summing circuit. In:  . [S.l.: s.n.], 2011. v.~2, n.~2, p. 6--14.}
+
+\bibitem[Moghaddam, Moaiyeri and Eshghi 2017]{moghaddam2017design}
+\abntrefinfo{Moghaddam, Moaiyeri and Eshghi}{MOGHADDAM; MOAIYERI; ESHGHI}{2017}
+{MOGHADDAM, M.; MOAIYERI, M.~H.; ESHGHI, M. Design and evaluation of an
+  efficient schmitt trigger-based hardened latch in cntfet technology. In:  .
+  [S.l.]: IEEE, 2017. v.~17, n.~1, p. 267--277.}
+
+\bibitem[Nassif 2008]{nassif:08}
+\abntrefinfo{Nassif}{NASSIF}{2008}
+{NASSIF, S. Process variability at the 65nm node and beyond. In:  IEEE.
+  \textbf{Custom Integrated Circuits Conference, 2008. CICC 2008. IEEE}.
+  [S.l.], 2008. p.~1--8.}
+
+\bibitem[Navi et al. 2009]{navi2009novel}
+\abntrefinfo{Navi et al.}{NAVI et al.}{2009}
+{NAVI, K. et al. A novel low-power full-adder cell for low voltage. In:  .
+  [S.l.]: Elsevier, 2009. v.~42, n.~4, p. 457--467.}
+
+\bibitem[Rahimi, Benini and Gupta 2016]{rahimi2016variability}
+\abntrefinfo{Rahimi, Benini and Gupta}{RAHIMI; BENINI; GUPTA}{2016}
+{RAHIMI, A.; BENINI, L.; GUPTA, R.~K. Variability mitigation in nanometer cmos
+  integrated systems: A survey of techniques from circuits to software. In:  .
+  [S.l.]: IEEE, 2016. v.~104, n.~7, p. 1410--1448.}
+
+\bibitem[Shams and Bayoumi 2000]{shams2000novel}
+\abntrefinfo{Shams and Bayoumi}{SHAMS; BAYOUMI}{2000}
+{SHAMS, A.~M.; BAYOUMI, M.~A. A novel high-performance cmos 1-bit full-adder
+  cell. In:  . [S.l.]: IEEE, 2000. v.~47, n.~5, p. 478--481.}
+
+\bibitem[Shoarinejad, Ung and Badawy 2003]{shoarinejad:03}
+\abntrefinfo{Shoarinejad, Ung and Badawy}{SHOARINEJAD; UNG; BADAWY}{2003}
+{SHOARINEJAD, A.; UNG, S.; BADAWY, W. Low-power single-bit full adder cells.
+  In:  . [S.l.]: IEEE, 2003. v.~28, n.~1, p.~3--9.}
+
+\bibitem[Taur and Ning 2013]{taur2013fundamentals}
+\abntrefinfo{Taur and Ning}{TAUR; NING}{2013}
+{TAUR, Y.; NING, T.~H. \textbf{Fundamentals of modern VLSI devices}. [S.l.]:
+  Cambridge university press, 2013.}
+
+\bibitem[Toledo, Zimpeck and Meinhardt 2016]{samuel2016}
+\abntrefinfo{Toledo, Zimpeck and Meinhardt}{TOLEDO; ZIMPECK; MEINHARDT}{2016}
+{TOLEDO, S.~P.; ZIMPECK, A.~L.; MEINHARDT, C. Impact of schmitt trigger
+  inverters on process variability robustness of 1-bit full adders. In:  IEEE.
+  \textbf{Conference on Electronics, Circuits and Systems (ICECS)}. [S.l.],
+  2016.}
+
+\bibitem[Walker et al. 2010]{walker2010optimizing}
+\abntrefinfo{Walker et al.}{WALKER et al.}{2010}
+{WALKER, J.~A. et al. Optimizing electronic standard cell libraries for
+  variability tolerance through the nano-cmos grid. In:  . [S.l.]: The Royal
+  Society, 2010. v.~368, n.~1925, p. 3967--3981.}
+
+\bibitem[Weste and Eshraghian 1985]{weste1985principles}
+\abntrefinfo{Weste and Eshraghian}{WESTE; ESHRAGHIAN}{1985}
+{WESTE, N. H.~E.; ESHRAGHIAN, K. \textbf{Principles of CMOS VLSI design}.
+  [S.l.]: Addison-Wesley New York, 1985.}
+
+\bibitem[Zhang, Srivastava and Ajmera 2003]{zhang2003low}
+\abntrefinfo{Zhang, Srivastava and Ajmera}{ZHANG; SRIVASTAVA; AJMERA}{2003}
+{ZHANG, C.; SRIVASTAVA, A.; AJMERA, P.~K. Low voltage cmos schmitt trigger
+  circuits. In:  . [S.l.]: IET, 2003. v.~39, n.~24, p. 1696--1698.}
+
+\bibitem[Zimpeck et al. 2016]{zimpeck2016finfet}
+\abntrefinfo{Zimpeck et al.}{ZIMPECK et al.}{2016}
+{ZIMPECK, A.~L. et al. Finfet cells with different transistor sizing techniques
+  against pvt variations. In:  IEEE. \textbf{Circuits and Systems (ISCAS), 2016
+  IEEE International Symposium on}. [S.l.], 2016. p. 45--48.}
+
+\end{thebibliography}
