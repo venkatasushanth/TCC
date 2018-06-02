@@ -375,7 +375,7 @@ In this design a dynamic body-bias technique is applied through a feedback mecha
 
 All Full Adders layouts will be designed using the Virtuoso Electronic Design Automation (EDA) tool from Cadence\textregistered{} with the process design kit (PDK) of 7-nm FinFET (ASAP) from the Arizona State University in partnership with ARM \cite{clark2016asap7}. This PDK was chosen due to realistic design conjecture regarding the current design competencies. Due to limitations of ASAP7 technology, it is not possible to connect the NMOS bulks separately due to the shared substrate. Given that, the Schmitt Trigger behavior is preserved with only minor changes between charging and discharging delays due to the difference between PMOS and NMOS threshold voltages. The ST applied in this work is shown at Figure \ref{fig:sub2}.
 
-The main PDK rules and lithography assumptions considered in this work are shown in Table \ref{layers}. To exemplify the PDK layers, the traditional CMOS Full Adder layout is shown in Fig. (FIGURA DO LAYOUT). For all layouts it was used a dense 7.5 M2 (Metal 2) track cell, baseline resulting in a 270nm cell height. This corresponds to three fins for each transistor. To make the bulk connections it is necessary a TAP-Cell. It is responsible to connect the NMOS and PMOS bulks to supply/ground, respectively, being possible to connect the PMOS bulks to another node. It is a technology restriction needed for the proper function of the circuit. Its layout has a length of 108nm resulting in an area of 0.02916 \(\mu\)m^{2}.
+The main PDK rules and lithography assumptions considered in this work are shown in Table \ref{layers}. To exemplify the PDK layers, the traditional CMOS Full Adder layout is shown in Fig. \ref{fig:layers}. For all layouts it was used a dense 7.5 M2 (Metal 2) track cell, baseline resulting in a 270nm cell height. This corresponds to three fins for each transistor. To make the bulk connections it is necessary a TAP-Cell. It is responsible to connect the NMOS and PMOS bulks to supply/ground, respectively, being possible to connect the PMOS bulks to another node. It is a technology restriction needed for the proper function of the circuit. Its layout has a length of 108nm resulting in an area of 0.02916 \(\mu\)m^{2}.
 
 \begin{table}[]
 \centering
@@ -393,6 +393,14 @@ The main PDK rules and lithography assumptions considered in this work are shown
 \textbf{M1-M3}                       & EUV                  & 18/18                     & 36                  \\ \hline
 \end{tabular}
 \end{table}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{Layers.pdf}
+\caption{Technology layers and original Mirror CMOS Layout}
+\label{fig:layers}
+\legend{Source: \cite{clark2016asap7}}
+\end{figure}
 
 \section{Electrical Simulation}
 
@@ -434,309 +442,422 @@ The reference values from ASAP7 technology for electrical simulations are shown 
 
 
 
-\chapter{Results}
+\chapter{Results and Discussion}
 
-The results will be shown in two parts for each Full Adder. The first part will concern the technique impact on nominal operation while the second part concerns for the near-threshold impact. Any improvement (worsening) of less than 5\% was disregarded in the analysis. 
+The results are organized into two main analysis: the set of full adders were evaluated at nominal conditions and operating at a near-threshold region with supply voltage equal to 0.4V. In both cases, the process variability is considered and simulations with and without the ST technique is performed. To highlight the improvements and drawbacks of the ST technique for each FA, results also show the relation (\(\Delta\)) between the deviation of traditional and ST circuits.
 
-\section{Mirror CMOS Full Adder}
-At nominal level, the CMOS Full Adder has shown considerable improvement over energy variability robustness with 18.2\% (19\%) enhancement over Sum (Carry Out) output, showing no delay robustness improvements. At near-threshold level, there was a 18.7\% (11.6\%) and 20\% (12\%) delay and energy robustness improvements for the Sum (Carry Out) output. 
+\section{Nominal Operation}
 
-\section{Transmission Gate Full Adder}
-At nominal level, the Transmission Gate Full Adder has shown an improvement of 15.77\% over Carry Out delays robustness while the Sum delay robustness worsened by 11.65\%. For energy robustness, only the Carry Out output showed improvements – over 31.32\%.
-For the near-threshold level, there was an improvement of 31.53\% at Sum Output and a worsening of 19.14\% at Carry Out output. For energy there was huge improvements over 61.45\% (34\%) for the Sum (Carry Out) output.
+At nominal supply voltage, carry-out generation is always the critical path, considering or not the variability effects. According to the Table \ref{delaysNominal} and Table \ref{energyNominal}, it is possible to observe an increase on the mean of delay and energy for all circuits when the ST technique is inserted in the design compared to traditional one.
+
+TFA presented the best performance and the lowest energy consumption for nominal voltage operation. However, TFA presented high maximum values and large standard deviation that are essential points to be considered. These points are a consequence of the heavy signal degradation on the TFA outputs, leaving the TFA for high-performance applications more indicated to technology nodes with low process variability sensibility. The CMOS adder showed the smallest standard deviations being the most recommended for technology nodes with high variability. 
+
+Also, these results for 7nm ASAP7 technology considering layout are in the face of the results found to 16nm PTM High-Performance technology \cite{samuel2016}. 7nm layout with ASAP7 technology shows significant improvement on the energy robustness (over 18\%) at nominal voltage and in some cases also in the delay robustness to process variability. 
+
+According to Table \ref{energyNominal}, ST circuits increased the mean energy about close two times considering the energy necessary to cover all timing arches to the SUM output. The effect is lighter on the Carry-Out total energy. But, although this penalty, the benefits of ST technique on the cell robustness against process variability are considerable. All the ST FA circuits have the deviation reduced. Hybrid presented the best improvement on energy robustness, with 30\% more stability. Fig. \ref{fig:improvNominal} resumes the improvement reached with the ST technique on Delay and Energy. Only TGA and TFA do not have total improvement, with some degradation on delay for the SUM output on TGA and the Carry-out on TFA. However, the deviation is reduced to all the other cases significantly.
+
+\begin{table}[H]
+\centering
+\caption{Delay measures for nominal voltage operation.}
+\label{delaysNominal}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|}
+\hline
+\multirow{3}{*}{@Nominal Voltage} & \multicolumn{10}{c|}{Delay}                                                                                                                                                                                     \\ \cline{2-11} 
+                                  & \multicolumn{5}{c|}{SUM}                                                                               & \multicolumn{5}{c|}{CARRY OUT}                                                                         \\ \cline{2-11} 
+                                  & Max (ps)              &  \(\mu\) (ps)          & \(\sigma\) (ps)          & \(\sigma\)/\(\mu\) (\%)      & \(\Delta\) (\%)                           & Max (ps)               & \(\mu\) (ps)           & \(\sigma\) (ps)          & \(\sigma\)/\(\mu\) (\%)      & \(\Delta\) (\%)                           \\ \hline
+\textbf{CMOS}                     & 93.19            & 16.11          & 3.83           & 23.31          & \multirow{2}{*}{4.46}            & 104.48           & 27.38          & 5.92           & 21.60          & \multirow{2}{*}{1.05}            \\ \cline{1-5} \cline{7-10}
+\textbf{CMOS ST}                  & 117.19           & 21.98          & 4.98           & \textbf{22.27} &                                  & 120.01           & \textbf{33.09} & 7.08           & \textbf{21.38} &                                  \\ \hline
+\textbf{TGA}                      & \textbf{63.13}   & 14.51          & \textbf{3.28}  & 27.94          & \multirow{2}{*}{\textbf{-11.65}} & \textbf{60.11}   & 16.32          & 4.28           & 28.54          & \multirow{2}{*}{\textbf{15.77}}  \\ \cline{1-5} \cline{7-10}
+\textbf{TGA ST}                   & 77.71            & 17.63          & 3.80           & 31.20          &                                  & 71.82            & 21.19          & 4.77           & 24.04          &                                  \\ \hline
+\textbf{TFA}                      & \textbf{1016.90} & \textbf{12.63} & \textbf{10.62} & \textbf{58.94} & \multirow{2}{*}{\textbf{37.43}}  & 2010.20          & \textbf{14.74} & 13.77          & 77.59          & \multirow{2}{*}{\textbf{-25.64}} \\ \cline{1-5} \cline{7-10}
+\textbf{TFA ST}                   & 83.52            & 15.39          & 4.16           & 36.88          &                                  & \textbf{2030.50} & 22.72          & \textbf{37.42} & \textbf{97.48} &                                  \\ \hline
+\textbf{HYBRID}                   & 117.57           & 18.15          & 4.42           & 23.72          & \multirow{2}{*}{-0.75}           & 65.29            & 17.30          & \textbf{4.18}  & 25.57          & \multirow{2}{*}{4.20}            \\ \cline{1-5} \cline{7-10}
+\textbf{HYBRID ST}                & 192.48           & \textbf{25.92} & 6.55           & 23.90          &                                  & 96.40            & 23.27          & 5.64           & 24.50          &                                  \\ \hline
+\end{tabular}%
+}
+\end{table}
 
 
-\section{Transmission Function Full Adder}
-At nominal level, the Transmission Function Full Adder showed an improvement over Sum delays robustness of 37.43\% and a worsening over Carry Out of 25.64\%. Although, on energy robustness it showed an improvement of 37.38\% (29.74\%) over the Sum (Carry Out) output. 
-At near-threshold it showed a 64.74\% higher delay robustness at the Sum output, while at the Carry Out output it showed a 21.15\% lower robustness.  For energy robustness it showed great improvements with a 66.6\% (52.18\%) improvement concerning the Sum (Carry Out) output.
-
-
-\section{Hybrid Full Adder}
-For the Hybrid Full Adder, at nominal level, there was no improvements/worsening over the delay robustness. Although it showed considerable improvement on energy with 37.38\% (29.74\%) higher robustness for the Sum (Carry Out) output. 
-At near-threshold there was improvement on all metrics with a 13.42\% (27.1\%) and 19.47\% (62\%) higher robustness on Sum and Carry Out delays (energy).
-
-An improvement overview is shown in Figures \ref{fig:Fig41} and \ref{fig:Fig42} for nominal and near-threshold levels, respectively.
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+% \usepackage{graphicx}
+\begin{table}[H]
+\centering
+\caption{Energy measures for nominal voltage operation.}
+\label{energyNominal}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|}
+\hline
+\multirow{3}{*}{@Nominal Voltage} & \multicolumn{10}{c|}{Energy}                                                                                                                                                                            \\ \cline{2-11} 
+                                  & \multicolumn{5}{c|}{SUM}                                                                           & \multicolumn{5}{c|}{CARRY OUT}                                                                     \\ \cline{2-11} 
+                                  & Max (fJ)              &  \(\mu\) (fJ)          & \(\sigma\) (fJ)          & \(\sigma\)/\(\mu\) (\%)      & \(\Delta\) (\%)                           & Max (fJ)               & \(\mu\) (fJ)           & \(\sigma\) (fJ)          & \(\sigma\)/\(\mu\) (\%)      & \(\Delta\) (\%)                          \\ \hline
+\textbf{CMOS}                     & 69.07          & 12.89          & 2.97          & 23.00          & \multirow{2}{*}{18.21}          & 83.43          & 20.88          & 3.52          & 16.87          & \multirow{2}{*}{\textbf{18.91}} \\ \cline{1-5} \cline{7-10}
+\textbf{CMOS ST}                  & \textbf{93.07} & 20.26          & 3.81          & 18.81          &                                 & 98.66          & 30.69          & 4.20          & 13.68          &                                 \\ \hline
+\textbf{TGA}                      & 60.36          & 11.78          & 2.36          & 20.04          & \multirow{2}{*}{\textbf{3.71}}  & 92.71          & 13.54          & 4.15          & \textbf{30.61} & \multirow{2}{*}{\textbf{31.32}} \\ \cline{1-5} \cline{7-10}
+\textbf{TGA ST}                   & 90.61          & 22.99          & \textbf{4.44} & 19.30          &                                 & 93.03          & 24.79          & \textbf{5.21} & 21.03          &                                 \\ \hline
+\textbf{TFA}                      & \textbf{21.94} & \textbf{4.45}  & \textbf{0.92} & 20.67          & \multirow{2}{*}{33.73}          & \textbf{29.74} & \textbf{4.96}  & \textbf{1.14} & 22.99          & \multirow{2}{*}{19.62}          \\ \cline{1-5} \cline{7-10}
+\textbf{TFA ST}                   & 29.28          & 10.59          & 1.45          & \textbf{13.70} &                                 & 53.74          & 10.58          & 1.96          & 18.48          &                                 \\ \hline
+\textbf{HYBRID}                   & 86.45          & 12.99          & 3.63          & \textbf{27.97} & \multirow{2}{*}{\textbf{37.38}} & 93.88          & 19.99          & 3.89          & 19.48          & \multirow{2}{*}{29.74}          \\ \cline{1-5} \cline{7-10}
+\textbf{HYBRID ST}                & 87.13          & \textbf{23.67} & 4.15          & 17.52          &                                 & \textbf{98.85} & \textbf{35.58} & 4.87          & \textbf{13.69} &                                 \\ \hline
+\end{tabular}%
+}
+\end{table}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=\textwidth, trim={0 9.5cm 0 9cm},clip]{improvNominal.pdf}
+\includegraphics[width=\textwidth]{Nominalimprov.png}
 \caption{Robustness improvements for each Full Adder at nominal operation.}
-\label{fig:Fig41}
+\label{fig:improvNominal}
 %\legend{Source: \cite{dokania2015circuit}}
 \end{figure}
 
+\section{Near-Threshold Operation}
+
+At near-threshold, variability compromises the FA circuits on some cases making the SUM output the critical path instead of the Carry-out generation, observing the maximum values found. Table \ref{delaysNT} presents the results of the near-threshold operation. 
+
+The energy results to near-threshold operation are presented in Table \ref{energyNT}. Operating at low voltage reduces the mean energy over 30\% for CMOS, TFA and Hybrid FAs and at least 15\% of TGA compared to nominal voltage operation. As stated on \cite{dokania2015circuit}, the ST technique at NT operation reduces the delay and energy deviation for all circuits. However, the deviation of the circuits is considerably higher at NT operation, emphasizing the need of circuit strategies to deal with variability. 
+
+TFA and TGA showed the highest deviations and unacceptable maximum delays, which is expected due to their pass-transistor logic and inherent signal degradation. The Hybrid adder showed higher deviations, delays and similar energy consumption in comparison to the CMOS Adder. Given that, the CMOS adder remains as a good choice for low power applications.
+
+Results make clear the advantage of the technique when considering energy variability robustness. Fig. \ref{fig:NTimprov} shows the comparative evaluation of the improvement reached by ST technique at NT operation. Even when there was a worsening on delay robustness, the energy robustness presented improvements. The technique can introduce more delay variability given that variability determines the ST behavior as well, influencing its delays, which stacks with the impact of multiple transistors in a series arrangement.
+
+\begin{table}[H]
+\centering
+\caption{Delay measures for near-threshold operation.}
+\label{delaysNT}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|}
+\hline
+\multicolumn{1}{|c|}{\multirow{3}{*}{@NT}} & \multicolumn{10}{c|}{Delay}                                                                                                                                                                                          \\ \cline{2-11} 
+\multicolumn{1}{|c|}{}                     & \multicolumn{5}{c|}{SUM}                                                                                 & \multicolumn{5}{c|}{CARRY OUT}                                                                            \\ \cline{2-11} 
+\multicolumn{1}{|c|}{}                     & Max (ps)              &  \(\mu\) (ps)          & \(\sigma\) (ps)          & \(\sigma\)/\(\mu\) (\%)      & \(\Delta\) (\%)                           & Max (ps)               & \(\mu\) (ps)           & \(\sigma\) (ps)          & \(\sigma\)/\(\mu\) (\%)      & \(\Delta\) (\%)                           \\ \hline
+\textbf{CMOS}                              & 873.41           & 73.22           & \textbf{56.38}  & 77.47           & \multirow{2}{*}{18.70}          & 794.87           & 128.65          & 86.67           & 67.39           & \multirow{2}{*}{11.61}           \\ \cline{1-5} \cline{7-10}
+\textbf{CMOS ST}                           & \textbf{430.85}  & 95.85           & 60.57           & \textbf{62.99}  &                                 & \textbf{539.77}  & 143.77          & 85.67           & 59.57           &                                  \\ \hline
+\textbf{TGA}                               & \textbf{7328.30} & \textbf{62.90}  & 92.17           & 133.30          & \multirow{2}{*}{31.53}          & 6396.90          & \textbf{325.25} & 138.02          & 173.54          & \multirow{2}{*}{-19.14}          \\ \cline{1-5} \cline{7-10}
+\textbf{TGA ST}                            & 2386.40          & \textbf{127.54} & \textbf{106.22} & 91.26           &                                 & 6265.10          & 181.01          & \textbf{373.37} & 206.76          &                                  \\ \hline
+\textbf{TFA}                               & 1024.90          & 67.28           & 93.48           & \textbf{289.41} & \multirow{2}{*}{\textbf{64.74}} & 5734.20          & 151.02          & 286.55          & 227.50          & \multirow{2}{*}{\textbf{-21.16}} \\ \cline{1-5} \cline{7-10}
+\textbf{TFA ST}                            & 4202.20          & 84.34           & 79.51           & 102.05          &                                 & \textbf{6705.80} & 94.87           & 233.09          & \textbf{275.63} &                                  \\ \hline
+\textbf{HYBRID}                            & 830.64           & 95.23           & 77.95           & 79.00           & \multirow{2}{*}{\textbf{13.43}} & 695.28           & \textbf{78.00}  & \textbf{56.73}  & 73.90           & \multirow{2}{*}{\textbf{19.48}}  \\ \cline{1-5} \cline{7-10}
+\textbf{HYBRID ST}                         & 1212.00          & 120.92          & 86.26           & 68.39           &                                 & 2755.30          & 168.92          & 100.34          & \textbf{59.51}  &                                  \\ \hline
+\end{tabular}%
+}
+\end{table}
+
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+% \usepackage{graphicx}
+\begin{table}[H]
+\centering
+\caption{Energy measures for near-threshold operation.}
+\label{energyNT}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|}
+\hline
+\multicolumn{1}{|c|}{\multirow{3}{*}{@NT}} & \multicolumn{10}{c|}{Energy}                                                                                                                                                                            \\ \cline{2-11} 
+\multicolumn{1}{|c|}{}                     & \multicolumn{5}{c|}{SUM}                                                                           & \multicolumn{5}{c|}{CARRY OUT}                                                                     \\ \cline{2-11} 
+\multicolumn{1}{|c|}{}                     & Max (fJ)              &  \(\mu\) (fJ)          & \(\sigma\) (fJ)          & \(\sigma\)/\(\mu\) (\%)      & \(\Delta\) (\%)                           & Max (fJ)               & \(\mu\) (fJ)           & \(\sigma\) (fJ)          & \(\sigma\)/\(\mu\) (\%)      & \(\Delta\) (\%)                          \\ \hline
+\textbf{CMOS}                              & 45.37          & 6.29           & 2.00          & 31.81          & \multirow{2}{*}{\textbf{20.07}} & 51.91          & 9.97           & 2.09          & 20.97          & \multirow{2}{*}{\textbf{12.02}} \\ \cline{1-5} \cline{7-10}
+\textbf{CMOS ST}                           & 60.64          & 10.22          & 2.60          & 25.43          &                                 & 70.97          & \textbf{15.16} & \textbf{2.80} & 18.45          &                                 \\ \hline
+\textbf{TGA}                               & 53.90          & 6.06           & 2.01          & 33.17          & \multirow{2}{*}{61.45}          & 61.28          & 6.40           & 1.85          & \textbf{28.90} & \multirow{2}{*}{34.04}          \\ \cline{1-5} \cline{7-10}
+\textbf{TGA ST}                            & 34.33          & 11.30          & 1.44          & 12.79          &                                 & \textbf{85.49} & 11.67          & 2.22          & 19.06          &                                 \\ \hline
+\textbf{TFA}                               & \textbf{16.26} & \textbf{2.40}  & 0.65          & 27.05          & \multirow{2}{*}{\textbf{66.59}} & 23.03          & \textbf{2.58}  & \textbf{0.64} & 24.66          & \multirow{2}{*}{52.18}          \\ \cline{1-5} \cline{7-10}
+\textbf{TFA ST}                            & 18.85          & 5.45           & \textbf{0.49} & \textbf{9.04}  &                                 & \textbf{22.21} & 5.61           & 0.66          & 11.79          &                                 \\ \hline
+\textbf{HYBRID}                            & 56.96          & 6.02           & 2.29          & \textbf{38.04} & \multirow{2}{*}{27.06}          & 59.99          & 9.46           & 2.00          & 21.19          & \multirow{2}{*}{\textbf{61.91}} \\ \cline{1-5} \cline{7-10}
+\textbf{HYBRID ST}                         & \textbf{81.05} & \textbf{11.65} & \textbf{3.23} & 27.75          &                                 & 26.22          & 15.03          & 1.21          & \textbf{8.07}  &                                 \\ \hline
+\end{tabular}%
+}
+\end{table}
+
 \begin{figure}[H]
 \centering
-\includegraphics[width=\textwidth, trim={0 9.5cm 0 9cm},clip]{improvNT.pdf}
+\includegraphics[width=\textwidth]{NTimprov.png}
 \caption{Robustness improvements for each Full Adder at near-threshold operation.}
-\label{fig:Fig42}
+\label{fig:NTimprov}
 %\legend{Source: \cite{dokania2015circuit}}
 \end{figure}
-
-\section{Discussion}
-The technique presents considerable robustness improvements over all full adders. For nominal and near-threshold operation, the Hybrid and TFA (with Hybrid in second) adders showed the highest accumulated improvements, respectively.
-
-Results make clear the advantage of the technique when considering energy variability robustness. Even when there was a worsening on delay robustness, the energy robustness presented improvements. The technique can introduce more delay variability given that variability determines the ST behavior as well, influencing its delays, which stacks with the impact of multiple transistors. In most cases there is either low variability and the technique’s inherently higher absolute deviation will cause a worsening in robustness or there is already some signal degradation due to the circuit’s area with the technique appliance only making it worse. 
-
-The energy robustness is improved since the signals are restored for every simulation softening the stacked impact of the critical path’s transistors. Considering absolute metrics, the TFA showed the highest performance and lowest energy consumption for nominal operation. Although, with non-acceptable maximum values and absolute deviation. Which indicates heavy signal degradation, leaving the TFA for high-performance applications with little variability impact to deal with. The CMOS adder showed the lowest standard deviations being the most recommended for technology nodes with high variability. 
-
-At near-threshold level, TFA and TGA showed the highest deviations and unacceptable maximum delays, which is expected due to their pass-transistor logic and inherent signal degradation. The Hybrid adder showed higher deviations, delays and similar energy consumption in comparison to the CMOS Adder. Given that, the CMOS adder remains as a considerable good choice for low power applications.
-
-All absolute values for metrics are shown at Tables/Figures X, Y, Z.
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=\textwidth, trim={0 9.5cm 0 9cm},clip]{delaysNominalSum.pdf}
-\caption{Propagation times for Sum output at nominal operation.}
-\label{fig:Fig43}
-%\legend{Source: \cite{dokania2015circuit}}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=\textwidth, trim={0 9cm 0 9cm},clip]{delaysNominalCarryOut.pdf}
-\caption{Propagation times for Carry Out output at nominal operation.}
-\label{fig:Fig44}
-%\legend{Source: \cite{dokania2015circuit}}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=\textwidth, trim={0 9cm 0 9cm},clip]{delaysNTSum.pdf}
-\caption{Propagation times for Sum output at near-threshold operation.}
-\label{fig:Fig45}
-%\legend{Source: \cite{dokania2015circuit}}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=\textwidth, trim={0 9cm 0 9cm},clip]{delaysNTCarryOut.pdf}
-\caption{Propagation times for Carry Out output at near-threshold operation.}
-\label{fig:Fig46}
-%\legend{Source: \cite{dokania2015circuit}}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=\textwidth, trim={0 9cm 0 9cm},clip]{energyNominalSum.pdf}
-\caption{Energy measures for Sum output at nominal operation.}
-\label{fig:Fig47}
-%\legend{Source: \cite{dokania2015circuit}}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=\textwidth, trim={0 9cm 0 9cm},clip]{energyNominalCarryOut.pdf}
-\caption{Energy measures for Carry Out output at nominal operation.}
-\label{fig:Fig48}
-%\legend{Source: \cite{dokania2015circuit}}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=\textwidth, trim={0 9cm 0 9cm},clip]{energyNTSum.pdf}
-\caption{Energy measures for Sum output at near-threshold operation.}
-\label{fig:Fig49}
-%\legend{Source: \cite{dokania2015circuit}}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=\textwidth, trim={0 9cm 0 9cm},clip]{energyNTCarryOut.pdf}
-\caption{Energy measures for Carry Out output at near-threshold operation.}
-\label{fig:Fig410}
-%\legend{Source: \cite{dokania2015circuit}}
-\end{figure}
-
-\begin{table}[H]
-\centering
-\caption{My caption}
-\label{my-label}
-\resizebox{\textwidth}{!}{%
-\begin{tabular}{|l|r|r|r|r|c|r|r|r|r|c|}
-\hline
-\multicolumn{11}{|c|}{{\ul \textbf{SUM}}} \\ \hline
-\multirow{2}{*}{\textbf{Full Adder}} & \multicolumn{5}{c|}{\textbf{Nominal @ 0.7V}} & \multicolumn{5}{c|}{\textbf{Near-threshold @ 0.4V}} \\ \cline{2-11} 
- & \multicolumn{1}{c|}{Max (ps)} & \multicolumn{1}{c|}{\mu (ps)} & \multicolumn{1}{c|}{\sigma (ps)} & \multicolumn{1}{c|}{\sigma/\mu (\%)} & \Delta(\%) & \multicolumn{1}{c|}{Max (ps)} & \multicolumn{1}{c|}{\mu (ps)} & \multicolumn{1}{c|}{\sigma (ps)} & \multicolumn{1}{c|}{\sigma/\mu (\%)} & \Delta(\%) \\ \hline
-CMOS & 93.19 & 16.11 & 3.83 & 0.23 & \multirow{2}{*}{4.46} & 873.41 & 73.22 & 56.38 & 0.77 & \multirow{2}{*}{18.70} \\ \cline{1-5} \cline{7-10}
-CMOS ST & 117.19 & 21.98 & 4.98 & 0.22 &  & 430.85 & 95.85 & 60.57 & 0.63 &  \\ \hline
-TGA & 63.13 & 14.51 & 3.28 & 0.28 & \multirow{2}{*}{-11.65} & 7328.30 & 62.90 & 92.17 & 1.33 & \multirow{2}{*}{31.53} \\ \cline{1-5} \cline{7-10}
-TGA ST & 77.71 & 17.63 & 3.80 & 0.31 &  & 2386.40 & 127.54 & 106.22 & 0.91 &  \\ \hline
-TFA & 1016.90 & 12.63 & 10.62 & 0.59 & \multirow{2}{*}{37.43} & 1024.90 & 67.28 & 93.48 & 2.89 & \multirow{2}{*}{64.74} \\ \cline{1-5} \cline{7-10}
-TFA ST & 83.52 & 15.39 & 4.16 & 0.37 &  & 4202.20 & 84.34 & 79.51 & 1.02 &  \\ \hline
-HYBRID & 117.57 & 18.15 & 4.42 & 0.24 & \multirow{2}{*}{-0.75} & 830.64 & 95.23 & 77.95 & 0.79 & \multirow{2}{*}{13.43} \\ \cline{1-5} \cline{7-10}
-HYBRID ST & 192.48 & 25.92 & 6.55 & 0.24 &  & 1212.00 & 120.92 & 86.26 & 0.68 &  \\ \hline
-\end{tabular}%
-}
-\end{table}
-
-\begin{table}[H]
-\centering
-\caption{My caption}
-\label{my-label}
-\resizebox{\textwidth}{!}{%
-\begin{tabular}{|l|r|r|r|r|c|r|r|r|r|c|}
-\hline
-\multicolumn{11}{|c|}{{\ul \textbf{CARRY OUT}}} \\ \hline
-\multirow{2}{*}{\textbf{Full Adder}} & \multicolumn{5}{c|}{\textbf{Nominal @ 0.7V}} & \multicolumn{5}{c|}{\textbf{Near-threshold @ 0.4V}} \\ \cline{2-11} 
- & \multicolumn{1}{c|}{Max (ps)} & \multicolumn{1}{c|}{\mu (ps)} & \multicolumn{1}{c|}{\sigma (ps)} & \multicolumn{1}{c|}{\sigma/\mu (\%)} & \Delta(\%) & \multicolumn{1}{c|}{Max (ps)} & \multicolumn{1}{c|}{\mu (ps)} & \multicolumn{1}{c|}{\sigma (ps)} & \multicolumn{1}{c|}{\sigma/\mu (\%)} & \Delta(\%) \\ \hline
-CMOS & 104.48 & 27.38 & 5.92 & 0.22 & \multirow{2}{*}{1.05} & 794.87 & 128.65 & 86.67 & 0.67 & \multirow{2}{*}{11.61} \\ \cline{1-5} \cline{7-10}
-CMOS ST & 120.01 & 33.09 & 7.08 & 0.21 &  & 539.77 & 143.77 & 85.67 & 0.60 &  \\ \hline
-TGA & 60.11 & 16.32 & 4.28 & 0.29 & \multirow{2}{*}{15.77} & 6396.90 & 325.25 & 138.02 & 1.74 & \multirow{2}{*}{-19.14} \\ \cline{1-5} \cline{7-10}
-TGA ST & 71.82 & 21.19 & 4.77 & 0.24 &  & 6265.10 & 181.01 & 373.37 & 2.07 &  \\ \hline
-TFA & 2010.20 & 14.74 & 13.77 & 0.78 & \multirow{2}{*}{-25.64} & 5734.20 & 151.02 & 286.55 & 2.27 & \multirow{2}{*}{-21.16} \\ \cline{1-5} \cline{7-10}
-TFA ST & 2030.50 & 22.72 & 37.42 & 0.97 &  & 6705.80 & 94.87 & 233.09 & 2.76 &  \\ \hline
-HYBRID & 65.29 & 17.30 & 4.18 & 0.26 & \multirow{2}{*}{4.20} & 695.28 & 78.00 & 56.73 & 0.74 & \multirow{2}{*}{19.48} \\ \cline{1-5} \cline{7-10}
-HYBRID ST & 96.40 & 23.27 & 5.64 & 0.25 &  & 2755.30 & 168.92 & 100.34 & 0.60 &  \\ \hline
-\end{tabular}%
-}
-\end{table}
-
-\begin{table}[H]
-\centering
-\caption{My caption}
-\label{my-label}
-\resizebox{\textwidth}{!}{%
-\begin{tabular}{|l|r|r|r|r|c|r|r|r|r|c|}
-\hline
-\multicolumn{11}{|c|}{{\ul \textbf{SUM}}} \\ \hline
-\multirow{2}{*}{\textbf{Full Adder}} & \multicolumn{5}{c|}{\textbf{Nominal @ 0.7V}} & \multicolumn{5}{c|}{\textbf{Near-threshold @ 0.4V}} \\ \cline{2-11} 
- & \multicolumn{1}{c|}{Max (fJ)} & \multicolumn{1}{c|}{\mu (fJ)} & \multicolumn{1}{c|}{\sigma (fJ)} & \multicolumn{1}{c|}{\sigma/\mu (\%)} & \Delta(\%) & \multicolumn{1}{c|}{Max (fJ)} & \multicolumn{1}{c|}{\mu (fJ)} & \multicolumn{1}{c|}{\sigma (fJ)} & \multicolumn{1}{c|}{\sigma/\mu (\%)} & \Delta(\%) \\ \hline
-CMOS & 69.07 & 12.89 & 2.97 & 0.23 & \multirow{2}{*}{18.21} & 45.37 & 6.29 & 2.00 & 0.32 & \multirow{2}{*}{20.07} \\ \cline{1-5} \cline{7-10}
-CMOS ST & 93.07 & 20.26 & 3.81 & 0.19 &  & 60.64 & 10.22 & 2.60 & 0.25 &  \\ \hline
-TGA & 60.36 & 11.78 & 2.36 & 0.20 & \multirow{2}{*}{3.71} & 53.90 & 6.06 & 2.01 & 0.33 & \multirow{2}{*}{61.45} \\ \cline{1-5} \cline{7-10}
-TGA ST & 90.61 & 22.99 & 4.44 & 0.19 &  & 34.33 & 11.30 & 1.44 & 0.13 &  \\ \hline
-TFA & 21.94 & 4.45 & 0.92 & 0.21 & \multirow{2}{*}{33.73} & 16.26 & 2.40 & 0.65 & 0.27 & \multirow{2}{*}{66.59} \\ \cline{1-5} \cline{7-10}
-TFA ST & 29.28 & 10.59 & 1.45 & 0.14 &  & 18.85 & 5.45 & 0.49 & 0.09 &  \\ \hline
-HYBRID & 86.45 & 12.99 & 3.63 & 0.28 & \multirow{2}{*}{37.38} & 56.96 & 6.02 & 2.29 & 0.38 & \multirow{2}{*}{27.06} \\ \cline{1-5} \cline{7-10}
-HYBRID ST & 87.13 & 23.67 & 4.15 & 0.18 &  & 81.05 & 11.65 & 3.23 & 0.28 &  \\ \hline
-\end{tabular}%
-}
-\end{table}
-
-\begin{table}[H]
-\centering
-\caption{My caption}
-\label{my-label}
-\resizebox{\textwidth}{!}{%
-\begin{tabular}{|l|r|r|r|r|c|r|r|r|r|c|}
-\hline
-\multicolumn{11}{|c|}{{\ul \textbf{CARRY OUT}}} \\ \hline
-\multirow{2}{*}{\textbf{Full Adder}} & \multicolumn{5}{c|}{\textbf{Nominal @ 0.7V}} & \multicolumn{5}{c|}{\textbf{Near-threshold @ 0.4V}} \\ \cline{2-11} 
- & \multicolumn{1}{c|}{Max (fJ)} & \multicolumn{1}{c|}{\mu (fJ)} & \multicolumn{1}{c|}{\sigma (fJ)} & \multicolumn{1}{c|}{\sigma/\mu (\%)} & \Delta(\%) & \multicolumn{1}{c|}{Max (fJ)} & \multicolumn{1}{c|}{\mu (fJ)} & \multicolumn{1}{c|}{\sigma (fJ)} & \multicolumn{1}{c|}{\sigma/\mu (\%)} & \Delta(\%) \\ \hline
-CMOS & 83.43 & 20.88 & 3.52 & 0.17 & \multirow{2}{*}{18.91} & 51.91 & 9.97 & 2.09 & 0.21 & \multirow{2}{*}{12.02} \\ \cline{1-5} \cline{7-10}
-CMOS ST & 98.66 & 30.69 & 4.20 & 0.14 &  & 70.97 & 15.16 & 2.80 & 0.18 &  \\ \hline
-TGA & 92.71 & 13.54 & 4.15 & 0.31 & \multirow{2}{*}{31.32} & 61.28 & 6.40 & 1.85 & 0.29 & \multirow{2}{*}{34.04} \\ \cline{1-5} \cline{7-10}
-TGA ST & 93.03 & 24.79 & 5.21 & 0.21 &  & 85.49 & 11.67 & 2.22 & 0.19 &  \\ \hline
-TFA & 29.74 & 4.96 & 1.14 & 0.23 & \multirow{2}{*}{19.62} & 23.03 & 2.58 & 0.64 & 0.25 & \multirow{2}{*}{52.18} \\ \cline{1-5} \cline{7-10}
-TFA ST & 53.74 & 10.58 & 1.96 & 0.18 &  & 22.21 & 5.61 & 0.66 & 0.12 &  \\ \hline
-HYBRID & 93.88 & 19.99 & 3.89 & 0.19 & \multirow{2}{*}{29.74} & 59.99 & 9.46 & 2.00 & 0.21 & \multirow{2}{*}{61.91} \\ \cline{1-5} \cline{7-10}
-HYBRID ST & 98.85 & 35.58 & 4.87 & 0.14 &  & 26.22 & 15.03 & 1.21 & 0.08 &  \\ \hline
-\end{tabular}%
-}
-\end{table}
 
 \section{Penalties}
-It is expected that a technique which replaces a 2-transistor sub-circuit to a 4-transistor one should bring an impact over metrics. Given so, the average impact at nominal operation was 30\% over delays and their absolute deviations. For energy, the impact is considerable, being on average over 85\% percent higher energy consumption. For energy standard deviations there was a 40\% increase at nominal level and a minor 4\% increase at near-threshold level. An overview of the penalties is shown at Figures K and J and…
-For area penalties there was 250\%, 287.5\%, 200\% and 307\% increase for the CMOS, TGA, TFA and Hybrid Full Adders, respectively. Their respective areas are shown at Table 1. Such high area penalties are mainly due to technology rules such as the 108nm well-spacing and the necessity to use TAP-Cells to explicitly connect the transistors bulk to specific parts of the circuits or the supply/ground making the ST cell much bigger than expected. The Full Adders layouts are show at Figures C, K, L…
 
+It is expected that a technique which replaces a 2-transistor sub-circuit to a 4-transistor one should bring an impact over metrics. Given so, the average impact at nominal operation was 30\% over the delay and their deviations. For energy, the impact is considerable, being on average over 85\% percent higher the energy consumption. For energy standard deviations there was a 40\% increase at nominal level and a minor 4\% increase at near-threshold level.
+
+For area penalties there was 150\%, 187.5\%, 100\% and 207\% increase for the CMOS, TGA, TFA and Hybrid Full Adders, respectively. Their respective areas, not considering the TAP-Cell area, are shown in Table \ref{penalties}. Such high area penalties are mainly due to technology rules such as the 108nm well-spacing and the necessity to use TAP-Cells to explicitly connect the transistors bulk to specific parts of the circuits or the supply/ground making the ST cell more prominent than expected.
+
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
 \begin{table}[H]
 \centering
-\caption{My caption}
-\label{my-label}
-\begin{tabular}{|l|l|l|}
+\caption{Full Adders areas and respective technique area impact.}
+\label{penalties}
+\begin{tabular}{|l|c|c|}
 \hline
-\textbf{Full Adder} & \textbf{Area ($2^{\mu m}$)} & \textbf{Ratio} \\ \hline
-CMOS & 0.34 & \multirow{2}{*}{2.5} \\ \cline{1-2}
-CMOS ST & 0.85 &  \\ \hline
-TGA & 0.54 & \multirow{2}{*}{2.875} \\ \cline{1-2}
-TGA ST & 1.56 &  \\ \hline
-TFA & 0.47 & \multirow{2}{*}{2} \\ \cline{1-2}
-TFA ST & 0.95 &  \\ \hline
-HYBRID & 0.51 & \multirow{2}{*}{3.07} \\ \cline{1-2}
-HYBRID ST & 1.56 &  \\ \hline
+\textbf{Full Adder} & \textbf{Area (${\mu m}^2$)}    & \textbf{Ratio}         \\ \hline
+\textbf{CMOS}       & 0.34             & \multirow{2}{*}{2.5}   \\ \cline{1-2}
+\textbf{CMOS ST}    & 0.85             &                        \\ \hline
+\textbf{TGA}        & 0.54             & \multirow{2}{*}{2.875} \\ \cline{1-2}
+\textbf{TGA ST}     & 1.56             &                        \\ \hline
+\textbf{TFA}        & 0.47             & \multirow{2}{*}{2}     \\ \cline{1-2}
+\textbf{TFA ST}     & 0.95             &                        \\ \hline
+\textbf{HYBRID}     & 0.51             & \multirow{2}{*}{3.07}  \\ \cline{1-2}
+\textbf{HYBRID ST}  & 1.56             &                        \\ \hline
 \end{tabular}
 \end{table}
 
-\begin{figure}[H]
-\centering
-\begin{subfigure}[b]{\textwidth}
-   \includegraphics[width=1\linewidth]{CMOS.png}
-   \caption{}
-   \label{fig:Ng1} 
-\end{subfigure}
-
-\begin{subfigure}[b]{\textwidth}
-   \includegraphics[width=1\linewidth]{CMOSST.png}
-   \caption{}
-   \label{fig:Ng2}
-\end{subfigure}
-
-\caption{}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-\begin{subfigure}[b]{\textwidth}
-   \includegraphics[width=1\linewidth]{TGA.png}
-   \caption{}
-   \label{fig:Ng1} 
-\end{subfigure}
-
-\begin{subfigure}[b]{\textwidth}
-   \includegraphics[width=1\linewidth]{TGAST.png}
-   \caption{}
-   \label{fig:Ng2}
-\end{subfigure}
-
-\caption{}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-\begin{subfigure}[b]{\textwidth}
-   \includegraphics[width=1\linewidth]{TFA.png}
-   \caption{}
-   \label{fig:Ng1} 
-\end{subfigure}
-
-\begin{subfigure}[b]{\textwidth}
-   \includegraphics[width=1\linewidth]{TFAST.png}
-   \caption{}
-   \label{fig:Ng2}
-\end{subfigure}
-
-\caption{}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-\begin{subfigure}[b]{\textwidth}
-   \includegraphics[width=1\linewidth]{HYBRID.png}
-   \caption{}
-   \label{fig:Ng1} 
-\end{subfigure}
-
-\begin{subfigure}[b]{\textwidth}
-   \includegraphics[width=1\linewidth]{HYBRIDST.png}
-   \caption{}
-   \label{fig:Ng2}
-\end{subfigure}
-
-\caption{}
-\end{figure}
-
 \chapter{Conclusions}
-Variability has been a critical challenge in emerging technology nodes. Deviating the correct circuit’s behavior and affecting manufacturing yield. All current work in developing and validating techniques have been done at electrical and transistor level. There is a need of novel techniques which to improve variability robustness at layout and physical level.
 
-Given that, a novel technique is tested. The technique consists of replacing internal inverters with Schmitt Trigger inverters in order to increase the circuit’s noise-immunity. As results show, the technique improves, sometimes drastically, the energy variability robustness for each Full Adder considered. For delay robustness, in some cases, there was a worsening in robustness mainly caused by area penalty and the pass-transistor logic.
+Variability has been a critical challenge in emerging technology nodes because it can deviate from the correct circuit's behavior and affects the manufacturing yield. All current work in developing and validating techniques have been done at electrical and transistor level. There is a need for novel techniques which to improve variability robustness at the layout level.
 
-With the technique penalties in mind, it should only be utilized in applications that can bear the delays, energy consumption and area increase with variability robustness as a priority. This works demonstrates the need for new techniques at layout level to address variability for high performance/low power applications with low area penalties
+Given that, a novel technique was tested. The method consists of replacing internal inverters with Schmitt Trigger inverters to increase the circuit’s noise-immunity. The ST technique presents considerable robustness improvements over all full adders. For nominal and near-threshold operation, TFA and Hybrid adders showed the highest accumulated improvements, respectively. As results show, the technique improves, sometimes drastically, the energy variability robustness for each Full Adder considered. For delay robustness, in some cases, there was a worsening in robustness mainly caused by area penalty and the pass-transistor logic. 
 
-It is important to note that, according to the state-of-art research, this is the first analysis of this technique made at layout level. For future works, a supply voltage calibration shall be made to find the best cost-benefit supply voltage.   
+With the technique penalties in mind, it should only be utilized in applications that can bear the delays, energy consumption and area increase with variability robustness as a priority. These works demonstrate the need for new techniques at layout level to address variability for high performance/low power applications with low area penalties. It is important to note that, according to the state-of-art research, this is the first analysis of this technique made at layout level. For future works, a supply voltage calibration shall be made to find the best cost-benefit supply voltage.
 
 
 \bibliographystyle{abntex2-alf}
 \bibliography{biblio}
 
 \end{document}
+%ANTIGO
+
+
+
+
+
+
+% \begin{figure}[H]
+% \centering
+% \includegraphics[width=\textwidth, trim={0 9.5cm 0 9cm},clip]{delaysNominalSum.pdf}
+% \caption{Propagation times for Sum output at nominal operation.}
+% \label{fig:Fig43}
+% %\legend{Source: \cite{dokania2015circuit}}
+% \end{figure}
+
+% \begin{figure}[H]
+% \centering
+% \includegraphics[width=\textwidth, trim={0 9cm 0 9cm},clip]{delaysNominalCarryOut.pdf}
+% \caption{Propagation times for Carry Out output at nominal operation.}
+% \label{fig:Fig44}
+% %\legend{Source: \cite{dokania2015circuit}}
+% \end{figure}
+
+% \begin{figure}[H]
+% \centering
+% \includegraphics[width=\textwidth, trim={0 9cm 0 9cm},clip]{delaysNTSum.pdf}
+% \caption{Propagation times for Sum output at near-threshold operation.}
+% \label{fig:Fig45}
+% %\legend{Source: \cite{dokania2015circuit}}
+% \end{figure}
+
+% \begin{figure}[H]
+% \centering
+% \includegraphics[width=\textwidth, trim={0 9cm 0 9cm},clip]{delaysNTCarryOut.pdf}
+% \caption{Propagation times for Carry Out output at near-threshold operation.}
+% \label{fig:Fig46}
+% %\legend{Source: \cite{dokania2015circuit}}
+% \end{figure}
+
+% \begin{figure}[H]
+% \centering
+% \includegraphics[width=\textwidth, trim={0 9cm 0 9cm},clip]{energyNominalSum.pdf}
+% \caption{Energy measures for Sum output at nominal operation.}
+% \label{fig:Fig47}
+% %\legend{Source: \cite{dokania2015circuit}}
+% \end{figure}
+
+% \begin{figure}[H]
+% \centering
+% \includegraphics[width=\textwidth, trim={0 9cm 0 9cm},clip]{energyNominalCarryOut.pdf}
+% \caption{Energy measures for Carry Out output at nominal operation.}
+% \label{fig:Fig48}
+% %\legend{Source: \cite{dokania2015circuit}}
+% \end{figure}
+
+% \begin{figure}[H]
+% \centering
+% \includegraphics[width=\textwidth, trim={0 9cm 0 9cm},clip]{energyNTSum.pdf}
+% \caption{Energy measures for Sum output at near-threshold operation.}
+% \label{fig:Fig49}
+% %\legend{Source: \cite{dokania2015circuit}}
+% \end{figure}
+
+% \begin{figure}[H]
+% \centering
+% \includegraphics[width=\textwidth, trim={0 9cm 0 9cm},clip]{energyNTCarryOut.pdf}
+% \caption{Energy measures for Carry Out output at near-threshold operation.}
+% \label{fig:Fig410}
+% %\legend{Source: \cite{dokania2015circuit}}
+% \end{figure}
+
+% \begin{table}[H]
+% \centering
+% \caption{My caption}
+% \label{my-label}
+% \resizebox{\textwidth}{!}{%
+% \begin{tabular}{|l|r|r|r|r|c|r|r|r|r|c|}
+% \hline
+% \multicolumn{11}{|c|}{{\ul \textbf{SUM}}} \\ \hline
+% \multirow{2}{*}{\textbf{Full Adder}} & \multicolumn{5}{c|}{\textbf{Nominal @ 0.7V}} & \multicolumn{5}{c|}{\textbf{Near-threshold @ 0.4V}} \\ \cline{2-11} 
+%  & \multicolumn{1}{c|}{Max (ps)} & \multicolumn{1}{c|}{\mu (ps)} & \multicolumn{1}{c|}{\sigma (ps)} & \multicolumn{1}{c|}{\sigma/\mu (\%)} & \Delta(\%) & \multicolumn{1}{c|}{Max (ps)} & \multicolumn{1}{c|}{\mu (ps)} & \multicolumn{1}{c|}{\sigma (ps)} & \multicolumn{1}{c|}{\sigma/\mu (\%)} & \Delta(\%) \\ \hline
+% CMOS & 93.19 & 16.11 & 3.83 & 0.23 & \multirow{2}{*}{4.46} & 873.41 & 73.22 & 56.38 & 0.77 & \multirow{2}{*}{18.70} \\ \cline{1-5} \cline{7-10}
+% CMOS ST & 117.19 & 21.98 & 4.98 & 0.22 &  & 430.85 & 95.85 & 60.57 & 0.63 &  \\ \hline
+% TGA & 63.13 & 14.51 & 3.28 & 0.28 & \multirow{2}{*}{-11.65} & 7328.30 & 62.90 & 92.17 & 1.33 & \multirow{2}{*}{31.53} \\ \cline{1-5} \cline{7-10}
+% TGA ST & 77.71 & 17.63 & 3.80 & 0.31 &  & 2386.40 & 127.54 & 106.22 & 0.91 &  \\ \hline
+% TFA & 1016.90 & 12.63 & 10.62 & 0.59 & \multirow{2}{*}{37.43} & 1024.90 & 67.28 & 93.48 & 2.89 & \multirow{2}{*}{64.74} \\ \cline{1-5} \cline{7-10}
+% TFA ST & 83.52 & 15.39 & 4.16 & 0.37 &  & 4202.20 & 84.34 & 79.51 & 1.02 &  \\ \hline
+% HYBRID & 117.57 & 18.15 & 4.42 & 0.24 & \multirow{2}{*}{-0.75} & 830.64 & 95.23 & 77.95 & 0.79 & \multirow{2}{*}{13.43} \\ \cline{1-5} \cline{7-10}
+% HYBRID ST & 192.48 & 25.92 & 6.55 & 0.24 &  & 1212.00 & 120.92 & 86.26 & 0.68 &  \\ \hline
+% \end{tabular}%
+% }
+% \end{table}
+
+% \begin{table}[H]
+% \centering
+% \caption{My caption}
+% \label{my-label}
+% \resizebox{\textwidth}{!}{%
+% \begin{tabular}{|l|r|r|r|r|c|r|r|r|r|c|}
+% \hline
+% \multicolumn{11}{|c|}{{\ul \textbf{CARRY OUT}}} \\ \hline
+% \multirow{2}{*}{\textbf{Full Adder}} & \multicolumn{5}{c|}{\textbf{Nominal @ 0.7V}} & \multicolumn{5}{c|}{\textbf{Near-threshold @ 0.4V}} \\ \cline{2-11} 
+%  & \multicolumn{1}{c|}{Max (ps)} & \multicolumn{1}{c|}{\mu (ps)} & \multicolumn{1}{c|}{\sigma (ps)} & \multicolumn{1}{c|}{\sigma/\mu (\%)} & \Delta(\%) & \multicolumn{1}{c|}{Max (ps)} & \multicolumn{1}{c|}{\mu (ps)} & \multicolumn{1}{c|}{\sigma (ps)} & \multicolumn{1}{c|}{\sigma/\mu (\%)} & \Delta(\%) \\ \hline
+% CMOS & 104.48 & 27.38 & 5.92 & 0.22 & \multirow{2}{*}{1.05} & 794.87 & 128.65 & 86.67 & 0.67 & \multirow{2}{*}{11.61} \\ \cline{1-5} \cline{7-10}
+% CMOS ST & 120.01 & 33.09 & 7.08 & 0.21 &  & 539.77 & 143.77 & 85.67 & 0.60 &  \\ \hline
+% TGA & 60.11 & 16.32 & 4.28 & 0.29 & \multirow{2}{*}{15.77} & 6396.90 & 325.25 & 138.02 & 1.74 & \multirow{2}{*}{-19.14} \\ \cline{1-5} \cline{7-10}
+% TGA ST & 71.82 & 21.19 & 4.77 & 0.24 &  & 6265.10 & 181.01 & 373.37 & 2.07 &  \\ \hline
+% TFA & 2010.20 & 14.74 & 13.77 & 0.78 & \multirow{2}{*}{-25.64} & 5734.20 & 151.02 & 286.55 & 2.27 & \multirow{2}{*}{-21.16} \\ \cline{1-5} \cline{7-10}
+% TFA ST & 2030.50 & 22.72 & 37.42 & 0.97 &  & 6705.80 & 94.87 & 233.09 & 2.76 &  \\ \hline
+% HYBRID & 65.29 & 17.30 & 4.18 & 0.26 & \multirow{2}{*}{4.20} & 695.28 & 78.00 & 56.73 & 0.74 & \multirow{2}{*}{19.48} \\ \cline{1-5} \cline{7-10}
+% HYBRID ST & 96.40 & 23.27 & 5.64 & 0.25 &  & 2755.30 & 168.92 & 100.34 & 0.60 &  \\ \hline
+% \end{tabular}%
+% }
+% \end{table}
+
+% \begin{table}[H]
+% \centering
+% \caption{My caption}
+% \label{my-label}
+% \resizebox{\textwidth}{!}{%
+% \begin{tabular}{|l|r|r|r|r|c|r|r|r|r|c|}
+% \hline
+% \multicolumn{11}{|c|}{{\ul \textbf{SUM}}} \\ \hline
+% \multirow{2}{*}{\textbf{Full Adder}} & \multicolumn{5}{c|}{\textbf{Nominal @ 0.7V}} & \multicolumn{5}{c|}{\textbf{Near-threshold @ 0.4V}} \\ \cline{2-11} 
+%  & \multicolumn{1}{c|}{Max (fJ)} & \multicolumn{1}{c|}{\mu (fJ)} & \multicolumn{1}{c|}{\sigma (fJ)} & \multicolumn{1}{c|}{\sigma/\mu (\%)} & \Delta(\%) & \multicolumn{1}{c|}{Max (fJ)} & \multicolumn{1}{c|}{\mu (fJ)} & \multicolumn{1}{c|}{\sigma (fJ)} & \multicolumn{1}{c|}{\sigma/\mu (\%)} & \Delta(\%) \\ \hline
+% CMOS & 69.07 & 12.89 & 2.97 & 0.23 & \multirow{2}{*}{18.21} & 45.37 & 6.29 & 2.00 & 0.32 & \multirow{2}{*}{20.07} \\ \cline{1-5} \cline{7-10}
+% CMOS ST & 93.07 & 20.26 & 3.81 & 0.19 &  & 60.64 & 10.22 & 2.60 & 0.25 &  \\ \hline
+% TGA & 60.36 & 11.78 & 2.36 & 0.20 & \multirow{2}{*}{3.71} & 53.90 & 6.06 & 2.01 & 0.33 & \multirow{2}{*}{61.45} \\ \cline{1-5} \cline{7-10}
+% TGA ST & 90.61 & 22.99 & 4.44 & 0.19 &  & 34.33 & 11.30 & 1.44 & 0.13 &  \\ \hline
+% TFA & 21.94 & 4.45 & 0.92 & 0.21 & \multirow{2}{*}{33.73} & 16.26 & 2.40 & 0.65 & 0.27 & \multirow{2}{*}{66.59} \\ \cline{1-5} \cline{7-10}
+% TFA ST & 29.28 & 10.59 & 1.45 & 0.14 &  & 18.85 & 5.45 & 0.49 & 0.09 &  \\ \hline
+% HYBRID & 86.45 & 12.99 & 3.63 & 0.28 & \multirow{2}{*}{37.38} & 56.96 & 6.02 & 2.29 & 0.38 & \multirow{2}{*}{27.06} \\ \cline{1-5} \cline{7-10}
+% HYBRID ST & 87.13 & 23.67 & 4.15 & 0.18 &  & 81.05 & 11.65 & 3.23 & 0.28 &  \\ \hline
+% \end{tabular}%
+% }
+% \end{table}
+
+% \begin{table}[H]
+% \centering
+% \caption{My caption}
+% \label{my-label}
+% \resizebox{\textwidth}{!}{%
+% \begin{tabular}{|l|r|r|r|r|c|r|r|r|r|c|}
+% \hline
+% \multicolumn{11}{|c|}{{\ul \textbf{CARRY OUT}}} \\ \hline
+% \multirow{2}{*}{\textbf{Full Adder}} & \multicolumn{5}{c|}{\textbf{Nominal @ 0.7V}} & \multicolumn{5}{c|}{\textbf{Near-threshold @ 0.4V}} \\ \cline{2-11} 
+%  & \multicolumn{1}{c|}{Max (fJ)} & \multicolumn{1}{c|}{\mu (fJ)} & \multicolumn{1}{c|}{\sigma (fJ)} & \multicolumn{1}{c|}{\sigma/\mu (\%)} & \Delta(\%) & \multicolumn{1}{c|}{Max (fJ)} & \multicolumn{1}{c|}{\mu (fJ)} & \multicolumn{1}{c|}{\sigma (fJ)} & \multicolumn{1}{c|}{\sigma/\mu (\%)} & \Delta(\%) \\ \hline
+% CMOS & 83.43 & 20.88 & 3.52 & 0.17 & \multirow{2}{*}{18.91} & 51.91 & 9.97 & 2.09 & 0.21 & \multirow{2}{*}{12.02} \\ \cline{1-5} \cline{7-10}
+% CMOS ST & 98.66 & 30.69 & 4.20 & 0.14 &  & 70.97 & 15.16 & 2.80 & 0.18 &  \\ \hline
+% TGA & 92.71 & 13.54 & 4.15 & 0.31 & \multirow{2}{*}{31.32} & 61.28 & 6.40 & 1.85 & 0.29 & \multirow{2}{*}{34.04} \\ \cline{1-5} \cline{7-10}
+% TGA ST & 93.03 & 24.79 & 5.21 & 0.21 &  & 85.49 & 11.67 & 2.22 & 0.19 &  \\ \hline
+% TFA & 29.74 & 4.96 & 1.14 & 0.23 & \multirow{2}{*}{19.62} & 23.03 & 2.58 & 0.64 & 0.25 & \multirow{2}{*}{52.18} \\ \cline{1-5} \cline{7-10}
+% TFA ST & 53.74 & 10.58 & 1.96 & 0.18 &  & 22.21 & 5.61 & 0.66 & 0.12 &  \\ \hline
+% HYBRID & 93.88 & 19.99 & 3.89 & 0.19 & \multirow{2}{*}{29.74} & 59.99 & 9.46 & 2.00 & 0.21 & \multirow{2}{*}{61.91} \\ \cline{1-5} \cline{7-10}
+% HYBRID ST & 98.85 & 35.58 & 4.87 & 0.14 &  & 26.22 & 15.03 & 1.21 & 0.08 &  \\ \hline
+% \end{tabular}%
+% }
+% \end{table}
+
+% \begin{table}[H]
+% \centering
+% \caption{My caption}
+% \label{my-label}
+% \begin{tabular}{|l|l|l|}
+% \hline
+% \textbf{Full Adder} & \textbf{Area ($2^{\mu m}$)} & \textbf{Ratio} \\ \hline
+% CMOS & 0.34 & \multirow{2}{*}{2.5} \\ \cline{1-2}
+% CMOS ST & 0.85 &  \\ \hline
+% TGA & 0.54 & \multirow{2}{*}{2.875} \\ \cline{1-2}
+% TGA ST & 1.56 &  \\ \hline
+% TFA & 0.47 & \multirow{2}{*}{2} \\ \cline{1-2}
+% TFA ST & 0.95 &  \\ \hline
+% HYBRID & 0.51 & \multirow{2}{*}{3.07} \\ \cline{1-2}
+% HYBRID ST & 1.56 &  \\ \hline
+% \end{tabular}
+% \end{table}
+
+% \begin{figure}[H]
+% \centering
+% \begin{subfigure}[b]{\textwidth}
+%    \includegraphics[width=1\linewidth]{CMOS.png}
+%    \caption{}
+%    \label{fig:Ng1} 
+% \end{subfigure}
+
+% \begin{subfigure}[b]{\textwidth}
+%    \includegraphics[width=1\linewidth]{CMOSST.png}
+%    \caption{}
+%    \label{fig:Ng2}
+% \end{subfigure}
+
+% \caption{}
+% \end{figure}
+
+% \begin{figure}[H]
+% \centering
+% \begin{subfigure}[b]{\textwidth}
+%    \includegraphics[width=1\linewidth]{TGA.png}
+%    \caption{}
+%    \label{fig:Ng1} 
+% \end{subfigure}
+
+% \begin{subfigure}[b]{\textwidth}
+%    \includegraphics[width=1\linewidth]{TGAST.png}
+%    \caption{}
+%    \label{fig:Ng2}
+% \end{subfigure}
+
+% \caption{}
+% \end{figure}
+
+% \begin{figure}[H]
+% \centering
+% \begin{subfigure}[b]{\textwidth}
+%    \includegraphics[width=1\linewidth]{TFA.png}
+%    \caption{}
+%    \label{fig:Ng1} 
+% \end{subfigure}
+
+% \begin{subfigure}[b]{\textwidth}
+%    \includegraphics[width=1\linewidth]{TFAST.png}
+%    \caption{}
+%    \label{fig:Ng2}
+% \end{subfigure}
+
+% \caption{}
+% \end{figure}
+
+% \begin{figure}[H]
+% \centering
+% \begin{subfigure}[b]{\textwidth}
+%    \includegraphics[width=1\linewidth]{HYBRID.png}
+%    \caption{}
+%    \label{fig:Ng1} 
+% \end{subfigure}
+
+% \begin{subfigure}[b]{\textwidth}
+%    \includegraphics[width=1\linewidth]{HYBRIDST.png}
+%    \caption{}
+%    \label{fig:Ng2}
+% \end{subfigure}
+
+% \caption{}
+% \end{figure}
+

@@ -6,12 +6,9 @@
 \contentsline {chapter}{3~Methodology}{19}{CHAPTER.3}
 \contentsline {section}{\numberline {3.1}Layout Design}{21}{section.3.1}
 \contentsline {section}{\numberline {3.2}Electrical Simulation}{22}{section.3.2}
-\contentsline {chapter}{4~Results}{24}{CHAPTER.4}
-\contentsline {section}{\numberline {4.1}Mirror CMOS Full Adder}{24}{section.4.1}
-\contentsline {section}{\numberline {4.2}Transmission Gate Full Adder}{24}{section.4.2}
-\contentsline {section}{\numberline {4.3}Transmission Function Full Adder}{24}{section.4.3}
-\contentsline {section}{\numberline {4.4}Hybrid Full Adder}{25}{section.4.4}
-\contentsline {section}{\numberline {4.5}Discussion}{26}{section.4.5}
-\contentsline {section}{\numberline {4.6}Penalties}{31}{section.4.6}
-\contentsline {chapter}{5~Conclusions}{34}{CHAPTER.5}
-\contentsline {chapter}{\xspace {}References}{35}{schapter.7}
+\contentsline {chapter}{4~Results and Discussion}{24}{CHAPTER.4}
+\contentsline {section}{\numberline {4.1}Nominal Operation}{24}{section.4.1}
+\contentsline {section}{\numberline {4.2}Near-Threshold Operation}{26}{section.4.2}
+\contentsline {section}{\numberline {4.3}Penalties}{28}{section.4.3}
+\contentsline {chapter}{5~Conclusions}{30}{CHAPTER.5}
+\contentsline {chapter}{\xspace {}References}{31}{schapter.7}
