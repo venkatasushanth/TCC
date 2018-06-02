@@ -281,7 +281,7 @@ Dynamic Power & Difficult & Workload dependent & C,  \(\alpha\) & Shorter batter
 \end{table}
 
 This work evaluates the effects caused by the physical variability. In FinFET, the physical variations are responsible for deviations in the device work function (WF), gate length (L\textsc{g}), fin height (H\textsc{fin}), fin thickness (T\textsc{si}) and parasitic resistances. It is shown in \cite{meinhardt2014impact} that work 
-function fluctuation (WFF) is the main cause of threshold voltage (V\textsc{th}) variations. Alongside, in [14] is shown the high correlation between the variability in I\textsc{on} and I\textsc{off} currents and V\textsc{th} fluctuation in the presence of granularity of the metal gate. The main cause of WFF is due to its dependency over the orientation of its metal grains. In the real fabrication process, metal gate devices are generally produced using multiple types of metal with different work functions randomly aligned. In the ideal fabrication process, metal gate devices have the gates manufactured with uniformly aligned metal and then, they have very low WFF deviation [15].
+function fluctuation (WFF) is the main cause of threshold voltage (V\textsc{th}) variations. Alongside, in \cite{wang2011statistical} is shown the high correlation between the variability in I\textsc{on} and I\textsc{off} currents and V\textsc{th} fluctuation in the presence of granularity of the metal gate. The main cause of WFF is due to its dependency over the orientation of its metal grains. In the real fabrication process, metal gate devices are generally produced using multiple types of metal with different work functions randomly aligned. In the ideal fabrication process, metal gate devices have the gates manufactured with uniformly aligned metal and then, they have very low WFF deviation \cite{zimpeck2016finfet}.
 
 At circuit level there is multiple techniques to predict and prevent errors: Tuning CMOS knobs, circuit topology optimizations, self-timed circuits, temporal and logical error masking, relaxed retiming and graceful degradation, and inexact circuits. Although, there are few approaches to decrease the process variability at its core. It is due to the technology dependency present in this problem \cite{rahimi2016variability}.
 
@@ -338,29 +338,20 @@ The CMOS Full Adder is considered the most traditional Full Adder topology conta
 
 Transmission Gate Full Adder \cite{weste1985principles} contains 16 transistors, and is a high speed and low power design. However, shows low driving capability which may be unacceptable in some cases where there is a long chain of full adders due to the increase in delay \cite{islam2011design}. The Transmission Function Adder is based on transmission gates as well, containing 20 transistors, working satisfactorily with low voltages but losing performance when cascaded due to the lack of supply/ground contacts and, consequently, driving capability \cite{navi2009novel}. Both TFA and TGA generate the XOR function (H = A XOR B) followed by an inverter which produces the XNOR function (H’). H and H’ are used to control the transmission gates generating the Sum and Cout outputs. The inverter generates delay between H and H’, which will cause the transmission gates to behave as pass transistors, that may introduce glitches and consequently, increase the power consumption of these cells. Additionally, TGA contains three inverters, one more than TFA. The inverters switching introduce more short-circuit power \cite{shams2000novel}.
 
-Inspired by CMOS and CPL Full Adders architectures, the Hybrid Full Adder \cite{navi2009novel} contains 26 transistors, with the main advantage of a high output signal and low power properties. Although, the design shows high input capacitance for specific input vectors.
-
-A variety of CMOS Schmitt Trigger designs have been proposed and implemented over the years, with the conventional 6T-CMOS Schmitt Trigger proposed in \cite{doki1984cmos} exhibiting the wanted characteristics of different high-to-low and low-to-high transition threshold voltages, giving rise to hysteresis. The ST inverter circuit used in this work was inspired by \cite{zhang2003low} and modified in \cite{dokania2015circuit} to achieve the desired inverting characteristic, as shown in Figure \ref{fig:Fig4}. It is designed for operation at a supply voltage of 0.4V in order to achieve low power consumption, and consists of the junction of two inverters where the output from the second one will be the bulk for the first one.  
-
-In this design a dynamic body-bias technique is applied through a feedback mechanism to a standard CMOS inverter circuit, thus allowing a change in the threshold voltages of two MOSFETs, implying a change in the switching voltage. The Full Adder designs are shown in Figure \ref{fig:Fig5}.
+Inspired by CMOS and CPL Full Adders architectures, the Hybrid Full Adder \cite{navi2009novel} contains 26 transistors, with the main advantage of a high output signal and low power properties. Although, the design shows high input capacitance for specific input vectors. The Full Adder designs are shown in Figure \ref{fig:Fig5}.
 
 \begin{figure}[ht]
 \centering
-\includegraphics[width=1\textwidth]{lpSchmitt.jpg}
-\caption{Original Low Power Schmitt Trigger (left above), Modified Low Power Schmitt Trigger (left below) and its hysteresis curve (right).}
-\label{fig:Fig4}
-\legend{Source: \cite{dokania2015circuit}}
-\end{figure}
-
-\begin{figure}[ht]
-\centering
-\includegraphics[width=1\textwidth]{FULLADDERS.png}
+\includegraphics[width=1\textwidth]{FAs.png}
 \caption{Full Adders with internal inverters to be replaced highlighted.}
 \label{fig:Fig5}
-\legend{Source: \cite{samuel2016}}
+\legend{Transmission Function Adder (a), Transmission Gate Adder (b), Mirror CMOS Adder (c) and Hybrid Full Adder (d).
+Source: \cite{samuel2016}}
 \end{figure}
 
-Due to technology restrictions with the substrate of NMOS devices being shared and attached to ground, the ST applied on \cite{dokania2015circuit} was modified in order to maintain its characteristics. Given that, the bulk terminals of the respective NMOS devices present in the schematic were connected to ground. The ST behavior is preserved with only minor changes between charging and discharging delays due to the difference between PMOS and NMOS threshold voltages. A circuit schematic is shown at Figure \ref{fig:sub2}.
+A variety of CMOS Schmitt Trigger designs have been proposed and implemented over the years, with the conventional 6T-CMOS Schmitt Trigger proposed in \cite{doki1984cmos} exhibiting the wanted characteristics of different high-to-low and low-to-high transition threshold voltages, giving rise to hysteresis. The ST inverter circuit used in this work was inspired by \cite{zhang2003low} and modified in \cite{dokania2015circuit} to achieve the desired inverting characteristic, as shown in Figure \ref{fig:sub1}. It is designed for operation at a supply voltage of 0.4V in order to achieve low power consumption, and consists of the junction of two inverters where the output from the second one will be the bulk for the first one.  
+
+In this design a dynamic body-bias technique is applied through a feedback mechanism to a standard CMOS inverter circuit, thus allowing a change in the threshold voltages of two MOSFETs, implying a change in the switching voltage. 
 
 \begin{figure}[ht]
 \centering
@@ -380,11 +371,58 @@ Due to technology restrictions with the substrate of NMOS devices being shared a
 \label{fig:test}
 \end{figure}
 
-All Full Adders layouts will be designed using the Virtuoso Electronic Design Automation (EDA) tool from Cadence\textregistered{} with the process design kit (PDK) of 7nm FinFET from ASAP in partnership with ARM. The simulations will be carried out in HSPICE from Synopsys Company, after the removal of parasitic capacitances from the layouts. Each full adder will be designed with and without the Schmitt Triggers replacement in order to take into account the penalties due to the adoption of the ST technique in terms of area, power consumption and performance. The process variability evaluation will be conducted by 2000 Monte Carlo simulations varying the threshold voltage of the PMOS and NMOS devices according to a Gaussian distribution.
+\section{Layout Design}
 
-For all experiments, it will be observed maximum values, mean (\(\mu\)), standard deviation (\(\sigma\)) and normalized standard deviation (\(\sigma\)/\(\mu\)) for each metric: delay, power and energy, where \(\sigma\)/\(\mu\) represents the sensibility of the cell to process variability. 
+All Full Adders layouts will be designed using the Virtuoso Electronic Design Automation (EDA) tool from Cadence\textregistered{} with the process design kit (PDK) of 7-nm FinFET (ASAP) from the Arizona State University in partnership with ARM \cite{clark2016asap7}. This PDK was chosen due to realistic design conjecture regarding the current design competencies. Due to limitations of ASAP7 technology, it is not possible to connect the NMOS bulks separately due to the shared substrate. Given that, the Schmitt Trigger behavior is preserved with only minor changes between charging and discharging delays due to the difference between PMOS and NMOS threshold voltages. The ST applied in this work is shown at Figure \ref{fig:sub2}.
 
-To avoid underestimating effects of realistic input waveforms on design metrics, the simulations will be carried under a 5-bit ripple carry adder using copies of the 1-bit full adder cell with design metrics being calculated for the middle cell as shown in Figure \ref{fig:Fig6}. 
+The main PDK rules and lithography assumptions considered in this work are shown in Table \ref{layers}. To exemplify the PDK layers, the traditional CMOS Full Adder layout is shown in Fig. (FIGURA DO LAYOUT). For all layouts it was used a dense 7.5 M2 (Metal 2) track cell, baseline resulting in a 270nm cell height. This corresponds to three fins for each transistor. To make the bulk connections it is necessary a TAP-Cell. It is responsible to connect the NMOS and PMOS bulks to supply/ground, respectively, being possible to connect the PMOS bulks to another node. It is a technology restriction needed for the proper function of the circuit. Its layout has a length of 108nm resulting in an area of 0.02916 \(\mu\)m^{2}.
+
+\begin{table}[]
+\centering
+\caption{Key layer lithography assumptions, widths and pitches}
+\label{layers}
+\begin{tabular}{|l|c|c|c|}
+\hline
+\multicolumn{1}{|c|}{\textbf{Layer}} & \textbf{Lithography} & \textbf{Width/drawn (nm)} & \textbf{Pitch (nm)} \\ \hline
+\textbf{Fin}                         & SAQP                 & 6.5/7                     & 27                  \\ \hline
+\textbf{Active (horizontal)}         & EUV                  & 54/16                     & 108                 \\ \hline
+\textbf{Gate}                        & SADP                 & 21/20                     & 54                  \\ \hline
+\textbf{SDT/LISD}                    & EUV                  & 25/24                     & 54                  \\ \hline
+\textbf{LIG}                         & EUV                  & 16/16                     & 54                  \\ \hline
+\textbf{VIA0-VIA3}                   & EUV                  & 18/18                     & 25                  \\ \hline
+\textbf{M1-M3}                       & EUV                  & 18/18                     & 36                  \\ \hline
+\end{tabular}
+\end{table}
+
+\section{Electrical Simulation}
+
+The simulations were carried out in HSPICE considering the new netlist obtained after the physical verification flow and the parasitic capacitances extraction. Each full adder was designed with and without the Schmitt Triggers replacement to consider the penalties due to the adoption of the ST technique in terms of area, energy and performance.
+
+The process variability evaluation was taken
+through 2000 Monte Carlo (MC) simulations varying
+the threshold voltage of the PMOS and NMOS devices
+according to a Gaussian distribution considering a 3\(\sigma\) deviation and a 5\% variation on nominal values. For all experiments, it will be observed maximum values, mean (\(\mu\)), standard deviation (\(\sigma\)) and normalized standard deviation (\(\sigma\)/\(\mu\)) for each metric: delay, power and energy, where \(\sigma\)/\(\mu\) represents the sensibility of the cell to process variability. 
+
+The reference values from ASAP7 technology for electrical simulations are shown in Table \ref{electPar}. To avoid underestimating effects of realistic input waveforms on design metrics, the simulations will be carried under a 5-bit ripple carry adder using copies of the 1-bit full adder cell with design metrics being calculated for the middle cell as shown in Figure \ref{fig:Fig6}. 
+
+\begin{table}[H]
+\centering
+\caption{Parameters applied in the electrical simulations}
+\label{electPar}
+\begin{tabular}{|l|c|c|}
+\hline
+\textbf{Parameter}                                            & \multicolumn{2}{c|}{\textbf{7nm}}                                  \\ \hline
+\textbf{Nominal Supply Voltage}                               & \multicolumn{2}{c|}{0.7 V}                                         \\ \hline
+\textbf{Gate Length (L\textsc{g})}           & \multicolumn{2}{c|}{21nm}                                          \\ \hline
+\textbf{Fin Width (W\textsc{fin})}              & \multicolumn{2}{c|}{6.5nm}                                         \\ \hline
+\textbf{Fin Height (H\textsc{fin})}          & \multicolumn{2}{c|}{32nm}                                          \\ \hline
+\textbf{Oxide Thickness (T\textsc{ox})}      & \multicolumn{2}{c|}{2.1nm}                                         \\ \hline
+\textbf{Channel Doping}                                       & \multicolumn{2}{c|}{1x10^{22}m^{-3}}                                     \\ \hline
+\textbf{Source/Drain Doping}                                  & \multicolumn{2}{c|}{2x10^{22}m^{-3}} \\ \hline
+\multicolumn{1}{|c|}{\multirow{2}{*}{\textbf{Work Function}}} & NFET                            & 4.372                            \\ \cline{2-3} 
+\multicolumn{1}{|c|}{}                                        & PFET                            & 4.8108                           \\ \hline
+\end{tabular}
+\end{table}
 
 \begin{figure}[H]
 \centering
@@ -393,6 +431,8 @@ To avoid underestimating effects of realistic input waveforms on design metrics,
 \label{fig:Fig6}
 \legend{Source: \cite{dokania2015circuit}}
 \end{figure}
+
+
 
 \chapter{Results}
 
@@ -517,7 +557,7 @@ All absolute values for metrics are shown at Tables/Figures X, Y, Z.
 \hline
 \multicolumn{11}{|c|}{{\ul \textbf{SUM}}} \\ \hline
 \multirow{2}{*}{\textbf{Full Adder}} & \multicolumn{5}{c|}{\textbf{Nominal @ 0.7V}} & \multicolumn{5}{c|}{\textbf{Near-threshold @ 0.4V}} \\ \cline{2-11} 
- & \multicolumn{1}{c|}{Max (ps)} & \multicolumn{1}{c|}{μ (ps)} & \multicolumn{1}{c|}{σ (ps)} & \multicolumn{1}{c|}{σ/μ (\%)} & Δ(\%) & \multicolumn{1}{c|}{Max (ps)} & \multicolumn{1}{c|}{μ (ps)} & \multicolumn{1}{c|}{σ (ps)} & \multicolumn{1}{c|}{σ/μ (\%)} & Δ(\%) \\ \hline
+ & \multicolumn{1}{c|}{Max (ps)} & \multicolumn{1}{c|}{\mu (ps)} & \multicolumn{1}{c|}{\sigma (ps)} & \multicolumn{1}{c|}{\sigma/\mu (\%)} & \Delta(\%) & \multicolumn{1}{c|}{Max (ps)} & \multicolumn{1}{c|}{\mu (ps)} & \multicolumn{1}{c|}{\sigma (ps)} & \multicolumn{1}{c|}{\sigma/\mu (\%)} & \Delta(\%) \\ \hline
 CMOS & 93.19 & 16.11 & 3.83 & 0.23 & \multirow{2}{*}{4.46} & 873.41 & 73.22 & 56.38 & 0.77 & \multirow{2}{*}{18.70} \\ \cline{1-5} \cline{7-10}
 CMOS ST & 117.19 & 21.98 & 4.98 & 0.22 &  & 430.85 & 95.85 & 60.57 & 0.63 &  \\ \hline
 TGA & 63.13 & 14.51 & 3.28 & 0.28 & \multirow{2}{*}{-11.65} & 7328.30 & 62.90 & 92.17 & 1.33 & \multirow{2}{*}{31.53} \\ \cline{1-5} \cline{7-10}
@@ -539,7 +579,7 @@ HYBRID ST & 192.48 & 25.92 & 6.55 & 0.24 &  & 1212.00 & 120.92 & 86.26 & 0.68 & 
 \hline
 \multicolumn{11}{|c|}{{\ul \textbf{CARRY OUT}}} \\ \hline
 \multirow{2}{*}{\textbf{Full Adder}} & \multicolumn{5}{c|}{\textbf{Nominal @ 0.7V}} & \multicolumn{5}{c|}{\textbf{Near-threshold @ 0.4V}} \\ \cline{2-11} 
- & \multicolumn{1}{c|}{Max (ps)} & \multicolumn{1}{c|}{μ (ps)} & \multicolumn{1}{c|}{σ (ps)} & \multicolumn{1}{c|}{σ/μ (\%)} & Δ(\%) & \multicolumn{1}{c|}{Max (ps)} & \multicolumn{1}{c|}{μ (ps)} & \multicolumn{1}{c|}{σ (ps)} & \multicolumn{1}{c|}{σ/μ (\%)} & Δ(\%) \\ \hline
+ & \multicolumn{1}{c|}{Max (ps)} & \multicolumn{1}{c|}{\mu (ps)} & \multicolumn{1}{c|}{\sigma (ps)} & \multicolumn{1}{c|}{\sigma/\mu (\%)} & \Delta(\%) & \multicolumn{1}{c|}{Max (ps)} & \multicolumn{1}{c|}{\mu (ps)} & \multicolumn{1}{c|}{\sigma (ps)} & \multicolumn{1}{c|}{\sigma/\mu (\%)} & \Delta(\%) \\ \hline
 CMOS & 104.48 & 27.38 & 5.92 & 0.22 & \multirow{2}{*}{1.05} & 794.87 & 128.65 & 86.67 & 0.67 & \multirow{2}{*}{11.61} \\ \cline{1-5} \cline{7-10}
 CMOS ST & 120.01 & 33.09 & 7.08 & 0.21 &  & 539.77 & 143.77 & 85.67 & 0.60 &  \\ \hline
 TGA & 60.11 & 16.32 & 4.28 & 0.29 & \multirow{2}{*}{15.77} & 6396.90 & 325.25 & 138.02 & 1.74 & \multirow{2}{*}{-19.14} \\ \cline{1-5} \cline{7-10}
@@ -561,7 +601,7 @@ HYBRID ST & 96.40 & 23.27 & 5.64 & 0.25 &  & 2755.30 & 168.92 & 100.34 & 0.60 & 
 \hline
 \multicolumn{11}{|c|}{{\ul \textbf{SUM}}} \\ \hline
 \multirow{2}{*}{\textbf{Full Adder}} & \multicolumn{5}{c|}{\textbf{Nominal @ 0.7V}} & \multicolumn{5}{c|}{\textbf{Near-threshold @ 0.4V}} \\ \cline{2-11} 
- & \multicolumn{1}{c|}{Max (fJ)} & \multicolumn{1}{c|}{μ (fJ)} & \multicolumn{1}{c|}{σ (fJ)} & \multicolumn{1}{c|}{σ/μ (\%)} & Δ(\%) & \multicolumn{1}{c|}{Max (fJ)} & \multicolumn{1}{c|}{μ (fJ)} & \multicolumn{1}{c|}{σ (fJ)} & \multicolumn{1}{c|}{σ/μ (\%)} & Δ(\%) \\ \hline
+ & \multicolumn{1}{c|}{Max (fJ)} & \multicolumn{1}{c|}{\mu (fJ)} & \multicolumn{1}{c|}{\sigma (fJ)} & \multicolumn{1}{c|}{\sigma/\mu (\%)} & \Delta(\%) & \multicolumn{1}{c|}{Max (fJ)} & \multicolumn{1}{c|}{\mu (fJ)} & \multicolumn{1}{c|}{\sigma (fJ)} & \multicolumn{1}{c|}{\sigma/\mu (\%)} & \Delta(\%) \\ \hline
 CMOS & 69.07 & 12.89 & 2.97 & 0.23 & \multirow{2}{*}{18.21} & 45.37 & 6.29 & 2.00 & 0.32 & \multirow{2}{*}{20.07} \\ \cline{1-5} \cline{7-10}
 CMOS ST & 93.07 & 20.26 & 3.81 & 0.19 &  & 60.64 & 10.22 & 2.60 & 0.25 &  \\ \hline
 TGA & 60.36 & 11.78 & 2.36 & 0.20 & \multirow{2}{*}{3.71} & 53.90 & 6.06 & 2.01 & 0.33 & \multirow{2}{*}{61.45} \\ \cline{1-5} \cline{7-10}
@@ -583,7 +623,7 @@ HYBRID ST & 87.13 & 23.67 & 4.15 & 0.18 &  & 81.05 & 11.65 & 3.23 & 0.28 &  \\ \
 \hline
 \multicolumn{11}{|c|}{{\ul \textbf{CARRY OUT}}} \\ \hline
 \multirow{2}{*}{\textbf{Full Adder}} & \multicolumn{5}{c|}{\textbf{Nominal @ 0.7V}} & \multicolumn{5}{c|}{\textbf{Near-threshold @ 0.4V}} \\ \cline{2-11} 
- & \multicolumn{1}{c|}{Max (fJ)} & \multicolumn{1}{c|}{μ (fJ)} & \multicolumn{1}{c|}{σ (fJ)} & \multicolumn{1}{c|}{σ/μ (\%)} & Δ(\%) & \multicolumn{1}{c|}{Max (fJ)} & \multicolumn{1}{c|}{μ (fJ)} & \multicolumn{1}{c|}{σ (fJ)} & \multicolumn{1}{c|}{σ/μ (\%)} & Δ(\%) \\ \hline
+ & \multicolumn{1}{c|}{Max (fJ)} & \multicolumn{1}{c|}{\mu (fJ)} & \multicolumn{1}{c|}{\sigma (fJ)} & \multicolumn{1}{c|}{\sigma/\mu (\%)} & \Delta(\%) & \multicolumn{1}{c|}{Max (fJ)} & \multicolumn{1}{c|}{\mu (fJ)} & \multicolumn{1}{c|}{\sigma (fJ)} & \multicolumn{1}{c|}{\sigma/\mu (\%)} & \Delta(\%) \\ \hline
 CMOS & 83.43 & 20.88 & 3.52 & 0.17 & \multirow{2}{*}{18.91} & 51.91 & 9.97 & 2.09 & 0.21 & \multirow{2}{*}{12.02} \\ \cline{1-5} \cline{7-10}
 CMOS ST & 98.66 & 30.69 & 4.20 & 0.14 &  & 70.97 & 15.16 & 2.80 & 0.18 &  \\ \hline
 TGA & 92.71 & 13.54 & 4.15 & 0.31 & \multirow{2}{*}{31.32} & 61.28 & 6.40 & 1.85 & 0.29 & \multirow{2}{*}{34.04} \\ \cline{1-5} \cline{7-10}
@@ -606,7 +646,7 @@ For area penalties there was 250\%, 287.5\%, 200\% and 307\% increase for the CM
 \label{my-label}
 \begin{tabular}{|l|l|l|}
 \hline
-\textbf{Full Adder} & \textbf{Area (µm²)} & \textbf{Ratio} \\ \hline
+\textbf{Full Adder} & \textbf{Area ($2^{\mu m}$)} & \textbf{Ratio} \\ \hline
 CMOS & 0.34 & \multirow{2}{*}{2.5} \\ \cline{1-2}
 CMOS ST & 0.85 &  \\ \hline
 TGA & 0.54 & \multirow{2}{*}{2.875} \\ \cline{1-2}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Arch Linux) (preloaded format=pdflatex 2018.6.1)  1 JUN 2018 17:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Arch Linux) (preloaded format=pdflatex 2018.6.1)  2 JUN 2018 00:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1361,13 +1361,6 @@ text indent calculated (lof, 1): 27.0pt
 number indent calculated (lof, 1): 18.0pt
 text noindent (lof, 1): 27.0pt
 number noindent (lof, 1): 0.0pt
-number indent by \l@... (lof, 1):  18.0pt
-text indent by \l@... (lof, 1):  27.60004pt
-number indent by parent (lof, 1):  18.0pt
-text indent calculated (lof, 1): 27.0pt
-number indent calculated (lof, 1): 18.0pt
-text noindent (lof, 1): 27.0pt
-number noindent (lof, 1): 0.0pt
 )
 \tf@lof=\write4
 \openout4 = `ecp-tc.lof'.
@@ -1375,6 +1368,20 @@ number noindent (lof, 1): 0.0pt
  [7
 
 ] (./ecp-tc.lot
+number indent by \l@... (lot, 1):  18.0pt
+text indent by \l@... (lot, 1):  27.60004pt
+number indent by parent (lot, 1):  18.0pt
+text indent calculated (lot, 1): 21.0pt
+number indent calculated (lot, 1): 18.0pt
+text noindent (lot, 1): 21.0pt
+number noindent (lot, 1): 0.0pt
+number indent by \l@... (lot, 1):  18.0pt
+text indent by \l@... (lot, 1):  27.60004pt
+number indent by parent (lot, 1):  18.0pt
+text indent calculated (lot, 1): 21.0pt
+number indent calculated (lot, 1): 18.0pt
+text noindent (lot, 1): 21.0pt
+number noindent (lot, 1): 0.0pt
 number indent by \l@... (lot, 1):  18.0pt
 text indent by \l@... (lot, 1):  27.60004pt
 number indent by parent (lot, 1):  18.0pt
@@ -1452,6 +1459,20 @@ text indent calculated (toc, 0): 18.0pt
 number indent calculated (toc, 0): 0.0pt
 text noindent (toc, 0): 21.0pt
 number noindent (toc, 0): 0.0pt
+number indent by \l@... (toc, 1):  18.0pt
+text indent by \l@... (toc, 1):  27.60004pt
+number indent by parent (toc, 1):  18.0pt
+text indent calculated (toc, 1): 21.0pt
+number indent calculated (toc, 1): 18.0pt
+text noindent (toc, 1): 21.0pt
+number noindent (toc, 1): 0.0pt
+number indent by \l@... (toc, 1):  18.0pt
+text indent by \l@... (toc, 1):  27.60004pt
+number indent by parent (toc, 1):  18.0pt
+text indent calculated (toc, 1): 21.0pt
+number indent calculated (toc, 1): 18.0pt
+text noindent (toc, 1): 21.0pt
+number noindent (toc, 1): 0.0pt
 number indent by \l@... (toc, 0):  0.0pt
 text indent by \l@... (toc, 0):  18.0pt
 number indent by parent (toc, 0):  0.0pt
@@ -1539,18 +1560,13 @@ Package epstopdf Info: Source file: <bulkvsfinfet.eps>
 (epstopdf)                    date: 2018-06-01 19:36:42
 (epstopdf)                    size: 37506 bytes
 (epstopdf)             Output file: <bulkvsfinfet-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-06-01 17:17:16
+(epstopdf)                    date: 2018-06-01 19:45:53
 (epstopdf)                    size: 12349 bytes
 (epstopdf)             Command: <repstopdf --outfile=bulkvsfinfet-eps-converted
 -to.pdf bulkvsfinfet.eps>
 (epstopdf)             \includegraphics on input line 233.
-runsystem(repstopdf --outfile=bulkvsfinfet-eps-converted-to.pdf bulkvsfinfet.ep
-s)...executed safely (allowed).
-
-Package epstopdf Info: Result file: <bulkvsfinfet-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-06-01 17:20:17
-(epstopdf)                    size: 12349 bytes.
-<bulkvsfinfet-eps-converted-to.pdf, id=231, 963.6pt x 542.025pt>
+Package epstopdf Info: Output file is already uptodate.
+<bulkvsfinfet-eps-converted-to.pdf, id=242, 963.6pt x 542.025pt>
 File: bulkvsfinfet-eps-converted-to.pdf Graphic file (type pdf)
 <use bulkvsfinfet-eps-converted-to.pdf>
 Package pdftex.def Info: bulkvsfinfet-eps-converted-to.pdf  used on input line 
@@ -1562,7 +1578,7 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  []
 
 [12 <./bulkvsfinfet-eps-converted-to.pdf>]
-<transistorVariability.jpg, id=258, 1336.995pt x 1047.915pt>
+<transistorVariability.jpg, id=269, 1336.995pt x 1047.915pt>
 File: transistorVariability.jpg Graphic file (type jpg)
 <use transistorVariability.jpg>
 Package pdftex.def Info: transistorVariability.jpg  used on input line 259.
@@ -1589,7 +1605,7 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  []
 
 [16]
-<Hysteresis.png, id=326, 1374.63562pt x 963.6pt>
+<Hysteresis.png, id=345, 1374.63562pt x 963.6pt>
 File: Hysteresis.png Graphic file (type png)
 <use Hysteresis.png>
 Package pdftex.def Info: Hysteresis.png  used on input line 314.
@@ -1605,113 +1621,129 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [19
 
 ]
-Overfull \hbox (5.68597pt too wide) in paragraph at lines 343--344
+<FAs.png, id=407, 1445.4pt x 1156.32pt>
+File: FAs.png Graphic file (type png)
+<use FAs.png>
+Package pdftex.def Info: FAs.png  used on input line 345.
+(pdftex.def)             Requested size: 426.79135pt x 341.42903pt.
+
+Overfull \hbox (5.68597pt too wide) in paragraph at lines 352--353
 \T1/ptm/m/n/12 work was in-spired by ([][]ZHANG; SRI-VAS-TAVA; AJMERA[][], [][]
 2003[][]) and mod-i-fied in ([][]DOKA-
  []
 
-<lpSchmitt.jpg, id=395, 602.25pt x 305.64188pt>
-File: lpSchmitt.jpg Graphic file (type jpg)
-<use lpSchmitt.jpg>
-Package pdftex.def Info: lpSchmitt.jpg  used on input line 349.
-(pdftex.def)             Requested size: 426.79135pt x 216.60616pt.
-<FULLADDERS.png, id=400, 1452.17531pt x 1360.33218pt>
-File: FULLADDERS.png Graphic file (type png)
-<use FULLADDERS.png>
-Package pdftex.def Info: FULLADDERS.png  used on input line 357.
-(pdftex.def)             Requested size: 426.79135pt x 399.80002pt.
 
 Underfull \hbox (badness 10000) has occurred while \output is active
 \T1/ptm/m/n/10.95 20
  []
 
-[20 <./lpSchmitt.jpg>]
+[20 <./FAs.png>]
 Package epstopdf Info: Source file: <STOriginal.eps>
 (epstopdf)                    date: 2018-06-01 19:36:42
 (epstopdf)                    size: 12802 bytes
 (epstopdf)             Output file: <STOriginal-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-06-01 17:17:16
+(epstopdf)                    date: 2018-06-01 19:45:53
 (epstopdf)                    size: 11064 bytes
 (epstopdf)             Command: <repstopdf --outfile=STOriginal-eps-converted-t
 o.pdf STOriginal.eps>
-(epstopdf)             \includegraphics on input line 369.
-runsystem(repstopdf --outfile=STOriginal-eps-converted-to.pdf STOriginal.eps)..
-.executed safely (allowed).
-
-Package epstopdf Info: Result file: <STOriginal-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-06-01 17:20:17
-(epstopdf)                    size: 11064 bytes.
-<STOriginal-eps-converted-to.pdf, id=415, 646.415pt x 551.05875pt>
+(epstopdf)             \includegraphics on input line 360.
+Package epstopdf Info: Output file is already uptodate.
+<STOriginal-eps-converted-to.pdf, id=428, 646.415pt x 551.05875pt>
 File: STOriginal-eps-converted-to.pdf Graphic file (type pdf)
 <use STOriginal-eps-converted-to.pdf>
 Package pdftex.def Info: STOriginal-eps-converted-to.pdf  used on input line 36
-9.
+0.
 (pdftex.def)             Requested size: 170.71718pt x 145.53377pt.
 Package epstopdf Info: Source file: <STcorrigido.eps>
 (epstopdf)                    date: 2018-06-01 19:36:42
 (epstopdf)                    size: 11715 bytes
 (epstopdf)             Output file: <STcorrigido-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-06-01 17:17:17
+(epstopdf)                    date: 2018-06-01 19:45:54
 (epstopdf)                    size: 10698 bytes
 (epstopdf)             Command: <repstopdf --outfile=STcorrigido-eps-converted-
 to.pdf STcorrigido.eps>
-(epstopdf)             \includegraphics on input line 375.
-runsystem(repstopdf --outfile=STcorrigido-eps-converted-to.pdf STcorrigido.eps)
-...executed safely (allowed).
-
-Package epstopdf Info: Result file: <STcorrigido-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-06-01 17:20:18
-(epstopdf)                    size: 10698 bytes.
-<STcorrigido-eps-converted-to.pdf, id=420, 646.415pt x 551.05875pt>
+(epstopdf)             \includegraphics on input line 366.
+Package epstopdf Info: Output file is already uptodate.
+<STcorrigido-eps-converted-to.pdf, id=433, 646.415pt x 551.05875pt>
 File: STcorrigido-eps-converted-to.pdf Graphic file (type pdf)
 <use STcorrigido-eps-converted-to.pdf>
 Package pdftex.def Info: STcorrigido-eps-converted-to.pdf  used on input line 3
-75.
+66.
 (pdftex.def)             Requested size: 170.71718pt x 145.53377pt.
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 383.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 376.
 
  (/usr/share/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 383.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 376.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.378 ...resulting in an area of 0.02916 \(\mu\)m^
+                                                  {2}.
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.379 
+      
+? 
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 380.
+
+[21 <./STOriginal-eps-converted-to.pdf> <./STcorrigido-eps-converted-to.pdf>]
+LaTeX Font Info:    Font shape `T1/ptm/bx/sc' in size <12> not available
+(Font)              Font shape `T1/ptm/b/sc' tried instead on input line 416.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.420 ...   & \multicolumn{2}{c|}{1x10^{22}m^{-3}}
+                                                                            ...
+
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.420 ...   & \multicolumn{2}{c|}{1x10^{22}m^{-3}}
+                                                                            ...
+
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.421 ...   & \multicolumn{2}{c|}{2x10^{22}m^{-3}}
+                                                   \\ \hline
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.421 ...   & \multicolumn{2}{c|}{2x10^{22}m^{-3}}
+                                                   \\ \hline
+? 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [21 <./FULLADDERS.png>]
-<testbench.jpg, id=428, 883.80188pt x 344.78813pt>
-File: testbench.jpg Graphic file (type jpg)
-<use testbench.jpg>
-Package pdftex.def Info: testbench.jpg  used on input line 391.
-(pdftex.def)             Requested size: 341.43437pt x 133.19891pt.
 
 Underfull \hbox (badness 10000) has occurred while \output is active
 \T1/ptm/m/n/10.95 22
  []
 
-[22 <./STOriginal-eps-converted-to.pdf> <./STcorrigido-eps-converted-to.pdf> <.
-/testbench.jpg>]
-Overfull \hbox (0.70302pt too wide) in paragraph at lines 415--417
+[22]
+<testbench.jpg, id=458, 883.80188pt x 344.78813pt>
+File: testbench.jpg Graphic file (type jpg)
+<use testbench.jpg>
+Package pdftex.def Info: testbench.jpg  used on input line 429.
+(pdftex.def)             Requested size: 341.43437pt x 133.19891pt.
+ [23 <./testbench.jpg>]
+Overfull \hbox (0.70302pt too wide) in paragraph at lines 455--457
 []\T1/ptm/m/n/12 For the Hy-brid Full Adder, at nom-i-nal level, there was no i
 m-prove-ments/worsening
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [23
-
-]
-<improvNominal.pdf, id=451, 614.295pt x 794.97pt>
-File: improvNominal.pdf Graphic file (type pdf)
-<use improvNominal.pdf>
-Package pdftex.def Info: improvNominal.pdf  used on input line 422.
-(pdftex.def)             Requested size: 426.79135pt x 186.61288pt.
-<improvNT.pdf, id=453, 614.295pt x 794.97pt>
-File: improvNT.pdf Graphic file (type pdf)
-<use improvNT.pdf>
-Package pdftex.def Info: improvNT.pdf  used on input line 430.
-(pdftex.def)             Requested size: 426.79135pt x 186.61288pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -1720,541 +1752,469 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 \T1/ptm/m/n/10.95 24
  []
 
-[24 <./improvNominal.pdf> <./improvNT.pdf>]
-<delaysNominalSum.pdf, id=475, 614.295pt x 794.97pt>
-File: delaysNominalSum.pdf Graphic file (type pdf)
-<use delaysNominalSum.pdf>
-Package pdftex.def Info: delaysNominalSum.pdf  used on input line 449.
+[24
+
+]
+<improvNominal.pdf, id=474, 614.295pt x 794.97pt>
+File: improvNominal.pdf Graphic file (type pdf)
+<use improvNominal.pdf>
+Package pdftex.def Info: improvNominal.pdf  used on input line 462.
+(pdftex.def)             Requested size: 426.79135pt x 186.61288pt.
+<improvNT.pdf, id=476, 614.295pt x 794.97pt>
+File: improvNT.pdf Graphic file (type pdf)
+<use improvNT.pdf>
+Package pdftex.def Info: improvNT.pdf  used on input line 470.
 (pdftex.def)             Requested size: 426.79135pt x 186.61288pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [25]
-<delaysNominalCarryOut.pdf, id=482, 614.295pt x 794.97pt>
-File: delaysNominalCarryOut.pdf Graphic file (type pdf)
-<use delaysNominalCarryOut.pdf>
-Package pdftex.def Info: delaysNominalCarryOut.pdf  used on input line 457.
-(pdftex.def)             Requested size: 426.79135pt x 196.49704pt.
-<delaysNTSum.pdf, id=484, 614.295pt x 794.97pt>
-File: delaysNTSum.pdf Graphic file (type pdf)
-<use delaysNTSum.pdf>
-Package pdftex.def Info: delaysNTSum.pdf  used on input line 465.
-(pdftex.def)             Requested size: 426.79135pt x 196.49704pt.
-<delaysNTCarryOut.pdf, id=486, 614.295pt x 794.97pt>
-File: delaysNTCarryOut.pdf Graphic file (type pdf)
-<use delaysNTCarryOut.pdf>
-Package pdftex.def Info: delaysNTCarryOut.pdf  used on input line 473.
-(pdftex.def)             Requested size: 426.79135pt x 196.49704pt.
+ [25 <./improvNominal.pdf> <./improvNT.pdf>]
+<delaysNominalSum.pdf, id=499, 614.295pt x 794.97pt>
+File: delaysNominalSum.pdf Graphic file (type pdf)
+<use delaysNominalSum.pdf>
+Package pdftex.def Info: delaysNominalSum.pdf  used on input line 489.
+(pdftex.def)             Requested size: 426.79135pt x 186.61288pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 
 Underfull \hbox (badness 10000) has occurred while \output is active
 \T1/ptm/m/n/10.95 26
  []
 
-[26 <./delaysNominalSum.pdf> <./delaysNominalCarryOut.pdf> <./delaysNTSum.pdf>]
-<energyNominalSum.pdf, id=550, 614.295pt x 794.97pt>
+[26]
+<delaysNominalCarryOut.pdf, id=505, 614.295pt x 794.97pt>
+File: delaysNominalCarryOut.pdf Graphic file (type pdf)
+<use delaysNominalCarryOut.pdf>
+Package pdftex.def Info: delaysNominalCarryOut.pdf  used on input line 497.
+(pdftex.def)             Requested size: 426.79135pt x 196.49704pt.
+<delaysNTSum.pdf, id=507, 614.295pt x 794.97pt>
+File: delaysNTSum.pdf Graphic file (type pdf)
+<use delaysNTSum.pdf>
+Package pdftex.def Info: delaysNTSum.pdf  used on input line 505.
+(pdftex.def)             Requested size: 426.79135pt x 196.49704pt.
+<delaysNTCarryOut.pdf, id=509, 614.295pt x 794.97pt>
+File: delaysNTCarryOut.pdf Graphic file (type pdf)
+<use delaysNTCarryOut.pdf>
+Package pdftex.def Info: delaysNTCarryOut.pdf  used on input line 513.
+(pdftex.def)             Requested size: 426.79135pt x 196.49704pt.
+ [27 <./delaysNominalSum.pdf> <./delaysNominalCarryOut.pdf> <./delaysNTSum.pdf>
+]
+<energyNominalSum.pdf, id=574, 614.295pt x 794.97pt>
 File: energyNominalSum.pdf Graphic file (type pdf)
 <use energyNominalSum.pdf>
-Package pdftex.def Info: energyNominalSum.pdf  used on input line 481.
+Package pdftex.def Info: energyNominalSum.pdf  used on input line 521.
 (pdftex.def)             Requested size: 426.79135pt x 196.49704pt.
-<energyNominalCarryOut.pdf, id=552, 614.295pt x 794.97pt>
+<energyNominalCarryOut.pdf, id=576, 614.295pt x 794.97pt>
 File: energyNominalCarryOut.pdf Graphic file (type pdf)
 <use energyNominalCarryOut.pdf>
-Package pdftex.def Info: energyNominalCarryOut.pdf  used on input line 489.
+Package pdftex.def Info: energyNominalCarryOut.pdf  used on input line 529.
 (pdftex.def)             Requested size: 426.79135pt x 196.49704pt.
-<energyNTSum.pdf, id=554, 614.295pt x 794.97pt>
+<energyNTSum.pdf, id=578, 614.295pt x 794.97pt>
 File: energyNTSum.pdf Graphic file (type pdf)
 <use energyNTSum.pdf>
-Package pdftex.def Info: energyNTSum.pdf  used on input line 497.
+Package pdftex.def Info: energyNTSum.pdf  used on input line 537.
 (pdftex.def)             Requested size: 426.79135pt x 196.49704pt.
-[27 <./delaysNTCarryOut.pdf> <./energyNominalSum.pdf> <./energyNominalCarryOut.
-pdf>]
-<energyNTCarryOut.pdf, id=612, 614.295pt x 794.97pt>
-File: energyNTCarryOut.pdf Graphic file (type pdf)
-<use energyNTCarryOut.pdf>
-Package pdftex.def Info: energyNTCarryOut.pdf  used on input line 505.
-(pdftex.def)             Requested size: 426.79135pt x 196.49704pt.
-
-
-! Package inputenc Error: Unicode char μ (U+3BC)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.530 }
-       
-? 
-
-! Package inputenc Error: Unicode char σ (U+3C3)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.530 }
-       
-? 
-
-! Package inputenc Error: Unicode char σ (U+3C3)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.530 }
-       
-? 
-
-! Package inputenc Error: Unicode char μ (U+3BC)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.530 }
-       
-? 
-
-! Package inputenc Error: Unicode char Δ (U+394)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.530 }
-       
-? 
-
-! Package inputenc Error: Unicode char μ (U+3BC)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.530 }
-       
-? 
-
-! Package inputenc Error: Unicode char σ (U+3C3)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.530 }
-       
-? 
-
-! Package inputenc Error: Unicode char σ (U+3C3)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.530 }
-       
-? 
-
-! Package inputenc Error: Unicode char μ (U+3BC)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.530 }
-       
-? 
-
-! Package inputenc Error: Unicode char Δ (U+394)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.530 }
-       
-? 
-
-! Package inputenc Error: Unicode char μ (U+3BC)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.552 }
-       
-? 
-
-! Package inputenc Error: Unicode char σ (U+3C3)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.552 }
-       
-? 
-
-! Package inputenc Error: Unicode char σ (U+3C3)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.552 }
-       
-? 
-
-! Package inputenc Error: Unicode char μ (U+3BC)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.552 }
-       
-? 
-
-! Package inputenc Error: Unicode char Δ (U+394)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.552 }
-       
-? 
-
-! Package inputenc Error: Unicode char μ (U+3BC)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.552 }
-       
-? 
-
-! Package inputenc Error: Unicode char σ (U+3C3)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.552 }
-       
-? 
-
-! Package inputenc Error: Unicode char σ (U+3C3)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.552 }
-       
-? 
-
-! Package inputenc Error: Unicode char μ (U+3BC)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.552 }
-       
-? 
-
-! Package inputenc Error: Unicode char Δ (U+394)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.552 }
-       
-? 
 
 Underfull \hbox (badness 10000) has occurred while \output is active
 \T1/ptm/m/n/10.95 28
  []
 
-[28 <./energyNTSum.pdf> <./energyNTCarryOut.pdf>]
+[28 <./delaysNTCarryOut.pdf> <./energyNominalSum.pdf> <./energyNominalCarryOut.
+pdf>]
+<energyNTCarryOut.pdf, id=635, 614.295pt x 794.97pt>
+File: energyNTCarryOut.pdf Graphic file (type pdf)
+<use energyNTCarryOut.pdf>
+Package pdftex.def Info: energyNTCarryOut.pdf  used on input line 545.
+(pdftex.def)             Requested size: 426.79135pt x 196.49704pt.
 
-! Package inputenc Error: Unicode char μ (U+3BC)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.574 }
+! Missing $ inserted.
+<inserted text> 
+                $
+l.570 }
+       
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.570 }
+       
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.570 }
+       
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.570 }
+       
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.570 }
+       
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.570 }
+       
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.570 }
+       
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.570 }
+       
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.570 }
+       
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.570 }
+       
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.570 }
+       
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.570 }
+       
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.570 }
+       
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.570 }
+       
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.570 }
+       
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.570 }
+       
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.592 }
+       
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.592 }
+       
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.592 }
+       
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.592 }
+       
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.592 }
+       
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.592 }
+       
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.592 }
+       
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.592 }
+       
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.592 }
+       
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.592 }
+       
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.592 }
+       
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.592 }
+       
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.592 }
+       
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.592 }
+       
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.592 }
+       
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.592 }
+       
+? 
+[29 <./energyNTSum.pdf> <./energyNTCarryOut.pdf>]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.614 }
+       
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.614 }
+       
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.614 }
+       
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.614 }
+       
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.614 }
+       
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.614 }
+       
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.614 }
+       
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.614 }
+       
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.614 }
+       
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.614 }
+       
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.614 }
+       
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.614 }
+       
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.614 }
+       
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.614 }
+       
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.614 }
+       
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.614 }
+       
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.636 }
+       
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.636 }
+       
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.636 }
+       
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.636 }
+       
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.636 }
+       
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.636 }
+       
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.636 }
+       
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.636 }
+       
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.636 }
+       
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.636 }
+       
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.636 }
+       
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.636 }
+       
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.636 }
+       
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.636 }
+       
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.636 }
+       
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.636 }
        
 ? 
 
-! Package inputenc Error: Unicode char σ (U+3C3)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.574 }
-       
-? 
-
-! Package inputenc Error: Unicode char σ (U+3C3)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.574 }
-       
-? 
-
-! Package inputenc Error: Unicode char μ (U+3BC)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.574 }
-       
-? 
-
-! Package inputenc Error: Unicode char Δ (U+394)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.574 }
-       
-? 
-
-! Package inputenc Error: Unicode char μ (U+3BC)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.574 }
-       
-? 
-
-! Package inputenc Error: Unicode char σ (U+3C3)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.574 }
-       
-? 
-
-! Package inputenc Error: Unicode char σ (U+3C3)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.574 }
-       
-? 
-
-! Package inputenc Error: Unicode char μ (U+3BC)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.574 }
-       
-? 
-
-! Package inputenc Error: Unicode char Δ (U+394)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.574 }
-       
-? 
-
-! Package inputenc Error: Unicode char μ (U+3BC)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.596 }
-       
-? 
-
-! Package inputenc Error: Unicode char σ (U+3C3)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.596 }
-       
-? 
-
-! Package inputenc Error: Unicode char σ (U+3C3)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.596 }
-       
-? 
-
-! Package inputenc Error: Unicode char μ (U+3BC)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.596 }
-       
-? 
-
-! Package inputenc Error: Unicode char Δ (U+394)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.596 }
-       
-? 
-
-! Package inputenc Error: Unicode char μ (U+3BC)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.596 }
-       
-? 
-
-! Package inputenc Error: Unicode char σ (U+3C3)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.596 }
-       
-? 
-
-! Package inputenc Error: Unicode char σ (U+3C3)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.596 }
-       
-? 
-
-! Package inputenc Error: Unicode char μ (U+3BC)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.596 }
-       
-? 
-
-! Package inputenc Error: Unicode char Δ (U+394)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.596 }
-       
-? 
-[29]
-
-! Package inputenc Error: Unicode char µ (U+B5)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.609 \textbf{Full Adder} & \textbf{Area (µm²)}
-                                                  & \textbf{Ratio} \\ \hline
-? 
-
-! Package inputenc Error: Unicode char ² (U+B2)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.609 \textbf{Full Adder} & \textbf{Area (µm²)}
-                                                  & \textbf{Ratio} \\ \hline
-? 
-<CMOS.png, id=654, 715.67375pt x 199.74625pt>
-File: CMOS.png Graphic file (type png)
-<use CMOS.png>
-Package pdftex.def Info: CMOS.png  used on input line 624.
-(pdftex.def)             Requested size: 426.79135pt x 119.12022pt.
-<CMOSST.png, id=655, 1201.96422pt x 147.58295pt>
-File: CMOSST.png Graphic file (type png)
-<use CMOSST.png>
-Package pdftex.def Info: CMOSST.png  used on input line 630.
-(pdftex.def)             Requested size: 426.79135pt x 52.40244pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 6300) has occurred while \output is active []
 
 
 Underfull \hbox (badness 10000) has occurred while \output is active
@@ -2262,88 +2222,109 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  []
 
 [30]
-<TGA.png, id=660, 1201.20348pt x 224.41737pt>
+<CMOS.png, id=678, 715.67375pt x 199.74625pt>
+File: CMOS.png Graphic file (type png)
+<use CMOS.png>
+Package pdftex.def Info: CMOS.png  used on input line 664.
+(pdftex.def)             Requested size: 426.79135pt x 119.12022pt.
+<CMOSST.png, id=679, 1201.96422pt x 147.58295pt>
+File: CMOSST.png Graphic file (type png)
+<use CMOSST.png>
+Package pdftex.def Info: CMOSST.png  used on input line 670.
+(pdftex.def)             Requested size: 426.79135pt x 52.40244pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [31]
+<TGA.png, id=686, 1201.20348pt x 224.41737pt>
 File: TGA.png Graphic file (type png)
 <use TGA.png>
-Package pdftex.def Info: TGA.png  used on input line 641.
+Package pdftex.def Info: TGA.png  used on input line 681.
 (pdftex.def)             Requested size: 426.79135pt x 79.73549pt.
-<TGAST.png, id=661, 1197.3998pt x 78.3559pt>
+<TGAST.png, id=687, 1197.3998pt x 78.3559pt>
 File: TGAST.png Graphic file (type png)
 <use TGAST.png>
-Package pdftex.def Info: TGAST.png  used on input line 647.
+Package pdftex.def Info: TGAST.png  used on input line 687.
 (pdftex.def)             Requested size: 426.79135pt x 27.92831pt.
-<TFA.png, id=662, 1200.44273pt x 253.32536pt>
+<TFA.png, id=688, 1200.44273pt x 253.32536pt>
 File: TFA.png Graphic file (type png)
 <use TFA.png>
-Package pdftex.def Info: TFA.png  used on input line 658.
+Package pdftex.def Info: TFA.png  used on input line 698.
 (pdftex.def)             Requested size: 426.79135pt x 90.06448pt.
-<TFAST.png, id=663, 1201.96422pt x 127.04305pt>
+<TFAST.png, id=689, 1201.96422pt x 127.04305pt>
 File: TFAST.png Graphic file (type png)
 <use TFAST.png>
-Package pdftex.def Info: TFAST.png  used on input line 664.
+Package pdftex.def Info: TFAST.png  used on input line 704.
 (pdftex.def)             Requested size: 426.79135pt x 45.10931pt.
-<HYBRID.png, id=664, 1197.3998pt x 236.58916pt>
+<HYBRID.png, id=690, 1197.3998pt x 236.58916pt>
 File: HYBRID.png Graphic file (type png)
 <use HYBRID.png>
-Package pdftex.def Info: HYBRID.png  used on input line 675.
+Package pdftex.def Info: HYBRID.png  used on input line 715.
 (pdftex.def)             Requested size: 426.79135pt x 84.32727pt.
-<HYBRIDST.png, id=665, 1195.87831pt x 75.31294pt>
+<HYBRIDST.png, id=691, 1195.87831pt x 75.31294pt>
 File: HYBRIDST.png Graphic file (type png)
 <use HYBRIDST.png>
-Package pdftex.def Info: HYBRIDST.png  used on input line 681.
+Package pdftex.def Info: HYBRIDST.png  used on input line 721.
 (pdftex.def)             Requested size: 426.79135pt x 26.87704pt.
 
 Underfull \vbox (badness 1178) has occurred while \output is active []
 
- [31 <./CMOS.png> <./CMOSST.png> <./TGA.png> <./TGAST.png> <./TFA.png> <./TFAST
-.png>]
+
 Underfull \hbox (badness 10000) has occurred while \output is active
 \T1/ptm/m/n/10.95 32
  []
 
-[32 <./HYBRID.png> <./HYBRIDST.png>] (./ecp-tc.bbl [33
-
-]
+[32 <./CMOS.png> <./CMOSST.png> <./TGA.png> <./TGAST.png> <./TFA.png> <./TFAST.
+png>] [33 <./HYBRID.png> <./HYBRIDST.png>] (./ecp-tc.bbl
 Underfull \hbox (badness 10000) has occurred while \output is active
 \T1/ptm/m/n/10.95 34
  []
 
 [34
 
-]) 
+] [35
+
+]
+Underfull \hbox (badness 10000) has occurred while \output is active
+\T1/ptm/m/n/10.95 36
+ []
+
+[36]) 
 AED: lastpage setting LastPage
-[35]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 702.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 702.
+[37]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 742.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 742.
  (./ecp-tc.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 702.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 702.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 742.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 742.
 Package rerunfilecheck Info: File `ecp-tc.out' has not changed.
-(rerunfilecheck)             Checksum: 9F14F3D2B332CD6548B152D960A0051C;2699.
+(rerunfilecheck)             Checksum: 459721CA8DEFABDB0AD83CEB69176B60;3031.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 702.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 742.
  ) 
 Here is how much of TeX's memory you used:
- 22789 strings out of 492982
- 378398 string characters out of 6138580
- 494854 words of memory out of 5000000
- 25950 multiletter control sequences out of 15000+600000
- 561580 words of font info for 53 fonts, out of 8000000 for 9000
+ 22810 strings out of 492982
+ 378822 string characters out of 6138580
+ 496479 words of memory out of 5000000
+ 25962 multiletter control sequences out of 15000+600000
+ 566868 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 48i,12n,46p,10362b,573s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 48i,12n,46p,10362b,590s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
-msy10.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb></usr/sha
-re/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-dist/fonts/typ
-e1/urw/times/utmr8a.pfb>
-Output written on ecp-tc.pdf (35 pages, 2096065 bytes).
+c/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/s
+hare/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/u
+rw/helvetic/uhvro8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmb8a.pfb
+></usr/share/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
+Output written on ecp-tc.pdf (37 pages, 3901199 bytes).
 PDF statistics:
- 759 PDF objects out of 1000 (max. 8388607)
- 627 compressed objects within 7 object streams
- 134 named destinations out of 1000 (max. 500000)
- 341 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 800 PDF objects out of 1000 (max. 8388607)
+ 666 compressed objects within 7 object streams
+ 142 named destinations out of 1000 (max. 500000)
+ 352 words of extra memory for PDF output out of 10000 (max. 10000000)
 

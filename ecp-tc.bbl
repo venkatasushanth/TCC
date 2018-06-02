@@ -51,6 +51,11 @@
   Proceedings. 2002 IEEE International Conference on}. [S.l.], 2002. p.
   260--267.}
 
+\bibitem[Clark et al. 2016]{clark2016asap7}
+\abntrefinfo{Clark et al.}{CLARK et al.}{2016}
+{CLARK, L.~T. et al. Asap7: A 7-nm finfet predictive process design kit. In:  .
+  [S.l.]: Elsevier, 2016. v.~53, p. 105--115.}
+
 \bibitem[Cockrill 2011]{WinNT}
 \abntrefinfo{Cockrill}{COCKRILL}{2011}
 {COCKRILL, C. \textbf{Understanding Schmitt Triggers - Application Report}.
@@ -113,6 +118,13 @@ Available from Internet: \url{http://www.ti.com/lit/an/scea046/scea046.pdf}.}
 {ISLAM, A.; HASAN, M. Design and analysis of power and variability aware
   digital summing circuit. In:  . [S.l.: s.n.], 2011. v.~2, n.~2, p. 6--14.}
 
+\bibitem[Meinhardt, Zimpeck and Reis 2014]{meinhardt2014impact}
+\abntrefinfo{Meinhardt, Zimpeck and Reis}{MEINHARDT; ZIMPECK; REIS}{2014}
+{MEINHARDT, C.; ZIMPECK, A.~L.; REIS, R. Impact of gate workfunction
+  fluctuation on finfet standard cells. In:  IEEE. \textbf{Electronics,
+  Circuits and Systems (ICECS), 2014 21st IEEE International Conference on}.
+  [S.l.], 2014. p. 574--577.}
+
 \bibitem[Moghaddam, Moaiyeri and Eshghi 2017]{moghaddam2017design}
 \abntrefinfo{Moghaddam, Moaiyeri and Eshghi}{MOGHADDAM; MOAIYERI; ESHGHI}{2017}
 {MOGHADDAM, M.; MOAIYERI, M.~H.; ESHGHI, M. Design and evaluation of an
@@ -163,6 +175,12 @@ Available from Internet: \url{http://www.ti.com/lit/an/scea046/scea046.pdf}.}
 {WALKER, J.~A. et al. Optimizing electronic standard cell libraries for
   variability tolerance through the nano-cmos grid. In:  . [S.l.]: The Royal
   Society, 2010. v.~368, n.~1925, p. 3967--3981.}
+
+\bibitem[Wang et al. 2011]{wang2011statistical}
+\abntrefinfo{Wang et al.}{WANG et al.}{2011}
+{WANG, X. et al. Statistical threshold-voltage variability in scaled
+  decananometer bulk hkmg mosfets: A full-scale 3-d simulation scaling study.
+  In:  . [S.l.]: IEEE, 2011. v.~58, n.~8, p. 2293--2301.}
 
 \bibitem[Weste and Eshraghian 1985]{weste1985principles}
 \abntrefinfo{Weste and Eshraghian}{WESTE; ESHRAGHIAN}{1985}
