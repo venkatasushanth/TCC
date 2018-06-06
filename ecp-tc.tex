@@ -59,12 +59,11 @@
 
 % orientador e co-orientador são opcionais (não diga isso pra eles :))
 \advisor[Prof.~Dr.]{Reis}{Ricardo}
+\coadvisor[Prof.~Dr]{Zimpeck}{Alexandra L.}
 %\coadvisor[Prof.~Dr.]{Meinhardt}{Cristina}
-\coadvisor[Prof.~Dr]{Zimpeck}{Alexandra Lackmann}
-
 % a data deve ser a da defesa; se nao especificada, são gerados
 % mes e ano correntes
-\date{July}{2018}
+%\date{July}{2018}
 
 % o local de realização do trabalho pode ser especificado (ex. para TCs)
 % com o comando \location:
@@ -161,6 +160,40 @@ Agradeço ao \LaTeX\ por não ter vírus de macro\ldots
 \begin{listofabbrv}{SPMD}
         \item[FA] Full Adder
         \item[PVT] Process, Voltage and Temperature
+        \item[CMOS] Complementary-Metal-Oxide-Semiconductor
+        \item[ST] Schmitt Trigger
+        \item[FinFET] Fin Field Effect Transistor
+        \item[SOI] Silicon On Insulator
+        \item[SCE] Short-Channel Effect
+        \item[RDP] Random Dopant Fluctuation
+        \item[NBTI] Negative Bias Temperature Instability
+        \item[PBTI] Positive Bias Temperature Instability
+        \item[WF] Work Function
+        \item[WFF] Work Function Fluctuation
+        \item[L\textsc{g}] Gate Length
+        \item[H\textsc{fin}] Fin Height
+        \item[T\textsc{si}] Fin Thickness
+        \item[V\textsc{th}] Threshold Voltage
+        \item[I\textsc{on}] On-Current
+        \item[I\textsc{off}] Off-Current
+        \item[PDP] Power-Delay-Product
+        \item[CPL] Complementary Pass-transistor Logic
+        \item[TGA] Transmission Gate Adder
+        \item[TFA] Transmission Function Adder
+        \item[EDP] Energy-Delay-Product
+        \item[CNFET] Carbon Nanotube Field Effect Transistor
+        \item[FDSOI] Fully Depleted Silicon On Insulator
+        \item[OTS] Optimized Transistor Sizing
+        \item[SRAM] Static Random-Access Memory
+        \item[PMOS] P-channel Metal-Oxide-Semiconductor
+        \item[NMOS] N-channel Metal-Oxide-Semiconductor
+        \item[EDA] Electronic Design Automation
+        \item[PDK] Process Design Kit
+        \item[ASAP] Arizona State Predictive PDK
+        \item[M2] Metal 2
+        \item[MC] Monte Carlo
+        \item[PTM] Predictive Technology Model
+        \item[NT] Near-Threshold
 \end{listofabbrv}
 
 % idem para a lista de símbolos
@@ -188,7 +221,7 @@ The same technology scaling that allowed the increase in transistor density also
 
 The ascending number of mobile applications that depends on highly sophisticated processing schemes with a limited power-supply capability of today’s batteries brings conflicting needs. The need to explore high-performance designs and implementations to meet the speed constraints for real-time applications and, simultaneously, consider low-power design approaches to extend the battery life of portable devices \cite{shoarinejad:03}. 
 
-Due to the new power consumption concern, novel types of logic blocks for chips started being designed for low power. One of the most present logic blocks in computer systems is the Full Adder. It plays a central role in performing general arithmetic operations such as addition, subtraction, division, shift and so on. The full adder operation adds two bits considering the Carry Out value from a less significant stage. It follows the equations \ref{eqn:01} and \ref{eqn:02} with the Truth Table \ref{tab:01}.
+Due to the new power consumption concern, novel types of logic blocks for chips started being designed for low power. One of the most present logic blocks in computer systems is the Full Adder (FA). It plays a central role in performing general arithmetic operations such as addition, subtraction, division, shift and so on. The full adder operation adds two bits considering the Carry Out value from a less significant stage. It follows the equations \ref{eqn:01} and \ref{eqn:02} with the Truth Table \ref{tab:01}.
 
 \begin{equation}
 \label{eqn:01}
@@ -220,28 +253,28 @@ A       & B      & Cin      & Sum          & Cout         \\ \hline
 
 Adder cells define the throughput and are employed in the processor’s executive, floating-point, and memory address generation units. Due to its absolute numbers in microprocessors and their part on the critical path of electronic systems, any improvements over adding blocks generates a considerable improvement in the whole system because of the huge influence of power, timing and area characteristics on the system design \cite{shoarinejad:03}.
 
-Moore’s law predicts that the number of transistors per square on integrated circuits will double every year and it has been guiding the industry trending for decades. However, continue with scaling in the bulk CMOS technology has been no straightforward task. At deep nanotechnology nodes, each chip may show different behavior due to process variations during the manufacturing steps. Variations that influence the circuits metrics such as performance and power consumption, hastening the circuit degradation and making it deviate from its correct operation \cite{abbas:15} \cite{nassif:08}. 
+Moore’s law predicts that the number of transistors per square on integrated circuits will double every year and it has been guiding the industry trending for decades. However, continue with scaling in the bulk Complemenatry metal-oxide-semiconductor (CMOS) technology has been no straightforward task. At deep nanotechnology nodes, each chip may show different behavior due to process variations during the manufacturing steps. Variations that influence the circuits metrics such as performance and power consumption, hastening the circuit degradation and making it deviate from its correct operation \cite{abbas:15} \cite{nassif:08}. 
 
-In this context, this work employs a technique using Schmitt Trigger (ST) inverters for process variability mitigation on different Full Adder topologies with priority on power consumption variations. Performance, power, and area penalty will be analyzed alongside variability robustness. 
+In this context, this work employs a technique using Schmitt Trigger (ST) inverters for process variability mitigation on different Full Adder topologies with priority on power consumption variations. Performance, power, and area penalty were analyzed alongside variability robustness. 
 
 Promising new commercial technologies based on the Fin Field Effect Transistor (FinFET) devices have been introduced to maintain the technology scaling. The process variability impact on those technologies have shown to be less present, although it can not be ignored, being necessary more research concerning the characterization of process variability effect on emerging technologies. 
 
-FinFET technology is built on a Silicon on Insulator (SOI) substrate with a conducting channel that rises above the level of the insulator, creating a thin silicon structure, the gate as shown in Figure \ref{fig:Fig1}. The channel being surrounded from three dimensions by the gate results in a superior control, reduced SCE (short-channel effect) and eliminated RDF (random dopant fluctuation) effect due to the fully depleted channel that causes less sensitivity to process variations \cite{taur2013fundamentals}. 
+FinFET technology is built on a Silicon on Insulator (SOI) substrate with a conducting channel that rises above the level of the insulator, creating a thin silicon structure, the gate as shown in Figure \ref{fig:Fig1}. The channel being surrounded from three dimensions by the gate results in a superior control, reduced short-channel effect (SCE) and eliminated random dopant fluctuation (RDF) effect due to the fully depleted channel that causes less sensitivity to process variations \cite{taur2013fundamentals}. 
 
-\begin{figure}[ht]
+\begin{figure}[H]
 \centering
 \includegraphics[width=.8\textwidth, trim={0 3cm 0 5cm},clip]{bulkvsfinfet.eps}
 \caption{Comparison between Bulk CMOS (left) and FinFET (right) transistors.}
 \label{fig:Fig1}
 \end{figure}
 
-This work is divided into six further sections: Variability Effects and Mitigation Techniques, with a theoretical foundation about variability. Motivation and Objectives, explaining in more details this work’s objective. Methodology, presenting how results will be achieved with its experimental setup. Schedule, giving a prospect about next semester plans on future work. 
+This work is divided into five further sections: Variability Effects and Mitigation Techniques, with a theoretical foundation about variability. Motivation and Objectives, explaining in more details this work’s objective. Methodology, presenting how results were achieved with its experimental setup. The Results and Discussion presenting the simulation results and its analysis. And, lastly, the Conclusions.
 
 \chapter{Variability Effects and Mitigation Techniques}
 
 Standard CMOS devices have been optimized for high-speed and low-power consumption through its lifetime being the backbone of almost all modern digital circuits. The periodic process of technology scaling has resulted in faster and more energy efficient transistor than the previous generation. As channel lengths shrank below 50nm, the ratio of device size to atom-size becomes smaller, hence, a variable structure at the atomic scale has an increased effect on device behavior. There have been advances to reduce the loss of precision due to the manufacturing process. However, the intrinsic quantum-mechanical limitations cannot be overcome, with their impact increasing as the technology shrinks further. 
 
-Variability can occur in both spatial and temporal domains with deterministic and stochastic fluctuations \cite{walker2010optimizing}. In summary, variability consists of deviation of characteristics, internal or external, to the circuit, which can determine its operational features such as power and delay. These characteristics, or factors, as we will address them for the rest of this work, can be divided into three types: 
+Variability can occur in both spatial and temporal domains with deterministic and stochastic fluctuations \cite{walker2010optimizing}. In summary, variability consists of deviation of characteristics, internal or external, to the circuit, which can determine its operational features such as power and delay. These characteristics, or factors, as we addressed them for the rest of this work, can be divided into three types: 
  
 Environmental Factors:  
 Caused by temperature fluctuations and voltage drops. Voltage drops occurs due to abrupt changes in the switching activity, causing large current transients in the system, which can occur locally as well globally across the die \cite{nassif:08}. 
@@ -254,7 +287,7 @@ It is related to variations caused by the manufacturing process, which results i
 
 Additionally, the technology scaling and manufacturing tolerances are not correspondingly moving side by side. For instance, the pace at which the effective channel length is reduced is faster than the improvement of mask fabrication error and mask overlay control \cite{nassif:08} \cite{aghababa2009static}.
 
-\begin{figure}[ht]
+\begin{figure}[H]
 \centering
 \includegraphics[width=.5\textwidth]{transistorVariability.jpg}
 \caption{Transistor Variability}
@@ -270,7 +303,7 @@ These three types of variabilities, in conjunction, may prevent circuits from me
 \label{tab:02}
 \legend{Source: \cite{rahimi2016variability}}
 \resizebox{\textwidth}{!}{%
-\begin{tabular}{|l|c|c|c|c|}
+\begin{tabular}{lcccc}
 \hline
 Property & Ease of measuring & Variability & Effects of Variability & Effect of missing specification \\ \hline
 Performance & Medium & Medium: up to 60\% & L, W, R, C, Vth, \(\mu\) & Slower product, yield, timing error \\ \hline
@@ -281,23 +314,31 @@ Dynamic Power & Difficult & Workload dependent & C,  \(\alpha\) & Shorter batter
 \end{table}
 
 This work evaluates the effects caused by the physical variability. In FinFET, the physical variations are responsible for deviations in the device work function (WF), gate length (L\textsc{g}), fin height (H\textsc{fin}), fin thickness (T\textsc{si}) and parasitic resistances. It is shown in \cite{meinhardt2014impact} that work 
-function fluctuation (WFF) is the main cause of threshold voltage (V\textsc{th}) variations. Alongside, in \cite{wang2011statistical} is shown the high correlation between the variability in I\textsc{on} and I\textsc{off} currents and V\textsc{th} fluctuation in the presence of granularity of the metal gate. The main cause of WFF is due to its dependency over the orientation of its metal grains. In the real fabrication process, metal gate devices are generally produced using multiple types of metal with different work functions randomly aligned. In the ideal fabrication process, metal gate devices have the gates manufactured with uniformly aligned metal and then, they have very low WFF deviation \cite{zimpeck2016finfet}.
+function fluctuation (WFF) is the main cause of threshold voltage (V\textsc{th}) variations. Alongside, in \cite{wang2011statistical} is shown the high correlation between the variability in the on (I\textsc{on}) and off (I\textsc{off}) currents and V\textsc{th} fluctuation in the presence of granularity of the metal gate. The main cause of WFF is due to its dependency over the orientation of its metal grains. In the real fabrication process, metal gate devices are generally produced using multiple types of metal with different work functions randomly aligned as depicted in Figure \ref{wff}. In the ideal fabrication process, metal gate devices have the gates manufactured with uniformly aligned metal and then, they have very low WFF deviation \cite{zimpeck2016finfet}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{wff.png}
+\caption{Metal gate fabrication ideal and real aspects.}
+\label{wff}
+\legend{Source: \cite{meinhardt2014impact}}
+\end{figure}
 
 At circuit level there is multiple techniques to predict and prevent errors: Tuning CMOS knobs, circuit topology optimizations, self-timed circuits, temporal and logical error masking, relaxed retiming and graceful degradation, and inexact circuits. Although, there are few approaches to decrease the process variability at its core. It is due to the technology dependency present in this problem \cite{rahimi2016variability}.
 
 It can be observed that many works try to indicate the most robust design for a given type of circuit. For example, in \cite{dokania2013investigation} twelve different Full Adder topologies are analyzed considering delay, power and Power-Delay-Product (PDP) variability. It is used a 16nm bulk CMOS technology node in SPICE simulations with Process, Voltage and Temperature (PVT) variability being considered and Monte Carlo simulations performed. The authors concluded that Cell A, CLRCL and Cell B full adders presented the best results for all three metrics (Delay, Power and PDP).
 
-In \cite{ames2016investigating} the effects of PVT variability in different full adder designs are investigated. The simulations are performed in HSPICE with the bulk CMOS 32nm node technology. With TGA and TFA architectures showing acceptable behavior under PVT variability with the lowest power consumption sensibility amongst the tested full adders - 11x smaller in comparison with Complementary Pass Transistor Logic (CPL) Full Adder.
+In \cite{ames2016investigating} the effects of PVT variability in different full adder designs are investigated. The simulations are performed in HSPICE with the bulk CMOS 32nm node technology. With Transmission Gate Full Adder (TGA) and Transmission Function Adder (TFA) architectures showing acceptable behavior under PVT variability with the lowest power consumption sensibility amongst the tested full adders - 11x smaller in comparison with Complementary Pass Transistor Logic (CPL) Full Adder.
 
-In \cite{islam2011design} various popular 1-bit digital summing circuits functionality and robustness are analyzed in light of PVT variations with the best full adder being simulated in CNFET technology for comparison with the bulk CMOS version. The simulations are carried at the 22nm bulk CMOS and CNFET technology node in HSPICE. Its results show that the TGA has the strongest PVT variability robustness and its CNFET version provides over 3x, 1.14x and 1.1x less propagation delay, power dissipation and energy delay product (EDP) variations, respectively. This work does not consider the total power consumption of each full adder separately.
+In \cite{islam2011design} various popular 1-bit digital summing circuits functionality and robustness are analyzed in light of PVT variations with the best full adder being simulated in Carbon Nanotube Field Effect Transistor (CNFET) technology for comparison with the bulk CMOS version. The simulations are carried at the 22nm bulk CMOS and CNFET technology node in HSPICE. Its results show that the TGA has the strongest PVT variability robustness and its CNFET version provides over 3x, 1.14x and 1.1x less propagation delay, power dissipation and energy delay product (EDP) variations, respectively. This work does not consider the total power consumption of each full adder separately.
 
-Some articles analyze the adoption of new technologies: \cite{guduri2015design} proposes a hybrid of bulk CMOS and CNFET (Carbon Nanotube Field Effect Transistor) Full Adder at 16nm in deep subthreshold operation region for ultralow-power applications simulated in SPICE which showed some improvement over its bulk CMOS Full Adder counterpart achieving 5\% and 1\% improvement in power, power-delay and energy-delay products and their variability, respectively.  
+Some articles analyze the adoption of new technologies: \cite{guduri2015design} proposes a hybrid of bulk CMOS and CNFET Full Adder at 16nm in deep subthreshold operation region for ultralow-power applications simulated in SPICE which showed some improvement over its bulk CMOS Full Adder counterpart achieving 5\% and 1\% improvement in power, power-delay and energy-delay products and their variability, respectively.  
 
-In \cite{islam2011variability} a new subthreshold-FinFET (Fin Field-Effect Transistor) Full Adder is proposed and compared over multiple full adders showing huge metric improvements provided by the FinFET technology up to 2.22x improvement in power variability. It was simulated in 32nm predictive technology model on HSPICE. 
+In \cite{islam2011variability} a new subthreshold-FinFET Full Adder is proposed and compared over multiple full adders showing huge metric improvements provided by the FinFET technology up to 2.22x improvement in power variability. It was simulated in 32nm predictive technology model on HSPICE. 
 
 It is notable that none of these works consider a layout approach for its simulations and do not address any novel general technique which can be applied to a range of different types of circuits. Although, some works introduce novel designs.
 
-\cite{federspiel201228nm} presents reliability comparison between 28nm bulk CMOS and FDSOI technologies at layout level, with FDSOI showing 32\% improved performance, 40\% reduced power consumption and improved matching, with its intrinsic reliability behavior similar to 28nm bulk at the device level. \cite{alioto2007delay} presents a study about the delay variability caused by supply variations in the Transmission Gate Full Adder (TGA). The experiments were performed at 90nm and 180nm bulk CMOS Technology in Spectre at layout level. It showed that lower supply voltages bring more delay variability to the circuit with the TG FA presenting worse results 15\% (25\%) for the 90 nm (180 nm) in comparison to static logic.
+\cite{federspiel201228nm} presents reliability comparison between 28nm bulk CMOS and Fully Depleted Silicon On Insulator (FDSOI) technologies at layout level, with FDSOI showing 32\% improved performance, 40\% reduced power consumption and improved matching, with its intrinsic reliability behavior similar to 28nm bulk at the device level. \cite{alioto2007delay} presents a study about the delay variability caused by supply variations in the TGA. The experiments were performed at 90nm and 180nm bulk CMOS Technology in Spectre at layout level. It showed that lower supply voltages bring more delay variability to the circuit with the TGA presenting worse results 15\% (25\%) for the 90 nm (180 nm) in comparison to static logic.
 
 Some works focus on evaluating techniques: In \cite{zimpeck2016finfet} three dimensioning methods are applied on multiple circuits and their impact on variability robustness is analyzed. The simulations were performed considering a 14nm FinFET technology using HSPICE tool. The authors concluded that the Optimized Transistor Sizing (OTS) technique has the best ratio between nominal PDP and PDP under process variability.
 
@@ -309,23 +350,23 @@ Schmitt triggers are commonly used as internal circuits on systems to provide en
 
 If the threshold shifts, it will cross the input causing it to switch again. It can go indefinitely causing oscillation. The same thing can happen if there is noise on the input. Schmitt Triggers are applied in these cases to filter noise introducing superior and inferior threshold voltages, as shown in Figure \ref{fig:Fig3}.c. The difference between the thresholds is called Hysteresis \cite{WinNT}, its curve is shown at \ref{fig:Fig3}.a. According to the Schmitt Trigger behavior, it can mitigate the influence of variations in the inputs product of PVT variability. In figure \ref{fig:Fig3}.c is shown a classical CMOS Schmitt Trigger design. 
 
-\begin{figure}[ht]
+\begin{figure}[H]
 \centering
-\includegraphics[width=1\textwidth]{Hysteresis.png}
-\caption{a) General Schmitt Trigger's hysteresis curve b) Classical CMOS Schmitt Trigger Topology c) Typical signal filtering with Schmitt Trigger.}
+\includegraphics[width=0.8\textwidth]{Hysteresis.png}
+\caption{a) General ST hysteresis curve b) Classical CMOS ST Topology c) Typical signal filtering with ST.}
 \label{fig:Fig3}
 \legend{Source: \cite{WinNT}}
 \end{figure}
 
-This technique is tested in several works: In \cite{ahmad2016single} it is presented a novel Schmitt-trigger-based single-ended 11T SRAM cell. It analyses its performance against seven different SRAM topologies. The novel cell showed the least energy consumption per operation with the smallest leakage power and a 6.9x higher Ion/Ioff ratio. Further PVT variability simulations confirmed the robustness of the design regarding read and write operation. The simulations were carried in 22nm predictive technology using HSPICE.
+This technique is tested in several works: In \cite{ahmad2016single} it is presented a novel Schmitt-trigger-based single-ended 11 Transistor Static random-access memory (SRAM) cell. It analyses its performance against seven different SRAM topologies. The novel cell showed the least energy consumption per operation with the smallest leakage power and a 6.9x higher Ion/Ioff ratio. Further PVT variability simulations confirmed the robustness of the design regarding read and write operation. The simulations were carried in 22nm predictive technology using HSPICE.
 
-\cite{moghaddam2017design} presents a Schmitt trigger (ST) buffer using carbon nanotube FET (CNTFET). It was evaluated against other two buffers and showed, on average, 68\% higher critical charge and 53\% lower energy consumption and a huge gain considering PVT variability robustness. The simulations were carried in 16nm Stanford CNTFET model using HSPICE.
+\cite{moghaddam2017design} presents a Schmitt trigger (ST) buffer using CNFET. It was evaluated against other two buffers and showed, on average, 68\% higher critical charge and 53\% lower energy consumption and a huge gain considering PVT variability robustness. The simulations were carried in 16nm Stanford CNFET model using HSPICE.
 	
 Alongside, in \cite{samuel2016} the ST technique is applied on four Full Adders. It presented promising results regarding the power deviation due to the process variability with a decrease up to 79\% with a drawback of a significant increase in average energy consumption. The simulations were performed with the 16nm technology predictive technology model in NGSPICE. 
 
 \chapter{Methodology}
 
-For the experiments, there will be considered four different types of Full Adders topologies to evaluate their robustness to process variability with their internal inverters replaced by Schmitt Triggers. The Full Adders listed below have been chosen due to their promising results in related works \cite{ames2016investigating} \cite{dokania2015circuit} \cite{dokania2013investigation}:
+For the experiments, there were considered four different types of Full Adders topologies to evaluate their robustness to process variability with their internal inverters replaced by Schmitt Triggers. The Full Adders listed below have been chosen due to their promising results in related works \cite{ames2016investigating} \cite{dokania2015circuit} \cite{dokania2013investigation}:
 
 \begin{enumerate}
     \item Complementary MOSFET Adder (CMOS)
@@ -334,13 +375,13 @@ For the experiments, there will be considered four different types of Full Adder
     \item Hybrid Full Adder
 \end{enumerate}
 
-The CMOS Full Adder is considered the most traditional Full Adder topology containing 28 Transistors arranged in a pull-up and pull-down networks, which are logically complementary. It has a full voltage swing and buffered Sum and Cout signal and the advantages of good conductibility and robustness when working with novel technologies and low voltages. However, it has high capacitance because each input is connected to the gate of at least a PMOS and NMOS device additionally, it shows the impact of the pull-up network that makes the circuit slower due to the low mobility of its holes \cite{beckett2002fine} \cite{devadas2017design} \cite{islam2011design}. 
+The CMOS Full Adder is considered the most traditional Full Adder topology containing 28 Transistors arranged in a pull-up and pull-down networks, which are logically complementary. It has a full voltage swing and buffered Sum and Cout signal and the advantages of good conductibility and robustness when working with novel technologies and low voltages. However, it has high capacitance because each input is connected to the gate of at least a p-channel metal-oxide-semiconductor (PMOS) and n-channel metal-oxide-semiconductor (NMOS) device additionally, it shows the impact of the pull-up network that makes the circuit slower due to the low mobility of its holes \cite{beckett2002fine} \cite{devadas2017design} \cite{islam2011design}. 
 
 Transmission Gate Full Adder \cite{weste1985principles} contains 16 transistors, and is a high speed and low power design. However, shows low driving capability which may be unacceptable in some cases where there is a long chain of full adders due to the increase in delay \cite{islam2011design}. The Transmission Function Adder is based on transmission gates as well, containing 20 transistors, working satisfactorily with low voltages but losing performance when cascaded due to the lack of supply/ground contacts and, consequently, driving capability \cite{navi2009novel}. Both TFA and TGA generate the XOR function (H = A XOR B) followed by an inverter which produces the XNOR function (H’). H and H’ are used to control the transmission gates generating the Sum and Cout outputs. The inverter generates delay between H and H’, which will cause the transmission gates to behave as pass transistors, that may introduce glitches and consequently, increase the power consumption of these cells. Additionally, TGA contains three inverters, one more than TFA. The inverters switching introduce more short-circuit power \cite{shams2000novel}.
 
 Inspired by CMOS and CPL Full Adders architectures, the Hybrid Full Adder \cite{navi2009novel} contains 26 transistors, with the main advantage of a high output signal and low power properties. Although, the design shows high input capacitance for specific input vectors. The Full Adder designs are shown in Figure \ref{fig:Fig5}.
 
-\begin{figure}[ht]
+\begin{figure}[H]
 \centering
 \includegraphics[width=1\textwidth]{FAs.png}
 \caption{Full Adders with internal inverters to be replaced highlighted.}
@@ -353,7 +394,7 @@ A variety of CMOS Schmitt Trigger designs have been proposed and implemented ove
 
 In this design a dynamic body-bias technique is applied through a feedback mechanism to a standard CMOS inverter circuit, thus allowing a change in the threshold voltages of two MOSFETs, implying a change in the switching voltage. 
 
-\begin{figure}[ht]
+\begin{figure}[H]
 \centering
 \begin{subfigure}{.5\textwidth}
   \centering
@@ -373,17 +414,17 @@ In this design a dynamic body-bias technique is applied through a feedback mecha
 
 \section{Layout Design}
 
-All Full Adders layouts will be designed using the Virtuoso Electronic Design Automation (EDA) tool from Cadence\textregistered{} with the process design kit (PDK) of 7-nm FinFET (ASAP) from the Arizona State University in partnership with ARM \cite{clark2016asap7}. This PDK was chosen due to realistic design conjecture regarding the current design competencies. Due to limitations of ASAP7 technology, it is not possible to connect the NMOS bulks separately due to the shared substrate. Given that, the Schmitt Trigger behavior is preserved with only minor changes between charging and discharging delays due to the difference between PMOS and NMOS threshold voltages. The ST applied in this work is shown at Figure \ref{fig:sub2}.
+All Full Adders layouts were designed using the Virtuoso Electronic Design Automation (EDA) tool from Cadence\textregistered{} with the process design kit (PDK) of 7-nm FinFET or Arizona State Predictive PDK (ASAP7) from the Arizona State University in partnership with ARM \cite{clark2016asap7}. This PDK was chosen due to realistic design conjecture regarding the current design competencies. Due to limitations of ASAP7 technology, it is not possible to connect the NMOS bulks separately due to the shared substrate. Given that, the Schmitt Trigger behavior is preserved with only minor changes between charging and discharging delays due to the difference between PMOS and NMOS threshold voltages. The ST applied in this work is shown at Figure \ref{fig:sub2}.
 
 The main PDK rules and lithography assumptions considered in this work are shown in Table \ref{layers}. To exemplify the PDK layers, the traditional CMOS Full Adder layout is shown in Fig. \ref{fig:layers}. For all layouts it was used a dense 7.5 M2 (Metal 2) track cell, baseline resulting in a 270nm cell height. This corresponds to three fins for each transistor. To make the bulk connections it is necessary a TAP-Cell. It is responsible to connect the NMOS and PMOS bulks to supply/ground, respectively, being possible to connect the PMOS bulks to another node. It is a technology restriction needed for the proper function of the circuit. Its layout has a length of 108nm resulting in an area of 0.02916 \(\mu\)m^{2}.
 
-\begin{table}[]
+\begin{table}[H]
 \centering
 \caption{Key layer lithography assumptions, widths and pitches}
 \label{layers}
-\begin{tabular}{|l|c|c|c|}
+\begin{tabular}{lccc}
 \hline
-\multicolumn{1}{|c|}{\textbf{Layer}} & \textbf{Lithography} & \textbf{Width/drawn (nm)} & \textbf{Pitch (nm)} \\ \hline
+\multicolumn{1}{c}{\textbf{Layer}} & \textbf{Lithography} & \textbf{Width/drawn (nm)} & \textbf{Pitch (nm)} \\ \hline
 \textbf{Fin}                         & SAQP                 & 6.5/7                     & 27                  \\ \hline
 \textbf{Active (horizontal)}         & EUV                  & 54/16                     & 108                 \\ \hline
 \textbf{Gate}                        & SADP                 & 21/20                     & 54                  \\ \hline
@@ -406,35 +447,32 @@ The main PDK rules and lithography assumptions considered in this work are shown
 
 The simulations were carried out in HSPICE considering the new netlist obtained after the physical verification flow and the parasitic capacitances extraction. Each full adder was designed with and without the Schmitt Triggers replacement to consider the penalties due to the adoption of the ST technique in terms of area, energy and performance.
 
-The process variability evaluation was taken
-through 2000 Monte Carlo (MC) simulations varying
-the threshold voltage of the PMOS and NMOS devices
-according to a Gaussian distribution considering a 3\(\sigma\) deviation and a 5\% variation on nominal values. For all experiments, it will be observed maximum values, mean (\(\mu\)), standard deviation (\(\sigma\)) and normalized standard deviation (\(\sigma\)/\(\mu\)) for each metric: delay, power and energy, where \(\sigma\)/\(\mu\) represents the sensibility of the cell to process variability. 
+The process variability evaluation was taken through 2000 Monte Carlo (MC) simulations varying the threshold voltage of the PMOS and NMOS devices according to a Gaussian distribution considering a 3\(\sigma\) deviation and a 5\% variation on nominal values. For all experiments, it was observed maximum values, mean (\(\mu\)), standard deviation (\(\sigma\)) and normalized standard deviation (\(\sigma\)/\(\mu\)) for each metric: delay, power and energy, where \(\sigma\)/\(\mu\) represents the sensibility of the cell to process variability. 
 
-The reference values from ASAP7 technology for electrical simulations are shown in Table \ref{electPar}. To avoid underestimating effects of realistic input waveforms on design metrics, the simulations will be carried under a 5-bit ripple carry adder using copies of the 1-bit full adder cell with design metrics being calculated for the middle cell as shown in Figure \ref{fig:Fig6}. 
+The reference values from ASAP7 technology for electrical simulations are shown in Table \ref{electPar}. To avoid underestimating effects of realistic input waveforms on design metrics, the simulations were carried under a 5-bit ripple carry adder using copies of the 1-bit full adder cell with design metrics being calculated for the middle cell as shown in Figure \ref{fig:Fig6}. 
 
 \begin{table}[H]
 \centering
 \caption{Parameters applied in the electrical simulations}
 \label{electPar}
-\begin{tabular}{|l|c|c|}
+\begin{tabular}{lcc}
 \hline
-\textbf{Parameter}                                            & \multicolumn{2}{c|}{\textbf{7nm}}                                  \\ \hline
-\textbf{Nominal Supply Voltage}                               & \multicolumn{2}{c|}{0.7 V}                                         \\ \hline
-\textbf{Gate Length (L\textsc{g})}           & \multicolumn{2}{c|}{21nm}                                          \\ \hline
-\textbf{Fin Width (W\textsc{fin})}              & \multicolumn{2}{c|}{6.5nm}                                         \\ \hline
-\textbf{Fin Height (H\textsc{fin})}          & \multicolumn{2}{c|}{32nm}                                          \\ \hline
-\textbf{Oxide Thickness (T\textsc{ox})}      & \multicolumn{2}{c|}{2.1nm}                                         \\ \hline
-\textbf{Channel Doping}                                       & \multicolumn{2}{c|}{1x10^{22}m^{-3}}                                     \\ \hline
-\textbf{Source/Drain Doping}                                  & \multicolumn{2}{c|}{2x10^{22}m^{-3}} \\ \hline
-\multicolumn{1}{|c|}{\multirow{2}{*}{\textbf{Work Function}}} & NFET                            & 4.372                            \\ \cline{2-3} 
-\multicolumn{1}{|c|}{}                                        & PFET                            & 4.8108                           \\ \hline
+\textbf{Parameter}                                            & \multicolumn{2}{c}{\textbf{7nm}}                                  \\ \hline
+\textbf{Nominal Supply Voltage}                               & \multicolumn{2}{c}{0.7 V}                                         \\ \hline
+\textbf{Gate Length (L\textsc{g})}           & \multicolumn{2}{c}{21nm}                                          \\ \hline
+\textbf{Fin Width (W\textsc{fin})}              & \multicolumn{2}{c}{6.5nm}                                         \\ \hline
+\textbf{Fin Height (H\textsc{fin})}          & \multicolumn{2}{c}{32nm}                                          \\ \hline
+\textbf{Oxide Thickness (T\textsc{ox})}      & \multicolumn{2}{c}{2.1nm}                                         \\ \hline
+\textbf{Channel Doping}                                       & \multicolumn{2}{c}{1x10^{22}m^{-3}}                                     \\ \hline
+\textbf{Source/Drain Doping}                                  & \multicolumn{2}{c}{2x10^{22}m^{-3}} \\ \hline
+\multicolumn{1}{c}{\multirow{2}{*}{\textbf{Work Function}}} & NFET                            & 4.372                            \\ \cline{2-3} 
+\multicolumn{1}{c}{}                                        & PFET                            & 4.8108                           \\ \hline
 \end{tabular}
 \end{table}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=.8\textwidth]{testbench.jpg}
+\includegraphics[width=\textwidth]{testbench.jpg}
 \caption{Test Bench.}
 \label{fig:Fig6}
 \legend{Source: \cite{dokania2015circuit}}
@@ -444,7 +482,7 @@ The reference values from ASAP7 technology for electrical simulations are shown 
 
 \chapter{Results and Discussion}
 
-The results are organized into two main analysis: the set of full adders were evaluated at nominal conditions and operating at a near-threshold region with supply voltage equal to 0.4V. In both cases, the process variability is considered and simulations with and without the ST technique is performed. To highlight the improvements and drawbacks of the ST technique for each FA, results also show the relation (\(\Delta\)) between the deviation of traditional and ST circuits.
+The results are organized into two main analysis: the set of full adders were evaluated at nominal conditions and operating at a near-threshold (Nt) region with supply voltage equal to 0.4V. In both cases, the process variability is considered and simulations with and without the ST technique is performed. To highlight the improvements and drawbacks of the ST technique for each FA, results also show the relation (\(\Delta\)) between the deviation of traditional and ST circuits.
 
 \section{Nominal Operation}
 
@@ -452,19 +490,19 @@ At nominal supply voltage, carry-out generation is always the critical path, con
 
 TFA presented the best performance and the lowest energy consumption for nominal voltage operation. However, TFA presented high maximum values and large standard deviation that are essential points to be considered. These points are a consequence of the heavy signal degradation on the TFA outputs, leaving the TFA for high-performance applications more indicated to technology nodes with low process variability sensibility. The CMOS adder showed the smallest standard deviations being the most recommended for technology nodes with high variability. 
 
-Also, these results for 7nm ASAP7 technology considering layout are in the face of the results found to 16nm PTM High-Performance technology \cite{samuel2016}. 7nm layout with ASAP7 technology shows significant improvement on the energy robustness (over 18\%) at nominal voltage and in some cases also in the delay robustness to process variability. 
+Also, these results for 7nm ASAP7 technology considering layout are in the face of the results found to 16nm Predictive Technology Model (PTM) High-Performance technology \cite{samuel2016}. 7nm layout with ASAP7 technology shows significant improvement on the energy robustness (over 18\%) at nominal voltage and in some cases also in the delay robustness to process variability. 
 
 According to Table \ref{energyNominal}, ST circuits increased the mean energy about close two times considering the energy necessary to cover all timing arches to the SUM output. The effect is lighter on the Carry-Out total energy. But, although this penalty, the benefits of ST technique on the cell robustness against process variability are considerable. All the ST FA circuits have the deviation reduced. Hybrid presented the best improvement on energy robustness, with 30\% more stability. Fig. \ref{fig:improvNominal} resumes the improvement reached with the ST technique on Delay and Energy. Only TGA and TFA do not have total improvement, with some degradation on delay for the SUM output on TGA and the Carry-out on TFA. However, the deviation is reduced to all the other cases significantly.
 
-\begin{table}[H]
+\begin{table}[!htbp]
 \centering
 \caption{Delay measures for nominal voltage operation.}
 \label{delaysNominal}
 \resizebox{\textwidth}{!}{%
-\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|}
+\begin{tabular}{lcccccccccc}
 \hline
-\multirow{3}{*}{@Nominal Voltage} & \multicolumn{10}{c|}{Delay}                                                                                                                                                                                     \\ \cline{2-11} 
-                                  & \multicolumn{5}{c|}{SUM}                                                                               & \multicolumn{5}{c|}{CARRY OUT}                                                                         \\ \cline{2-11} 
+\multirow{3}{*}{@Nominal Voltage} & \multicolumn{10}{c}{Delay}                                                                                                                                                                                     \\ \cline{2-11} 
+                                  & \multicolumn{5}{c}{SUM}                                                                               & \multicolumn{5}{c}{CARRY OUT}                                                                         \\ \cline{2-11} 
                                   & Max (ps)              &  \(\mu\) (ps)          & \(\sigma\) (ps)          & \(\sigma\)/\(\mu\) (\%)      & \(\Delta\) (\%)                           & Max (ps)               & \(\mu\) (ps)           & \(\sigma\) (ps)          & \(\sigma\)/\(\mu\) (\%)      & \(\Delta\) (\%)                           \\ \hline
 \textbf{CMOS}                     & 93.19            & 16.11          & 3.83           & 23.31          & \multirow{2}{*}{4.46}            & 104.48           & 27.38          & 5.92           & 21.60          & \multirow{2}{*}{1.05}            \\ \cline{1-5} \cline{7-10}
 \textbf{CMOS ST}                  & 117.19           & 21.98          & 4.98           & \textbf{22.27} &                                  & 120.01           & \textbf{33.09} & 7.08           & \textbf{21.38} &                                  \\ \hline
@@ -482,15 +520,15 @@ According to Table \ref{energyNominal}, ST circuits increased the mean energy ab
 % Please add the following required packages to your document preamble:
 % \usepackage{multirow}
 % \usepackage{graphicx}
-\begin{table}[H]
+\begin{table}[!htbp]
 \centering
 \caption{Energy measures for nominal voltage operation.}
 \label{energyNominal}
 \resizebox{\textwidth}{!}{%
-\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|}
+\begin{tabular}{lcccccccccc}
 \hline
-\multirow{3}{*}{@Nominal Voltage} & \multicolumn{10}{c|}{Energy}                                                                                                                                                                            \\ \cline{2-11} 
-                                  & \multicolumn{5}{c|}{SUM}                                                                           & \multicolumn{5}{c|}{CARRY OUT}                                                                     \\ \cline{2-11} 
+\multirow{3}{*}{@Nominal Voltage} & \multicolumn{10}{c}{Energy}                                                                                                                                                                            \\ \cline{2-11} 
+                                  & \multicolumn{5}{c}{SUM}                                                                           & \multicolumn{5}{c}{CARRY OUT}                                                                     \\ \cline{2-11} 
                                   & Max (fJ)              &  \(\mu\) (fJ)          & \(\sigma\) (fJ)          & \(\sigma\)/\(\mu\) (\%)      & \(\Delta\) (\%)                           & Max (fJ)               & \(\mu\) (fJ)           & \(\sigma\) (fJ)          & \(\sigma\)/\(\mu\) (\%)      & \(\Delta\) (\%)                          \\ \hline
 \textbf{CMOS}                     & 69.07          & 12.89          & 2.97          & 23.00          & \multirow{2}{*}{18.21}          & 83.43          & 20.88          & 3.52          & 16.87          & \multirow{2}{*}{\textbf{18.91}} \\ \cline{1-5} \cline{7-10}
 \textbf{CMOS ST}                  & \textbf{93.07} & 20.26          & 3.81          & 18.81          &                                 & 98.66          & 30.69          & 4.20          & 13.68          &                                 \\ \hline
@@ -506,7 +544,7 @@ According to Table \ref{energyNominal}, ST circuits increased the mean energy ab
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=\textwidth]{Nominalimprov.png}
+\includegraphics[width=0.8\textwidth]{Nominalimprov.png}
 \caption{Robustness improvements for each Full Adder at nominal operation.}
 \label{fig:improvNominal}
 %\legend{Source: \cite{dokania2015circuit}}
@@ -522,16 +560,16 @@ TFA and TGA showed the highest deviations and unacceptable maximum delays, which
 
 Results make clear the advantage of the technique when considering energy variability robustness. Fig. \ref{fig:NTimprov} shows the comparative evaluation of the improvement reached by ST technique at NT operation. Even when there was a worsening on delay robustness, the energy robustness presented improvements. The technique can introduce more delay variability given that variability determines the ST behavior as well, influencing its delays, which stacks with the impact of multiple transistors in a series arrangement.
 
-\begin{table}[H]
+\begin{table}[!htbp]
 \centering
 \caption{Delay measures for near-threshold operation.}
 \label{delaysNT}
 \resizebox{\textwidth}{!}{%
-\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|}
+\begin{tabular}{lcccccccccc}
 \hline
-\multicolumn{1}{|c|}{\multirow{3}{*}{@NT}} & \multicolumn{10}{c|}{Delay}                                                                                                                                                                                          \\ \cline{2-11} 
-\multicolumn{1}{|c|}{}                     & \multicolumn{5}{c|}{SUM}                                                                                 & \multicolumn{5}{c|}{CARRY OUT}                                                                            \\ \cline{2-11} 
-\multicolumn{1}{|c|}{}                     & Max (ps)              &  \(\mu\) (ps)          & \(\sigma\) (ps)          & \(\sigma\)/\(\mu\) (\%)      & \(\Delta\) (\%)                           & Max (ps)               & \(\mu\) (ps)           & \(\sigma\) (ps)          & \(\sigma\)/\(\mu\) (\%)      & \(\Delta\) (\%)                           \\ \hline
+\multicolumn{1}{c}{\multirow{3}{*}{@NT}} & \multicolumn{10}{c}{Delay}                                                                                                                                                                                          \\ \cline{2-11} 
+\multicolumn{1}{c}{}                     & \multicolumn{5}{c}{SUM}                                                                                 & \multicolumn{5}{c}{CARRY OUT}                                                                            \\ \cline{2-11} 
+\multicolumn{1}{c}{}                     & Max (ps)              &  \(\mu\) (ps)          & \(\sigma\) (ps)          & \(\sigma\)/\(\mu\) (\%)      & \(\Delta\) (\%)                           & Max (ps)               & \(\mu\) (ps)           & \(\sigma\) (ps)          & \(\sigma\)/\(\mu\) (\%)      & \(\Delta\) (\%)                           \\ \hline
 \textbf{CMOS}                              & 873.41           & 73.22           & \textbf{56.38}  & 77.47           & \multirow{2}{*}{18.70}          & 794.87           & 128.65          & 86.67           & 67.39           & \multirow{2}{*}{11.61}           \\ \cline{1-5} \cline{7-10}
 \textbf{CMOS ST}                           & \textbf{430.85}  & 95.85           & 60.57           & \textbf{62.99}  &                                 & \textbf{539.77}  & 143.77          & 85.67           & 59.57           &                                  \\ \hline
 \textbf{TGA}                               & \textbf{7328.30} & \textbf{62.90}  & 92.17           & 133.30          & \multirow{2}{*}{31.53}          & 6396.90          & \textbf{325.25} & 138.02          & 173.54          & \multirow{2}{*}{-19.14}          \\ \cline{1-5} \cline{7-10}
@@ -547,16 +585,16 @@ Results make clear the advantage of the technique when considering energy variab
 % Please add the following required packages to your document preamble:
 % \usepackage{multirow}
 % \usepackage{graphicx}
-\begin{table}[H]
+\begin{table}[!htbp]
 \centering
 \caption{Energy measures for near-threshold operation.}
 \label{energyNT}
 \resizebox{\textwidth}{!}{%
-\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|}
+\begin{tabular}{lcccccccccc}
 \hline
-\multicolumn{1}{|c|}{\multirow{3}{*}{@NT}} & \multicolumn{10}{c|}{Energy}                                                                                                                                                                            \\ \cline{2-11} 
-\multicolumn{1}{|c|}{}                     & \multicolumn{5}{c|}{SUM}                                                                           & \multicolumn{5}{c|}{CARRY OUT}                                                                     \\ \cline{2-11} 
-\multicolumn{1}{|c|}{}                     & Max (fJ)              &  \(\mu\) (fJ)          & \(\sigma\) (fJ)          & \(\sigma\)/\(\mu\) (\%)      & \(\Delta\) (\%)                           & Max (fJ)               & \(\mu\) (fJ)           & \(\sigma\) (fJ)          & \(\sigma\)/\(\mu\) (\%)      & \(\Delta\) (\%)                          \\ \hline
+\multicolumn{1}{c}{\multirow{3}{*}{@NT}} & \multicolumn{10}{c}{Energy}                                                                                                                                                                            \\ \cline{2-11} 
+\multicolumn{1}{c}{}                     & \multicolumn{5}{c}{SUM}                                                                           & \multicolumn{5}{c}{CARRY OUT}                                                                     \\ \cline{2-11} 
+\multicolumn{1}{c}{}                     & Max (fJ)              &  \(\mu\) (fJ)          & \(\sigma\) (fJ)          & \(\sigma\)/\(\mu\) (\%)      & \(\Delta\) (\%)                           & Max (fJ)               & \(\mu\) (fJ)           & \(\sigma\) (fJ)          & \(\sigma\)/\(\mu\) (\%)      & \(\Delta\) (\%)                          \\ \hline
 \textbf{CMOS}                              & 45.37          & 6.29           & 2.00          & 31.81          & \multirow{2}{*}{\textbf{20.07}} & 51.91          & 9.97           & 2.09          & 20.97          & \multirow{2}{*}{\textbf{12.02}} \\ \cline{1-5} \cline{7-10}
 \textbf{CMOS ST}                           & 60.64          & 10.22          & 2.60          & 25.43          &                                 & 70.97          & \textbf{15.16} & \textbf{2.80} & 18.45          &                                 \\ \hline
 \textbf{TGA}                               & 53.90          & 6.06           & 2.01          & 33.17          & \multirow{2}{*}{61.45}          & 61.28          & 6.40           & 1.85          & \textbf{28.90} & \multirow{2}{*}{34.04}          \\ \cline{1-5} \cline{7-10}
@@ -569,9 +607,9 @@ Results make clear the advantage of the technique when considering energy variab
 }
 \end{table}
 
-\begin{figure}[H]
+\begin{figure}[!htb]
 \centering
-\includegraphics[width=\textwidth]{NTimprov.png}
+\includegraphics[width=0.8\textwidth]{NTimprov.png}
 \caption{Robustness improvements for each Full Adder at near-threshold operation.}
 \label{fig:NTimprov}
 %\legend{Source: \cite{dokania2015circuit}}
@@ -579,17 +617,43 @@ Results make clear the advantage of the technique when considering energy variab
 
 \section{Penalties}
 
-It is expected that a technique which replaces a 2-transistor sub-circuit to a 4-transistor one should bring an impact over metrics. Given so, the average impact at nominal operation was 30\% over the delay and their deviations. For energy, the impact is considerable, being on average over 85\% percent higher the energy consumption. For energy standard deviations there was a 40\% increase at nominal level and a minor 4\% increase at near-threshold level.
+It is expected that a technique which replaces a 2-transistor sub-circuit to a 4-transistor one should bring an impact over metrics. Given so, the average impact at nominal operation was 30\% over the delay and their deviations. For energy, the impact is considerable, being on average over 85\% percent higher the energy consumption. For energy standard deviations there was a 40\% increase at nominal level and a minor 4\% increase at near-threshold level. Energy penalties are plotted at Images \ref{fig:energyNS} to \ref{fig:energyNTCO}.
 
-For area penalties there was 150\%, 187.5\%, 100\% and 207\% increase for the CMOS, TGA, TFA and Hybrid Full Adders, respectively. Their respective areas, not considering the TAP-Cell area, are shown in Table \ref{penalties}. Such high area penalties are mainly due to technology rules such as the 108nm well-spacing and the necessity to use TAP-Cells to explicitly connect the transistors bulk to specific parts of the circuits or the supply/ground making the ST cell more prominent than expected.
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth, trim={0 9cm 0 9cm},clip]{energyNominalSum.pdf}
+\caption{Energy measures for the Sum output at Nominal operation.}
+\label{fig:energyNS}
+\end{figure}
 
-% Please add the following required packages to your document preamble:
-% \usepackage{multirow}
-\begin{table}[H]
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth, trim={0 9cm 0 9cm},clip]{energyNominalCarryOut.pdf}
+\caption{Energy measures for the Carry Out output at Nominal operation.}
+\label{fig:energyNCO}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth, trim={0 9cm 0 9cm},clip]{energyNTSum.pdf}
+\caption{Energy measures for the Sum output at Near-Threshold operation.}
+\label{fig:energyNTS}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth, trim={0 9cm 0 9cm},clip]{energyNTCarryOut.pdf}
+\caption{Energy measures for the Carry Out output at Near-Threshold operation.}
+\label{fig:energyNTCO}
+\end{figure}
+
+For area penalties there was 150\%, 187.5\%, 100\% and 207\% increase for the CMOS, TGA, TFA and Hybrid Full Adders, respectively. Their respective areas, not considering the TAP-Cell area, are shown in Table \ref{penalties}. Such high area penalties are mainly due to technology rules such as the 108nm well-spacing and the necessity to use TAP-Cells to explicitly connect the transistors bulk to specific parts of the circuits or the supply/ground making the ST cell more prominent than expected. The FAs respective layouts are shown in Images \ref{CMOS} to \ref{hybrid}.
+
+\begin{table}[!htbp]
 \centering
 \caption{Full Adders areas and respective technique area impact.}
 \label{penalties}
-\begin{tabular}{|l|c|c|}
+\begin{tabular}{lcc}
 \hline
 \textbf{Full Adder} & \textbf{Area (${\mu m}^2$)}    & \textbf{Ratio}         \\ \hline
 \textbf{CMOS}       & 0.34             & \multirow{2}{*}{2.5}   \\ \cline{1-2}
@@ -602,6 +666,77 @@ For area penalties there was 150\%, 187.5\%, 100\% and 207\% increase for the CM
 \textbf{HYBRID ST}  & 1.56             &                        \\ \hline
 \end{tabular}
 \end{table}
+
+\begin{figure}[!h]
+\centering
+\begin{subfigure}[b]{\textwidth}
+   \includegraphics[width=1\linewidth]{CMOS.png}
+   \caption{}
+   \label{fig:Ng1} 
+\end{subfigure}
+
+\begin{subfigure}[b]{\textwidth}
+   \includegraphics[width=1\linewidth]{CMOSST.png}
+   \caption{}
+   \label{fig:Ng2}
+\end{subfigure}
+\caption{Original Mirror CMOS (a) and Mirror CMOS with ST technique (b) layouts.}
+\label{CMOS}
+\end{figure}
+
+\begin{figure}[!htbp]
+\centering
+\begin{subfigure}[b]{\textwidth}
+   \includegraphics[width=1\linewidth]{TGA.png}
+   \caption{}
+   \label{fig:Ng1} 
+\end{subfigure}
+
+\begin{subfigure}[b]{\textwidth}
+   \includegraphics[width=1\linewidth]{TGAST.png}
+   \caption{}
+   \label{fig:Ng2}
+\end{subfigure}
+
+\caption{Original TGA (a) and TGA with ST technique (b) layouts.}
+\label{TGA}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{subfigure}[b]{\textwidth}
+   \includegraphics[width=1\linewidth]{TFA.png}
+   \caption{}
+   \label{fig:Ng1} 
+\end{subfigure}
+
+\begin{subfigure}[b]{\textwidth}
+   \includegraphics[width=1\linewidth]{TFAST.png}
+   \caption{}
+   \label{fig:Ng2}
+\end{subfigure}
+
+\caption{Original TFA (a) and TFA with ST technique (b) layouts.}
+\label{TFA}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{subfigure}[b]{\textwidth}
+   \includegraphics[width=1\linewidth]{HYBRID.png}
+   \caption{}
+   \label{fig:Ng1} 
+\end{subfigure}
+
+\begin{subfigure}[b]{\textwidth}
+   \includegraphics[width=1\linewidth]{HYBRIDST.png}
+   \caption{}
+   \label{fig:Ng2}
+\end{subfigure}
+
+\caption{Original HYBRID (a) and HYBRID with ST technique (b) layouts.}
+\label{hybrid}
+\end{figure}
 
 \chapter{Conclusions}
 
@@ -623,7 +758,7 @@ With the technique penalties in mind, it should only be utilized in applications
 
 
 
-% \begin{figure}[H]
+% \begin{figure}[!htbp]
 % \centering
 % \includegraphics[width=\textwidth, trim={0 9.5cm 0 9cm},clip]{delaysNominalSum.pdf}
 % \caption{Propagation times for Sum output at nominal operation.}
@@ -631,7 +766,7 @@ With the technique penalties in mind, it should only be utilized in applications
 % %\legend{Source: \cite{dokania2015circuit}}
 % \end{figure}
 
-% \begin{figure}[H]
+% \begin{figure}[!htbp]
 % \centering
 % \includegraphics[width=\textwidth, trim={0 9cm 0 9cm},clip]{delaysNominalCarryOut.pdf}
 % \caption{Propagation times for Carry Out output at nominal operation.}
@@ -639,7 +774,7 @@ With the technique penalties in mind, it should only be utilized in applications
 % %\legend{Source: \cite{dokania2015circuit}}
 % \end{figure}
 
-% \begin{figure}[H]
+% \begin{figure}[!htbp]
 % \centering
 % \includegraphics[width=\textwidth, trim={0 9cm 0 9cm},clip]{delaysNTSum.pdf}
 % \caption{Propagation times for Sum output at near-threshold operation.}
@@ -647,7 +782,7 @@ With the technique penalties in mind, it should only be utilized in applications
 % %\legend{Source: \cite{dokania2015circuit}}
 % \end{figure}
 
-% \begin{figure}[H]
+% \begin{figure}[!htbp]
 % \centering
 % \includegraphics[width=\textwidth, trim={0 9cm 0 9cm},clip]{delaysNTCarryOut.pdf}
 % \caption{Propagation times for Carry Out output at near-threshold operation.}
@@ -655,7 +790,7 @@ With the technique penalties in mind, it should only be utilized in applications
 % %\legend{Source: \cite{dokania2015circuit}}
 % \end{figure}
 
-% \begin{figure}[H]
+% \begin{figure}[!htbp]
 % \centering
 % \includegraphics[width=\textwidth, trim={0 9cm 0 9cm},clip]{energyNominalSum.pdf}
 % \caption{Energy measures for Sum output at nominal operation.}
@@ -663,7 +798,7 @@ With the technique penalties in mind, it should only be utilized in applications
 % %\legend{Source: \cite{dokania2015circuit}}
 % \end{figure}
 
-% \begin{figure}[H]
+% \begin{figure}[!htbp]
 % \centering
 % \includegraphics[width=\textwidth, trim={0 9cm 0 9cm},clip]{energyNominalCarryOut.pdf}
 % \caption{Energy measures for Carry Out output at nominal operation.}
@@ -671,7 +806,7 @@ With the technique penalties in mind, it should only be utilized in applications
 % %\legend{Source: \cite{dokania2015circuit}}
 % \end{figure}
 
-% \begin{figure}[H]
+% \begin{figure}[!htbp]
 % \centering
 % \includegraphics[width=\textwidth, trim={0 9cm 0 9cm},clip]{energyNTSum.pdf}
 % \caption{Energy measures for Sum output at near-threshold operation.}
@@ -679,7 +814,7 @@ With the technique penalties in mind, it should only be utilized in applications
 % %\legend{Source: \cite{dokania2015circuit}}
 % \end{figure}
 
-% \begin{figure}[H]
+% \begin{figure}[!htbp]
 % \centering
 % \includegraphics[width=\textwidth, trim={0 9cm 0 9cm},clip]{energyNTCarryOut.pdf}
 % \caption{Energy measures for Carry Out output at near-threshold operation.}
@@ -687,7 +822,7 @@ With the technique penalties in mind, it should only be utilized in applications
 % %\legend{Source: \cite{dokania2015circuit}}
 % \end{figure}
 
-% \begin{table}[H]
+% \begin{table}[!htbp]
 % \centering
 % \caption{My caption}
 % \label{my-label}
@@ -709,7 +844,7 @@ With the technique penalties in mind, it should only be utilized in applications
 % }
 % \end{table}
 
-% \begin{table}[H]
+% \begin{table}[!htbp]
 % \centering
 % \caption{My caption}
 % \label{my-label}
@@ -731,7 +866,7 @@ With the technique penalties in mind, it should only be utilized in applications
 % }
 % \end{table}
 
-% \begin{table}[H]
+% \begin{table}[!htbp]
 % \centering
 % \caption{My caption}
 % \label{my-label}
@@ -753,7 +888,7 @@ With the technique penalties in mind, it should only be utilized in applications
 % }
 % \end{table}
 
-% \begin{table}[H]
+% \begin{table}[!htbp]
 % \centering
 % \caption{My caption}
 % \label{my-label}
@@ -775,7 +910,7 @@ With the technique penalties in mind, it should only be utilized in applications
 % }
 % \end{table}
 
-% \begin{table}[H]
+% \begin{table}[!htbp]
 % \centering
 % \caption{My caption}
 % \label{my-label}
@@ -793,7 +928,7 @@ With the technique penalties in mind, it should only be utilized in applications
 % \end{tabular}
 % \end{table}
 
-% \begin{figure}[H]
+% \begin{figure}[!htbp]
 % \centering
 % \begin{subfigure}[b]{\textwidth}
 %    \includegraphics[width=1\linewidth]{CMOS.png}
@@ -810,7 +945,7 @@ With the technique penalties in mind, it should only be utilized in applications
 % \caption{}
 % \end{figure}
 
-% \begin{figure}[H]
+% \begin{figure}[!htbp]
 % \centering
 % \begin{subfigure}[b]{\textwidth}
 %    \includegraphics[width=1\linewidth]{TGA.png}
@@ -827,7 +962,7 @@ With the technique penalties in mind, it should only be utilized in applications
 % \caption{}
 % \end{figure}
 
-% \begin{figure}[H]
+% \begin{figure}[!htbp]
 % \centering
 % \begin{subfigure}[b]{\textwidth}
 %    \includegraphics[width=1\linewidth]{TFA.png}
@@ -844,7 +979,7 @@ With the technique penalties in mind, it should only be utilized in applications
 % \caption{}
 % \end{figure}
 
-% \begin{figure}[H]
+% \begin{figure}[!htbp]
 % \centering
 % \begin{subfigure}[b]{\textwidth}
 %    \includegraphics[width=1\linewidth]{HYBRID.png}
