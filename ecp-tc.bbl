@@ -51,6 +51,11 @@
   Proceedings. 2002 IEEE International Conference on}. [S.l.], 2002. p.
   260--267.}
 
+\bibitem[Bhattacharya and Jha 2014]{bhattacharya2014finfets}
+\abntrefinfo{Bhattacharya and Jha}{BHATTACHARYA; JHA}{2014}
+{BHATTACHARYA, D.; JHA, N.~K. Finfets: From devices to architectures. In:  .
+  [S.l.]: Hindawi, 2014. v.~2014.}
+
 \bibitem[Clark et al. 2016]{clark2016asap7}
 \abntrefinfo{Clark et al.}{CLARK et al.}{2016}
 {CLARK, L.~T. et al. Asap7: A 7-nm finfet predictive process design kit. In:  .
@@ -100,6 +105,12 @@ Available from Internet: \url{http://www.ti.com/lit/an/scea046/scea046.pdf}.}
   Integrated Networks (SPIN), 2015 2nd International Conference on}. [S.l.],
   2015. p. 931--935.}
 
+\bibitem[Harrington et al. 2018]{FinFET01}
+\abntrefinfo{Harrington et al.}{HARRINGTON et al.}{2018}
+{HARRINGTON, R.~C. et al. Effect of transistor variants on single-event
+  transients at the 14/16nm bulk finfet technology generation. In:  . [S.l.:
+  s.n.], 2018. p.~1--1.}
+
 \bibitem[Islam et al. 2010]{islam:10}
 \abntrefinfo{Islam et al.}{ISLAM et al.}{2010}
 {ISLAM, A. et al. Design and analysis of robust dual threshold cmos full adder
@@ -117,6 +128,18 @@ Available from Internet: \url{http://www.ti.com/lit/an/scea046/scea046.pdf}.}
 \abntrefinfo{Islam and Hasan}{ISLAM; HASAN}{2011}
 {ISLAM, A.; HASAN, M. Design and analysis of power and variability aware
   digital summing circuit. In:  . [S.l.: s.n.], 2011. v.~2, n.~2, p. 6--14.}
+
+\bibitem[King 2005]{finfetchar1}
+\abntrefinfo{King}{KING}{2005}
+{KING, T.-J. Finfets for nanoscale cmos digital integrated circuits. In:
+  \textbf{ICCAD-2005. IEEE/ACM International Conference on Computer-Aided
+  Design, 2005.} [S.l.: s.n.], 2005. p. 207--210.}
+
+\bibitem[Manoj et al. 2007]{finfetdis}
+\abntrefinfo{Manoj et al.}{MANOJ et al.}{2007}
+{MANOJ, C.~R. et al. Device optimization of bulk finfets and its comparison
+  with soi finfets. In:  \textbf{2007 International Workshop on Physics of
+  Semiconductor Devices}. [S.l.: s.n.], 2007. p. 134--137.}
 
 \bibitem[Meinhardt, Zimpeck and Reis 2014]{meinhardt2014impact}
 \abntrefinfo{Meinhardt, Zimpeck and Reis}{MEINHARDT; ZIMPECK; REIS}{2014}
@@ -147,6 +170,13 @@ Available from Internet: \url{http://www.ti.com/lit/an/scea046/scea046.pdf}.}
 {RAHIMI, A.; BENINI, L.; GUPTA, R.~K. Variability mitigation in nanometer cmos
   integrated systems: A survey of techniques from circuits to software. In:  .
   [S.l.]: IEEE, 2016. v.~104, n.~7, p. 1410--1448.}
+
+\bibitem[Ren et al. 2018]{FinFET02}
+\abntrefinfo{Ren et al.}{REN et al.}{2018}
+{REN, P. et al. New insights into the hci degradation of pass-gate transistor
+  in advanced finfet technology. In:  \textbf{2018 IEEE International
+  Reliability Physics Symposium (IRPS)}. [S.l.: s.n.], 2018. p.
+  P--CR.3--1--P--CR.3--4.}
 
 \bibitem[Shams and Bayoumi 2000]{shams2000novel}
 \abntrefinfo{Shams and Bayoumi}{SHAMS; BAYOUMI}{2000}
@@ -187,10 +217,22 @@ Available from Internet: \url{http://www.ti.com/lit/an/scea046/scea046.pdf}.}
 {WESTE, N. H.~E.; ESHRAGHIAN, K. \textbf{Principles of CMOS VLSI design}.
   [S.l.]: Addison-Wesley New York, 1985.}
 
+\bibitem[Xiong and Bokor 2003]{FinFET03}
+\abntrefinfo{Xiong and Bokor}{XIONG; BOKOR}{2003}
+{XIONG, S.; BOKOR, J. Sensitivity of double-gate and finfetdevices to process
+  variations. In:  . [S.l.: s.n.], 2003. v.~50, n.~11, p. 2255--2261.}
+
 \bibitem[Zhang, Srivastava and Ajmera 2003]{zhang2003low}
 \abntrefinfo{Zhang, Srivastava and Ajmera}{ZHANG; SRIVASTAVA; AJMERA}{2003}
 {ZHANG, C.; SRIVASTAVA, A.; AJMERA, P.~K. Low voltage cmos schmitt trigger
   circuits. In:  . [S.l.]: IET, 2003. v.~39, n.~24, p. 1696--1698.}
+
+\bibitem[Zhang et al. 2017]{FinFET04}
+\abntrefinfo{Zhang et al.}{ZHANG et al.}{2017}
+{ZHANG, R. et al. Modeling of the reliability degradation of a finfet-based
+  sram due to bias temperature instability, hot carrier injection, and gate
+  oxide breakdown. In:  \textbf{2017 IEEE International Integrated Reliability
+  Workshop (IIRW)}. [S.l.: s.n.], 2017. p.~1--4.}
 
 \bibitem[Zimpeck et al. 2016]{zimpeck2016finfet}
 \abntrefinfo{Zimpeck et al.}{ZIMPECK et al.}{2016}

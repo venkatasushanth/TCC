@@ -1,14 +1,16 @@
 \babel@toc {english}{}
 \babel@toc {brazilian}{}
 \babel@toc {english}{}
-\contentsline {chapter}{1~Introduction}{11}{CHAPTER.1}
-\contentsline {chapter}{2~Variability Effects and Mitigation Techniques}{14}{CHAPTER.2}
-\contentsline {chapter}{3~Methodology}{20}{CHAPTER.3}
-\contentsline {section}{\numberline {3.1}Layout Design}{22}{section.3.1}
-\contentsline {section}{\numberline {3.2}Electrical Simulation}{23}{section.3.2}
-\contentsline {chapter}{4~Results and Discussion}{25}{CHAPTER.4}
-\contentsline {section}{\numberline {4.1}Nominal Operation}{25}{section.4.1}
-\contentsline {section}{\numberline {4.2}Near-Threshold Operation}{26}{section.4.2}
-\contentsline {section}{\numberline {4.3}Penalties}{28}{section.4.3}
-\contentsline {chapter}{5~Conclusions}{32}{CHAPTER.5}
-\contentsline {chapter}{\xspace {}References}{33}{schapter.7}
+\babel@toc {brazilian}{}
+\babel@toc {english}{}
+\contentsline {chapter}{1~Introduction}{12}{CHAPTER.1}
+\contentsline {chapter}{2~Variability Effects and Mitigation Techniques}{17}{CHAPTER.2}
+\contentsline {chapter}{3~Methodology}{24}{CHAPTER.3}
+\contentsline {section}{\numberline {3.1}Layout Design}{26}{section.3.1}
+\contentsline {section}{\numberline {3.2}Electrical Simulation}{27}{section.3.2}
+\contentsline {chapter}{4~Results and Discussion}{29}{CHAPTER.4}
+\contentsline {section}{\numberline {4.1}Nominal Operation}{29}{section.4.1}
+\contentsline {section}{\numberline {4.2}Near-Threshold Operation}{31}{section.4.2}
+\contentsline {section}{\numberline {4.3}Penalties}{32}{section.4.3}
+\contentsline {chapter}{5~Conclusions}{37}{CHAPTER.5}
+\contentsline {chapter}{\xspace {}References}{38}{schapter.8}

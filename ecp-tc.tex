@@ -59,7 +59,7 @@
 
 % orientador e co-orientador são opcionais (não diga isso pra eles :))
 \advisor[Prof.~Dr.]{Reis}{Ricardo}
-\coadvisor[Prof.~Dr]{Zimpeck}{Alexandra L.}
+\coadvisor[Eng. Msc.]{Zimpeck}{Alexandra L.}
 %\coadvisor[Prof.~Dr.]{Meinhardt}{Cristina}
 % a data deve ser a da defesa; se nao especificada, são gerados
 % mes e ano correntes
@@ -108,10 +108,12 @@
 % palavras-chave
 % iniciar todas com letras minúsculas, exceto no caso de abreviaturas
 %
-\keyword{formatação eletrônica de documentos}
-\keyword{\LaTeX}
-\keyword{ABNT}
-\keyword{UFRGS}
+\keyword{Nanotechnology}
+\keyword{FinFET devices}
+\keyword{Process Variability}
+\keyword{ASAP7 PDK}
+\keyword{Schmitt Trigger}
+\keyword{Full Adder}
 
 %
 % inicio do documento
@@ -142,18 +144,15 @@ Agradeço ao \LaTeX\ por não ter vírus de macro\ldots
 
 % resumo na língua do documento
 \begin{abstract}
-    The aggressive technology and voltage scaling which modern digital circuits are facing introduce a higher influence in metrics, as performance and power consumption, due to process variability. To mitigate that, novel techniques are proposed and tested in the literature. This work analyzes the impact on variability robustness using a technique based on the replacement of full adders internal inverters by Schmitt Triggers. Some works point that the given technique helps to improve the variability robustness at the electrical level. Therefore, analysis has been performed at layout level using the 7nm FinFET technology node from ASAP7 library and the technique was applied on four full adder designs. Performance, energy and area are taken into account. Results show up to 64.74\% and 66.6\% improvement in average delay and energy variability robustness, respectively.
+    The aggressive technology and voltage scaling which CMOS-based modern digital circuits are facing introduce challenges as short-channel effects, higher radiation and variability impact. As CMOS technology approaches its scaling limit, novel technology nodes, as FinFET, emerged to address such challenges. Although, even when short-channel and radiation effects are mitigated due to technology instrinsic characteristics, the variability impact escalates with technology scaling and the lack of manufacturing precision. To mitigate that, novel techniques are proposed and tested in the literature. This work analyzes the impact on variability robustness using a technique based on the replacement of full adders internal inverters by Schmitt Triggers. Some works point that the given technique helps to improve the variability robustness at the electrical level. Therefore, analysis has been performed at layout level using the 7nm FinFET technology node from ASAP7 library and the technique was applied on four full adder designs. Performance, energy and area are taken into account. Results show up to 64.74\% and 66.6\% improvement in average delay and energy variability robustness, respectively, being necessary a trade-off analysis between robustness improvements and the impact on delays, power consumption and area. 
 \end{abstract}
 
 % resumo na outra língua
 % como parametros devem ser passados o titulo e as palavras-chave
 % na outra língua, separadas por vírgulas
-% \begin{englishabstract}{Using \LaTeX\ to Prepare Documents at II/UFRGS}{Electronic document preparation, \LaTeX, ABNT, UFRGS}
-% This document is an example on how to prepare documents at II/UFRGS
-% using the \LaTeX\ classes provided by the UTUG\@. At the same time, it
-% may serve as a guide for general-purpose commands. \emph{The text in
-% the abstract should not contain more than 500~words.}
-% \end{englishabstract}
+\begin{englishabstract}{Análise da Variabilidade utilizando Schmitt Triggers em Leiautes de Somadores Completos}{Nanotecnologia, Dispositivos FinFET, Variabilidade de Processo, ASAP7 PDK, Schmitt Trigger, Somador Completo}
+A miniaturização da tecnologia e diminuição das tensões de alimentação ao qual os circuitos digitais baseados na tecnologia CMOS estão enfrentando introduzem desafios como os efeitos de canal-curto e o maior impacto da radiação e da variabilidade. Como a tecnologia CMOS se aproxima de seus limites, novos nodos tecnologicos, como o FinFET, emergem para enfrentar esses desafios. Contudo, mesmo quando efeitos de canal-curto e efeitos de radiação são mitigados devido à características intrínsecas do nodo, o impacto da variabilidade escala com a miniatuarização da tecnologia e a falta de precisão de fabricação. Para mitigar esta variabilidade, novas técnicas são propostas e testadas na literatura. Este trabalho analiza o impacto na robustez à variabilidade de uma técnica baseada na substituição dos inversores internos de somadores completos por Schmitt Triggers. Alguns trabalhos apontam que esta técnica ajuda a melhorar a robustez à variabilidade no nível elétrico. Portanto, a análize foi efetuada em nível de leiaute utilizando o nodo tecnológico de 7nm FinFET da biblioteca ASAP7 e a técnica foi aplicada em quatro somadores completos diferentes. Desempenho, consumo de energia e area foram levados em conta. Resultados mostram melhorias de até 64.74\% e 66.6\% no atraso de propagação médio e energia. Contudo, é necessário realizar uma análise de custo-benefício entre as melhorias e o seu impacto nos atrasos de propagação, energia e área.
+\end{englishabstract}
 
 % lista de abreviaturas e siglas
 % o parametro deve ser a abreviatura mais longa
@@ -189,7 +188,6 @@ Agradeço ao \LaTeX\ por não ter vírus de macro\ldots
         \item[NMOS] N-channel Metal-Oxide-Semiconductor
         \item[EDA] Electronic Design Automation
         \item[PDK] Process Design Kit
-        \item[ASAP] Arizona State Predictive PDK
         \item[M2] Metal 2
         \item[MC] Monte Carlo
         \item[PTM] Predictive Technology Model
@@ -257,16 +255,37 @@ Moore’s law predicts that the number of transistors per square on integrated c
 
 In this context, this work employs a technique using Schmitt Trigger (ST) inverters for process variability mitigation on different Full Adder topologies with priority on power consumption variations. Performance, power, and area penalty were analyzed alongside variability robustness. 
 
-Promising new commercial technologies based on the Fin Field Effect Transistor (FinFET) devices have been introduced to maintain the technology scaling. The process variability impact on those technologies have shown to be less present, although it can not be ignored, being necessary more research concerning the characterization of process variability effect on emerging technologies. 
+Promising new commercial technologies based on the Fin Field Effect Transistor (FinFET) devices have been introduced to maintain the technology scaling. The FinFET main geometric parameters are the gate length (L or L\textsc{g}), fin width (W\textsc{fin}), fin height (H\textsc{fin}) and Oxide Thickness (T\textsc{ox}). FinFET technology can be built on a traditional bulk or Silicon on Insulator (SOI) substrate with a conducting channel that rises above the level of the insulator, creating a thin silicon structure, the gate as shown in Figure \ref{mosfetvsfinfet} and \ref{bulkvssoi}. 
 
-FinFET technology is built on a Silicon on Insulator (SOI) substrate with a conducting channel that rises above the level of the insulator, creating a thin silicon structure, the gate as shown in Figure \ref{fig:Fig1}. The channel being surrounded from three dimensions by the gate results in a superior control, reduced short-channel effect (SCE) and eliminated random dopant fluctuation (RDF) effect due to the fully depleted channel that causes less sensitivity to process variations \cite{taur2013fundamentals}. 
+The channel being surrounded from three dimensions by the gate results in a superior control, reduced short-channel effect (SCE) and eliminated random dopant fluctuation (RDF) effect due to the fully depleted channel that causes less sensitivity to process variations \cite{taur2013fundamentals}. FinFETs also present relative immunity to gate line-edge roughness, a major source of variability in planar nanoscale FETs \cite{finfetchar1}. The disadvantage over MOSFETs is the harder manufacturing process due to difficulty in the lithography steps as it is increasingly difficult to print small patterns, the increased variability impact due to the further minituarization of dimensions, in comparison to MOSFET and more constly manufacturing process due to the need of techniques to address the manufacturing imprecision and, in the case of SOI FinFET, to change the CMOS substrate process to support a SOI substrate manufacturing process \cite{finfetchar1} \cite{finfetdis}.
+
+
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=.8\textwidth, trim={0 3cm 0 5cm},clip]{bulkvsfinfet.eps}
-\caption{Comparison between Bulk CMOS (left) and FinFET (right) transistors.}
-\label{fig:Fig1}
+\includegraphics[width=\textwidth, trim={0 0cm 0 0cm},clip]{finfet.png}
+\caption{Structural comparison between (a) planar MOSFET and (b) FinFET.}
+\label{mosfetvsfinfet}
+\legend{Source: \citet{bhattacharya2014finfets}}
 \end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth, trim={0 0cm 0 0cm},clip]{finfet2.png}
+\caption{Structural comparison between (a) bulk and (b) SOI FinFETs.}
+\label{bulkvssoi}
+\legend{Source: \citet{bhattacharya2014finfets}}
+\end{figure}
+
+
+
+Several works analyze the FinFET reliability. In \cite{FinFET01} it is shown, at 14/16nm fabricated bulk FinFET technology, that for high energy charged particles, the drive current is the dominant factor to the transient fault pulse width and cross-section. And low energy particles have a grater dependence on secondary transistor and circuit design factors (number of fins, transistor arrangement, etc). 
+
+In \cite{FinFET02} the hot carrier injection (HCI) effect is analyzed in pass-gate FinFET transistors. The tests were executed using commercial FinFET technology showing a 50\% chance of errors due to HCI in pass-gate transistors. In \cite{FinFET03} a analysis of the sensitivity of double-gate and FinFET devices to process variations is shown. It is concluded that for 20nm FinFET devices large channel doping concentration is necessary to obtain suitable values of threshold voltage if heavily doped polysilicon gates are used. Due to the small volume of the channel the channel doping will bring unnacceptable V\textsc{th} fluctuations. Given that, heavily doped polysilicon may not be a viable choice with the work function adjustment being a better approach. 
+
+In \cite{FinFET04} the modeling of the reliability degradation of a FinFET-based Static Random Access Memory (SRAM) is shown. It is concluded that the probability of failure due to Bias Temperature Instability (BTI) and Gate Oxide BreakDown (GOBD) is relatively lower in comparison to HCI-induced failures. They also shown the improvement of lifetime due to Error-Correcting Code (ECC) memory. 
+
+Given the majority of papers exploring the reliability factors and its effects but the few that actually study mitigation techniques, this paper aims to bring a layout level analysis of a novel technique for robustness improvement. There is no evaluation in the the literature of the impact of the ST technique at layout level as well as in FinFET technology.
 
 This work is divided into five further sections: Variability Effects and Mitigation Techniques, with a theoretical foundation about variability. Motivation and Objectives, explaining in more details this work’s objective. Methodology, presenting how results were achieved with its experimental setup. The Results and Discussion presenting the simulation results and its analysis. And, lastly, the Conclusions.
 
@@ -301,7 +320,6 @@ These three types of variabilities, in conjunction, may prevent circuits from me
 \centering
 \caption{Design impact on performance and power due to different types of variability}
 \label{tab:02}
-\legend{Source: \cite{rahimi2016variability}}
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{lcccc}
 \hline
@@ -311,10 +329,10 @@ Leakage Power & Easy & Large: up to 148\% & L, Vth, \(\mu\), tox & Shorter batte
 Dynamic Power & Difficult & Workload dependent & C,  \(\alpha\) & Shorter battery life, heat \\ \hline
 \end{tabular}%
 }
+\legend{Source: \citet{rahimi2016variability}}
 \end{table}
 
-This work evaluates the effects caused by the physical variability. In FinFET, the physical variations are responsible for deviations in the device work function (WF), gate length (L\textsc{g}), fin height (H\textsc{fin}), fin thickness (T\textsc{si}) and parasitic resistances. It is shown in \cite{meinhardt2014impact} that work 
-function fluctuation (WFF) is the main cause of threshold voltage (V\textsc{th}) variations. Alongside, in \cite{wang2011statistical} is shown the high correlation between the variability in the on (I\textsc{on}) and off (I\textsc{off}) currents and V\textsc{th} fluctuation in the presence of granularity of the metal gate. The main cause of WFF is due to its dependency over the orientation of its metal grains. In the real fabrication process, metal gate devices are generally produced using multiple types of metal with different work functions randomly aligned as depicted in Figure \ref{wff}. In the ideal fabrication process, metal gate devices have the gates manufactured with uniformly aligned metal and then, they have very low WFF deviation \cite{zimpeck2016finfet}.
+This work evaluates the effects caused by the physical variability. In FinFET, the physical variations are responsible for deviations in the device work function (WF), gate length (L\textsc{g}), fin height (H\textsc{fin}), fin thickness (T\textsc{si}) and parasitic resistances. It is shown in \cite{meinhardt2014impact} that work function fluctuation (WFF) is the main cause of threshold voltage (V\textsc{th}) variations. Alongside, in \cite{wang2011statistical} is shown the high correlation between the variability in the on (I\textsc{on}) and off (I\textsc{off}) currents and V\textsc{th} fluctuation in the presence of granularity of the metal gate. The main cause of WFF is due to its dependency over the orientation of its metal grains. In the real fabrication process, metal gate devices are generally produced using multiple types of metal with different work functions randomly aligned as depicted in Figure \ref{wff}. In the ideal fabrication process, metal gate devices have the gates manufactured with uniformly aligned metal and then, they have very low WFF deviation \cite{zimpeck2016finfet}.
 
 \begin{figure}[H]
 \centering
@@ -358,7 +376,7 @@ If the threshold shifts, it will cross the input causing it to switch again. It 
 \legend{Source: \cite{WinNT}}
 \end{figure}
 
-This technique is tested in several works: In \cite{ahmad2016single} it is presented a novel Schmitt-trigger-based single-ended 11 Transistor Static random-access memory (SRAM) cell. It analyses its performance against seven different SRAM topologies. The novel cell showed the least energy consumption per operation with the smallest leakage power and a 6.9x higher Ion/Ioff ratio. Further PVT variability simulations confirmed the robustness of the design regarding read and write operation. The simulations were carried in 22nm predictive technology using HSPICE.
+This technique is tested in several works: In \cite{ahmad2016single} it is presented a novel Schmitt-trigger-based single-ended 11 Transistor SRAM cell. It analyses its performance against seven different SRAM topologies. The novel cell showed the least energy consumption per operation with the smallest leakage power and a 6.9x higher Ion/Ioff ratio. Further PVT variability simulations confirmed the robustness of the design regarding read and write operation. The simulations were carried in 22nm predictive technology using HSPICE.
 
 \cite{moghaddam2017design} presents a Schmitt trigger (ST) buffer using CNFET. It was evaluated against other two buffers and showed, on average, 68\% higher critical charge and 53\% lower energy consumption and a huge gain considering PVT variability robustness. The simulations were carried in 16nm Stanford CNFET model using HSPICE.
 	
@@ -433,6 +451,7 @@ The main PDK rules and lithography assumptions considered in this work are shown
 \textbf{VIA0-VIA3}                   & EUV                  & 18/18                     & 25                  \\ \hline
 \textbf{M1-M3}                       & EUV                  & 18/18                     & 36                  \\ \hline
 \end{tabular}
+
 \end{table}
 
 \begin{figure}[H]

@@ -13,6 +13,7 @@ Reallocated singl_function (elt_size=8) to 100 items from 50.
 Reallocated wiz_functions (elt_size=8) to 9000 items from 6000.
 Database file #1: abntex2-options.bib
 Database file #2: biblio.bib
+Warning--I didn't find a database entry for "finfetchar"
 Reallocated singl_function (elt_size=8) to 100 items from 50.
 Reallocated glb_str_ptr (elt_size=8) to 20 items from 10.
 Reallocated global_strs (elt_size=20001) to 20 items from 10.
@@ -22,44 +23,45 @@ Reallocated glb_str_end (elt_size=8) to 20 items from 10.
 | Em caso de dúvidas ou problemas com este estilo procure |
 | http://abntex2.googlecode.com                           |
 +---------------------------------------------------------+
-You've used 34 entries,
+You've used 41 entries,
             6711 wiz_defined-function locations,
-            1388 strings with 15788 characters,
-and the built_in function-call counts, 34483 in all, are:
-= -- 3013
-> -- 1250
-< -- 114
-+ -- 562
-- -- 370
-* -- 2498
-:= -- 4374
-add.period$ -- 170
-call.type$ -- 34
-change.case$ -- 425
-chr.to.int$ -- 75
-cite$ -- 32
-duplicate$ -- 1612
-empty$ -- 2692
-format.name$ -- 1778
-if$ -- 8504
+            1438 strings with 17382 characters,
+and the built_in function-call counts, 41123 in all, are:
+= -- 3541
+> -- 1495
+< -- 125
++ -- 655
+- -- 443
+* -- 2985
+:= -- 5237
+add.period$ -- 205
+call.type$ -- 41
+change.case$ -- 510
+chr.to.int$ -- 88
+cite$ -- 39
+duplicate$ -- 1904
+empty$ -- 3233
+format.name$ -- 2139
+if$ -- 10166
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 576
-newline$ -- 137
-num.names$ -- 160
-pop$ -- 840
+missing$ -- 692
+newline$ -- 165
+num.names$ -- 195
+pop$ -- 988
 preamble$ -- 1
-purify$ -- 150
+purify$ -- 181
 quote$ -- 0
-skip$ -- 1914
+skip$ -- 2272
 stack$ -- 1
-substring$ -- 1477
-swap$ -- 819
-text.length$ -- 56
+substring$ -- 1768
+swap$ -- 965
+text.length$ -- 65
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 13
+type$ -- 20
 warning$ -- 0
-while$ -- 279
+while$ -- 333
 width$ -- 0
-write$ -- 556
+write$ -- 670
+(There was 1 warning)

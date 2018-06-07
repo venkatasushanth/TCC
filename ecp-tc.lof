@@ -3,31 +3,35 @@
 \babel@toc {english}{}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\babel@toc {brazilian}{}
+\addvspace {10\p@ }
+\babel@toc {english}{}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces Comparison between Bulk CMOS (left) and FinFET (right) transistors.\relax }}{13}{figure.1.1}
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Structural comparison between (a) planar MOSFET and (b) FinFET.\relax }}{14}{figure.1.1}
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Structural comparison between (a) bulk and (b) SOI FinFETs.\relax }}{15}{figure.1.2}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Transistor Variability\relax }}{15}{figure.2.1}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Metal gate fabrication ideal and real aspects.\relax }}{16}{figure.2.2}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces a) General ST hysteresis curve b) Classical CMOS ST Topology c) Typical signal filtering with ST.\relax }}{19}{figure.2.3}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Transistor Variability\relax }}{18}{figure.2.1}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Metal gate fabrication ideal and real aspects.\relax }}{19}{figure.2.2}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces a) General ST hysteresis curve b) Classical CMOS ST Topology c) Typical signal filtering with ST.\relax }}{22}{figure.2.3}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Full Adders with internal inverters to be replaced highlighted.\relax }}{21}{figure.3.1}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Original and modified STs side-by-side\relax }}{22}{figure.3.2}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Technology layers and original Mirror CMOS Layout\relax }}{23}{figure.3.3}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Test Bench.\relax }}{24}{figure.3.4}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Full Adders with internal inverters to be replaced highlighted.\relax }}{25}{figure.3.1}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Original and modified STs side-by-side\relax }}{26}{figure.3.2}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Technology layers and original Mirror CMOS Layout\relax }}{27}{figure.3.3}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Test Bench.\relax }}{28}{figure.3.4}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Robustness improvements for each Full Adder at nominal operation.\relax }}{26}{figure.4.1}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Robustness improvements for each Full Adder at near-threshold operation.\relax }}{28}{figure.4.2}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Energy measures for the Sum output at Nominal operation.\relax }}{28}{figure.4.3}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Energy measures for the Carry Out output at Nominal operation.\relax }}{29}{figure.4.4}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Energy measures for the Sum output at Near-Threshold operation.\relax }}{29}{figure.4.5}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Energy measures for the Carry Out output at Near-Threshold operation.\relax }}{29}{figure.4.6}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Original Mirror CMOS (a) and Mirror CMOS with ST technique (b) layouts.\relax }}{30}{figure.4.7}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Original TGA (a) and TGA with ST technique (b) layouts.\relax }}{31}{figure.4.8}
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Original TFA (a) and TFA with ST technique (b) layouts.\relax }}{31}{figure.4.9}
-\contentsline {figure}{\numberline {4.10}{\ignorespaces Original HYBRID (a) and HYBRID with ST technique (b) layouts.\relax }}{31}{figure.4.10}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Robustness improvements for each Full Adder at nominal operation.\relax }}{31}{figure.4.1}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Robustness improvements for each Full Adder at near-threshold operation.\relax }}{33}{figure.4.2}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Energy measures for the Sum output at Nominal operation.\relax }}{33}{figure.4.3}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Energy measures for the Carry Out output at Nominal operation.\relax }}{34}{figure.4.4}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Energy measures for the Sum output at Near-Threshold operation.\relax }}{34}{figure.4.5}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Energy measures for the Carry Out output at Near-Threshold operation.\relax }}{34}{figure.4.6}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Original Mirror CMOS (a) and Mirror CMOS with ST technique (b) layouts.\relax }}{35}{figure.4.7}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Original TGA (a) and TGA with ST technique (b) layouts.\relax }}{36}{figure.4.8}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Original TFA (a) and TFA with ST technique (b) layouts.\relax }}{36}{figure.4.9}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Original HYBRID (a) and HYBRID with ST technique (b) layouts.\relax }}{36}{figure.4.10}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
