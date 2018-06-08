@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Arch Linux) (preloaded format=pdflatex 2018.6.5)  7 JUN 2018 17:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Arch Linux) (preloaded format=pdflatex 2018.6.1)  7 JUN 2018 22:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1347,6 +1347,41 @@ text indent calculated (lof, 1): 27.0pt
 number indent calculated (lof, 1): 18.0pt
 text noindent (lof, 1): 27.0pt
 number noindent (lof, 1): 0.0pt
+number indent by \l@... (lof, 1):  18.0pt
+text indent by \l@... (lof, 1):  27.60004pt
+number indent by parent (lof, 1):  18.0pt
+text indent calculated (lof, 1): 27.0pt
+number indent calculated (lof, 1): 18.0pt
+text noindent (lof, 1): 27.0pt
+number noindent (lof, 1): 0.0pt
+number indent by \l@... (lof, 1):  18.0pt
+text indent by \l@... (lof, 1):  27.60004pt
+number indent by parent (lof, 1):  18.0pt
+text indent calculated (lof, 1): 27.0pt
+number indent calculated (lof, 1): 18.0pt
+text noindent (lof, 1): 27.0pt
+number noindent (lof, 1): 0.0pt
+number indent by \l@... (lof, 1):  18.0pt
+text indent by \l@... (lof, 1):  27.60004pt
+number indent by parent (lof, 1):  18.0pt
+text indent calculated (lof, 1): 27.0pt
+number indent calculated (lof, 1): 18.0pt
+text noindent (lof, 1): 27.0pt
+number noindent (lof, 1): 0.0pt
+number indent by \l@... (lof, 1):  18.0pt
+text indent by \l@... (lof, 1):  27.60004pt
+number indent by parent (lof, 1):  18.0pt
+text indent calculated (lof, 1): 27.0pt
+number indent calculated (lof, 1): 18.0pt
+text noindent (lof, 1): 27.0pt
+number noindent (lof, 1): 0.0pt
+number indent by \l@... (lof, 1):  18.0pt
+text indent by \l@... (lof, 1):  27.60004pt
+number indent by parent (lof, 1):  18.0pt
+text indent calculated (lof, 1): 27.0pt
+number indent calculated (lof, 1): 18.0pt
+text noindent (lof, 1): 27.0pt
+number noindent (lof, 1): 0.0pt
 )
 \tf@lof=\write4
 \openout4 = `ecp-tc.lof'.
@@ -1431,6 +1466,13 @@ text indent calculated (toc, 0): 18.0pt
 number indent calculated (toc, 0): 0.0pt
 text noindent (toc, 0): 21.0pt
 number noindent (toc, 0): 0.0pt
+number indent by \l@... (toc, 1):  18.0pt
+text indent by \l@... (toc, 1):  27.60004pt
+number indent by parent (toc, 1):  18.0pt
+text indent calculated (toc, 1): 21.0pt
+number indent calculated (toc, 1): 18.0pt
+text noindent (toc, 1): 21.0pt
+number noindent (toc, 1): 0.0pt
 number indent by \l@... (toc, 0):  0.0pt
 text indent by \l@... (toc, 0):  18.0pt
 number indent by parent (toc, 0):  0.0pt
@@ -1521,12 +1563,12 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 Underfull \vbox (badness 3690) has occurred while \output is active []
 
  [13]
-<finfet.png, id=247, 1324.95pt x 634.37pt>
+<finfet.png, id=262, 1324.95pt x 634.37pt>
 File: finfet.png Graphic file (type png)
 <use finfet.png>
 Package pdftex.def Info: finfet.png  used on input line 266.
 (pdftex.def)             Requested size: 426.79135pt x 204.33833pt.
-<finfet2.png, id=253, 1595.9625pt x 769.87625pt>
+<finfet2.png, id=268, 1595.9625pt x 769.87625pt>
 File: finfet2.png Graphic file (type png)
 <use finfet2.png>
 Package pdftex.def Info: finfet2.png  used on input line 274.
@@ -1543,224 +1585,233 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 Underfull \vbox (badness 2005) has occurred while \output is active []
 
  [15 <./finfet2.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 Underfull \hbox (badness 10000) has occurred while \output is active
 \T1/ptm/m/n/10.95 16
  []
 
 [16]
-<transistorVariability.jpg, id=303, 1336.995pt x 1047.915pt>
-File: transistorVariability.jpg Graphic file (type jpg)
-<use transistorVariability.jpg>
-Package pdftex.def Info: transistorVariability.jpg  used on input line 311.
-(pdftex.def)             Requested size: 213.39568pt x 167.25409pt.
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [17
-
-]
-
-LaTeX Warning: File `wff.png' not found on input line 339.
-
-
-! Package pdftex.def Error: File `wff.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.339 \includegraphics[width=\textwidth]{wff.png}
-                                                 
-? 
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 339.
-(/usr/share/texmf-dist/tex/latex/psnfss/t1pcr.fd
-File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-)
+ [17]
 Underfull \hbox (badness 10000) has occurred while \output is active
 \T1/ptm/m/n/10.95 18
  []
 
-[18 <./transistorVariability.jpg>]
-Underfull \vbox (badness 5832) has occurred while \output is active []
+[18]
+<transistorVariability.jpg, id=362, 1336.995pt x 1047.915pt>
+File: transistorVariability.jpg Graphic file (type jpg)
+<use transistorVariability.jpg>
+Package pdftex.def Info: transistorVariability.jpg  used on input line 337.
+(pdftex.def)             Requested size: 426.79135pt x 334.50818pt.
 
- [19]
 Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [19
+
+]
+
+LaTeX Warning: Citation `cristina2014impact' on page 20 undefined on input line
+ 361.
 
 
 Underfull \hbox (badness 10000) has occurred while \output is active
 \T1/ptm/m/n/10.95 20
  []
 
-[20]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [21]
-<Hysteresis.png, id=389, 1374.63562pt x 963.6pt>
+[20 <./transistorVariability.jpg>]
+<wff.png, id=391, 2569.6pt x 1253.68375pt>
+File: wff.png Graphic file (type png)
+<use wff.png>
+Package pdftex.def Info: wff.png  used on input line 365.
+(pdftex.def)             Requested size: 426.79135pt x 208.22623pt.
+<Hysteresis.png, id=402, 1374.63562pt x 963.6pt>
 File: Hysteresis.png Graphic file (type png)
 <use Hysteresis.png>
-Package pdftex.def Info: Hysteresis.png  used on input line 373.
+Package pdftex.def Info: Hysteresis.png  used on input line 377.
 (pdftex.def)             Requested size: 341.43437pt x 239.34085pt.
-
+ [21 <./wff.png>]
 Underfull \hbox (badness 10000) has occurred while \output is active
 \T1/ptm/m/n/10.95 22
  []
 
-[22 <./Hysteresis.png>] [23]
+[22 <./Hysteresis.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [23
+
+]
+<FAs.png, id=463, 1445.4pt x 1156.32pt>
+File: FAs.png Graphic file (type png)
+<use FAs.png>
+Package pdftex.def Info: FAs.png  used on input line 408.
+(pdftex.def)             Requested size: 426.79135pt x 341.42903pt.
+
+Overfull \hbox (5.68597pt too wide) in paragraph at lines 415--416
+\T1/ptm/m/n/12 work was in-spired by ([][]ZHANG; SRI-VAS-TAVA; AJMERA[][], [][]
+2003[][]) and mod-i-fied in ([][]DOKA-
+ []
 
 
 Underfull \hbox (badness 10000) has occurred while \output is active
 \T1/ptm/m/n/10.95 24
  []
 
-[24
-
-]
-
-LaTeX Warning: File `FAs.png' not found on input line 404.
-
-
-! Package pdftex.def Error: File `FAs.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.404 \includegraphics[width=1\textwidth]{FAs.png}
-                                                  
-? 
-
-Overfull \hbox (5.68597pt too wide) in paragraph at lines 411--412
-\T1/ptm/m/n/12 work was in-spired by ([][]ZHANG; SRI-VAS-TAVA; AJMERA[][], [][]
-2003[][]) and mod-i-fied in ([][]DOKA-
- []
-
-[25]
+[24 <./FAs.png>]
 Package epstopdf Info: Source file: <STOriginal.eps>
-(epstopdf)                    date: 2018-06-05 12:51:17
+(epstopdf)                    date: 2018-06-01 19:36:42
 (epstopdf)                    size: 12802 bytes
 (epstopdf)             Output file: <STOriginal-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-06-05 12:51:17
+(epstopdf)                    date: 2018-06-01 19:45:53
 (epstopdf)                    size: 11064 bytes
 (epstopdf)             Command: <repstopdf --outfile=STOriginal-eps-converted-t
 o.pdf STOriginal.eps>
-(epstopdf)             \includegraphics on input line 419.
+(epstopdf)             \includegraphics on input line 423.
 Package epstopdf Info: Output file is already uptodate.
-<STOriginal-eps-converted-to.pdf, id=468, 646.415pt x 551.05875pt>
+<STOriginal-eps-converted-to.pdf, id=485, 646.415pt x 551.05875pt>
 File: STOriginal-eps-converted-to.pdf Graphic file (type pdf)
 <use STOriginal-eps-converted-to.pdf>
-Package pdftex.def Info: STOriginal-eps-converted-to.pdf  used on input line 41
-9.
+Package pdftex.def Info: STOriginal-eps-converted-to.pdf  used on input line 42
+3.
 (pdftex.def)             Requested size: 170.71718pt x 145.53377pt.
 Package epstopdf Info: Source file: <STcorrigido.eps>
-(epstopdf)                    date: 2018-06-05 12:51:17
+(epstopdf)                    date: 2018-06-01 19:36:42
 (epstopdf)                    size: 11715 bytes
 (epstopdf)             Output file: <STcorrigido-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-06-05 12:51:17
+(epstopdf)                    date: 2018-06-01 19:45:54
 (epstopdf)                    size: 10698 bytes
 (epstopdf)             Command: <repstopdf --outfile=STcorrigido-eps-converted-
 to.pdf STcorrigido.eps>
-(epstopdf)             \includegraphics on input line 425.
+(epstopdf)             \includegraphics on input line 429.
 Package epstopdf Info: Output file is already uptodate.
-<STcorrigido-eps-converted-to.pdf, id=473, 646.415pt x 551.05875pt>
+<STcorrigido-eps-converted-to.pdf, id=490, 646.415pt x 551.05875pt>
 File: STcorrigido-eps-converted-to.pdf Graphic file (type pdf)
 <use STcorrigido-eps-converted-to.pdf>
 Package pdftex.def Info: STcorrigido-eps-converted-to.pdf  used on input line 4
-25.
+29.
 (pdftex.def)             Requested size: 170.71718pt x 145.53377pt.
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 435.
 
- (/usr/share/texmf-dist/tex/latex/psnfss/omsptm.fd
+
+pdfTeX warning: pdflatex (file ./DesignFlow.pdf): PDF inclusion: found PDF vers
+ion <1.7>, but at most version <1.5> allowed
+<DesignFlow.pdf, id=494, 341.35529pt x 341.35529pt>
+File: DesignFlow.pdf Graphic file (type pdf)
+<use DesignFlow.pdf>
+Package pdftex.def Info: DesignFlow.pdf  used on input line 441.
+(pdftex.def)             Requested size: 341.43437pt x 341.44298pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [25 <./STOriginal-eps-converted-to.pdf> <./STcorrigido-eps-converted-to.pdf>]
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 448.
+
+
+(/usr/share/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 435.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 448.
 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.437 ...resulting in an area of 0.02916 \(\mu\)m^
+l.450 ...resulting in an area of 0.02916 \(\mu\)m^
                                                   {2}.
 ? 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.438 
+l.451 
       
 ? 
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 
 Underfull \hbox (badness 10000) has occurred while \output is active
 \T1/ptm/m/n/10.95 26
  []
 
-[26 <./STOriginal-eps-converted-to.pdf> <./STcorrigido-eps-converted-to.pdf>]
-<Layers.pdf, id=494, 1156.32pt x 245.718pt>
+[26 <./DesignFlow.pdf>]
+
+pdfTeX warning: pdflatex (file ./transistorHeight.pdf): PDF inclusion: found PD
+F version <1.7>, but at most version <1.5> allowed
+<transistorHeight.pdf, id=570, 963.6pt x 542.025pt>
+File: transistorHeight.pdf Graphic file (type pdf)
+<use transistorHeight.pdf>
+Package pdftex.def Info: transistorHeight.pdf  used on input line 454.
+(pdftex.def)             Requested size: 341.43437pt x 192.05217pt.
+<Layers.pdf, id=575, 1156.32pt x 245.718pt>
 File: Layers.pdf Graphic file (type pdf)
 <use Layers.pdf>
-Package pdftex.def Info: Layers.pdf  used on input line 459.
+Package pdftex.def Info: Layers.pdf  used on input line 479.
 (pdftex.def)             Requested size: 426.79135pt x 90.69301pt.
 
-[27 <./Layers.pdf>]
-LaTeX Font Info:    Font shape `T1/ptm/bx/sc' in size <12> not available
-(Font)              Font shape `T1/ptm/b/sc' tried instead on input line 481.
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.485 ...    & \multicolumn{2}{c}{1x10^{22}m^{-3}}
-                                                                            ...
-
-? 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.485 ...    & \multicolumn{2}{c}{1x10^{22}m^{-3}}
-                                                                            ...
-
-? 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.486 ...    & \multicolumn{2}{c}{2x10^{22}m^{-3}}
-                                                   \\ \hline
-? 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.486 ...    & \multicolumn{2}{c}{2x10^{22}m^{-3}}
-                                                   \\ \hline
-? 
-<testbench.jpg, id=538, 883.80188pt x 344.78813pt>
-File: testbench.jpg Graphic file (type jpg)
-<use testbench.jpg>
-Package pdftex.def Info: testbench.jpg  used on input line 494.
-(pdftex.def)             Requested size: 426.79135pt x 166.50127pt.
+ [27 <./transistorHeight.pdf>]
+<TGA.png, id=593, 1201.20348pt x 224.41737pt>
+File: TGA.png Graphic file (type png)
+<use TGA.png>
+Package pdftex.def Info: TGA.png  used on input line 486.
+(pdftex.def)             Requested size: 426.79135pt x 79.73549pt.
+<TFA.png, id=594, 1200.44273pt x 253.32536pt>
+File: TFA.png Graphic file (type png)
+<use TFA.png>
+Package pdftex.def Info: TFA.png  used on input line 493.
+(pdftex.def)             Requested size: 426.79135pt x 90.06448pt.
+<HYBRID.png, id=595, 1197.3998pt x 236.58916pt>
+File: HYBRID.png Graphic file (type png)
+<use HYBRID.png>
+Package pdftex.def Info: HYBRID.png  used on input line 500.
+(pdftex.def)             Requested size: 426.79135pt x 84.32727pt.
 
 Underfull \hbox (badness 10000) has occurred while \output is active
 \T1/ptm/m/n/10.95 28
  []
 
-[28 <./testbench.jpg>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+[28 <./Layers.pdf> <./TGA.png> <./TFA.png> <./HYBRID.png>]
+LaTeX Font Info:    Font shape `T1/ptm/bx/sc' in size <12> not available
+(Font)              Font shape `T1/ptm/b/sc' tried instead on input line 521.
 
- [29
+! Missing $ inserted.
+<inserted text> 
+                $
+l.525 ...    & \multicolumn{2}{c}{1x10^{22}m^{-3}}
+                                                                            ...
 
-]
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.525 ...    & \multicolumn{2}{c}{1x10^{22}m^{-3}}
+                                                                            ...
 
-LaTeX Warning: File `Nominalimprov.png' not found on input line 566.
-
-
-! Package pdftex.def Error: File `Nominalimprov.png' not found: using draft set
-ting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.566 ...s[width=0.8\textwidth]{Nominalimprov.png}
-                                                  
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.526 ...    & \multicolumn{2}{c}{2x10^{22}m^{-3}}
+                                                   \\ \hline
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.526 ...    & \multicolumn{2}{c}{2x10^{22}m^{-3}}
+                                                   \\ \hline
 ? 
 
+
+pdfTeX warning: pdflatex (file ./testbench.pdf): PDF inclusion: found PDF versi
+on <1.7>, but at most version <1.5> allowed
+<testbench.pdf, id=642, 910.48157pt x 369.90193pt>
+File: testbench.pdf Graphic file (type pdf)
+<use testbench.pdf>
+Package pdftex.def Info: testbench.pdf  used on input line 535.
+(pdftex.def)             Requested size: 426.79135pt x 173.3911pt.
+[29 <./testbench.pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -1768,53 +1819,49 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 \T1/ptm/m/n/10.95 30
  []
 
-[30]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+[30
 
- [31]
-
-LaTeX Warning: File `NTimprov.png' not found on input line 631.
-
-
-! Package pdftex.def Error: File `NTimprov.png' not found: using draft setting.
-
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.631 ...aphics[width=0.8\textwidth]{NTimprov.png}
-                                                  
-? 
-<energyNominalSum.pdf, id=575, 614.295pt x 794.97pt>
-File: energyNominalSum.pdf Graphic file (type pdf)
-<use energyNominalSum.pdf>
-Package pdftex.def Info: energyNominalSum.pdf  used on input line 643.
-(pdftex.def)             Requested size: 426.79135pt x 196.49704pt.
+]
+<Nominalimprov.png, id=680, 693.5511pt x 382.7901pt>
+File: Nominalimprov.png Graphic file (type png)
+<use Nominalimprov.png>
+Package pdftex.def Info: Nominalimprov.png  used on input line 607.
+(pdftex.def)             Requested size: 341.43437pt x 188.45076pt.
+ [31 <./Nominalimprov.png>]
+<NTimprov.png, id=692, 693.5511pt x 383.9946pt>
+File: NTimprov.png Graphic file (type png)
+<use NTimprov.png>
+Package pdftex.def Info: NTimprov.png  used on input line 672.
+(pdftex.def)             Requested size: 341.43437pt x 189.04375pt.
 
 Underfull \hbox (badness 10000) has occurred while \output is active
 \T1/ptm/m/n/10.95 32
  []
 
 [32]
-<energyNominalCarryOut.pdf, id=582, 614.295pt x 794.97pt>
+<energyNominalSum.pdf, id=700, 614.295pt x 794.97pt>
+File: energyNominalSum.pdf Graphic file (type pdf)
+<use energyNominalSum.pdf>
+Package pdftex.def Info: energyNominalSum.pdf  used on input line 684.
+(pdftex.def)             Requested size: 426.79135pt x 196.49704pt.
+<energyNominalCarryOut.pdf, id=702, 614.295pt x 794.97pt>
 File: energyNominalCarryOut.pdf Graphic file (type pdf)
 <use energyNominalCarryOut.pdf>
-Package pdftex.def Info: energyNominalCarryOut.pdf  used on input line 650.
+Package pdftex.def Info: energyNominalCarryOut.pdf  used on input line 691.
 (pdftex.def)             Requested size: 426.79135pt x 196.49704pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [33 <./energyNominalSum.pdf>]
-<energyNTSum.pdf, id=604, 614.295pt x 794.97pt>
+ [33 <./energyNominalSum.pdf> <./NTimprov.png>]
+<energyNTSum.pdf, id=725, 614.295pt x 794.97pt>
 File: energyNTSum.pdf Graphic file (type pdf)
 <use energyNTSum.pdf>
-Package pdftex.def Info: energyNTSum.pdf  used on input line 657.
+Package pdftex.def Info: energyNTSum.pdf  used on input line 698.
 (pdftex.def)             Requested size: 426.79135pt x 196.49704pt.
-<energyNTCarryOut.pdf, id=606, 614.295pt x 794.97pt>
+<energyNTCarryOut.pdf, id=727, 614.295pt x 794.97pt>
 File: energyNTCarryOut.pdf Graphic file (type pdf)
 <use energyNTCarryOut.pdf>
-Package pdftex.def Info: energyNTCarryOut.pdf  used on input line 664.
+Package pdftex.def Info: energyNTCarryOut.pdf  used on input line 705.
 (pdftex.def)             Requested size: 426.79135pt x 196.49704pt.
 
 Underfull \hbox (badness 10000) has occurred while \output is active
@@ -1822,57 +1869,53 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  []
 
 [34 <./energyNominalCarryOut.pdf> <./energyNTSum.pdf> <./energyNTCarryOut.pdf>]
-<CMOS.png, id=663, 715.67375pt x 199.74625pt>
+<CMOS.png, id=785, 715.67375pt x 199.74625pt>
 File: CMOS.png Graphic file (type png)
 <use CMOS.png>
-Package pdftex.def Info: CMOS.png  used on input line 692.
+Package pdftex.def Info: CMOS.png  used on input line 733.
 (pdftex.def)             Requested size: 426.79135pt x 119.12022pt.
-<CMOSST.png, id=664, 1201.96422pt x 147.58295pt>
+<CMOSST.png, id=786, 1201.96422pt x 147.58295pt>
 File: CMOSST.png Graphic file (type png)
 <use CMOSST.png>
-Package pdftex.def Info: CMOSST.png  used on input line 698.
+Package pdftex.def Info: CMOSST.png  used on input line 739.
 (pdftex.def)             Requested size: 426.79135pt x 52.40244pt.
-<TGA.png, id=665, 1201.20348pt x 224.41737pt>
 File: TGA.png Graphic file (type png)
 <use TGA.png>
-Package pdftex.def Info: TGA.png  used on input line 709.
+Package pdftex.def Info: TGA.png  used on input line 750.
 (pdftex.def)             Requested size: 426.79135pt x 79.73549pt.
-<TGAST.png, id=666, 1197.3998pt x 78.3559pt>
+<TGAST.png, id=787, 1197.3998pt x 78.3559pt>
 File: TGAST.png Graphic file (type png)
 <use TGAST.png>
-Package pdftex.def Info: TGAST.png  used on input line 715.
+Package pdftex.def Info: TGAST.png  used on input line 756.
 (pdftex.def)             Requested size: 426.79135pt x 27.92831pt.
-<TFA.png, id=667, 1200.44273pt x 253.32536pt>
 File: TFA.png Graphic file (type png)
 <use TFA.png>
-Package pdftex.def Info: TFA.png  used on input line 727.
+Package pdftex.def Info: TFA.png  used on input line 768.
 (pdftex.def)             Requested size: 426.79135pt x 90.06448pt.
-<TFAST.png, id=668, 1201.96422pt x 127.04305pt>
+<TFAST.png, id=788, 1201.96422pt x 127.04305pt>
 File: TFAST.png Graphic file (type png)
 <use TFAST.png>
-Package pdftex.def Info: TFAST.png  used on input line 733.
+Package pdftex.def Info: TFAST.png  used on input line 774.
 (pdftex.def)             Requested size: 426.79135pt x 45.10931pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [35 <./CMOS.png> <./CMOSST.png>]
-<HYBRID.png, id=677, 1197.3998pt x 236.58916pt>
 File: HYBRID.png Graphic file (type png)
 <use HYBRID.png>
-Package pdftex.def Info: HYBRID.png  used on input line 745.
+Package pdftex.def Info: HYBRID.png  used on input line 786.
 (pdftex.def)             Requested size: 426.79135pt x 84.32727pt.
-<HYBRIDST.png, id=678, 1195.87831pt x 75.31294pt>
+<HYBRIDST.png, id=797, 1195.87831pt x 75.31294pt>
 File: HYBRIDST.png Graphic file (type png)
 <use HYBRIDST.png>
-Package pdftex.def Info: HYBRIDST.png  used on input line 751.
+Package pdftex.def Info: HYBRIDST.png  used on input line 792.
 (pdftex.def)             Requested size: 426.79135pt x 26.87704pt.
 
 Underfull \hbox (badness 10000) has occurred while \output is active
 \T1/ptm/m/n/10.95 36
  []
 
-[36 <./TGA.png> <./TGAST.png> <./TFA.png> <./TFAST.png> <./HYBRID.png> <./HYBRI
-DST.png>] (./ecp-tc.bbl [37
+[36 <./TGAST.png> <./TFAST.png> <./HYBRIDST.png>] (./ecp-tc.bbl [37
 
 ]
 Underfull \hbox (badness 10000) has occurred while \output is active
@@ -1889,39 +1932,41 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  []
 
 [40]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 772.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 772.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 813.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 813.
  (./ecp-tc.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 772.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 772.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 813.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 813.
 Package rerunfilecheck Info: File `ecp-tc.out' has not changed.
-(rerunfilecheck)             Checksum: 1C9A2B4B99011F3A3AD73BF6F4851F8F;2592.
+(rerunfilecheck)             Checksum: C31DBC085F55313425E36217B9AD94AF;2738.
+
+
+LaTeX Warning: There were undefined references.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 772.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 813.
  ) 
 Here is how much of TeX's memory you used:
- 22868 strings out of 492982
- 379257 string characters out of 6138580
- 491230 words of memory out of 5000000
- 26008 multiletter control sequences out of 15000+600000
- 567489 words of font info for 57 fonts, out of 8000000 for 9000
+ 22883 strings out of 492982
+ 379699 string characters out of 6138580
+ 492676 words of memory out of 5000000
+ 26019 multiletter control sequences out of 15000+600000
+ 566868 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 48i,12n,46p,10362b,591s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 48i,12n,46p,10362b,590s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
 mr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/
 share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dis
-t/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/hel
-vetic/uhvro8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr
-/share/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on ecp-tc.pdf (40 pages, 1539199 bytes).
+t/fonts/type1/urw/helvetic/uhvro8a.pfb></usr/share/texmf-dist/fonts/type1/urw/t
+imes/utmb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
+Output written on ecp-tc.pdf (40 pages, 4436369 bytes).
 PDF statistics:
- 782 PDF objects out of 1000 (max. 8388607)
- 637 compressed objects within 7 object streams
- 150 named destinations out of 1000 (max. 500000)
- 281 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 896 PDF objects out of 1000 (max. 8388607)
+ 689 compressed objects within 7 object streams
+ 157 named destinations out of 1000 (max. 500000)
+ 319 words of extra memory for PDF output out of 10000 (max. 10000000)
 

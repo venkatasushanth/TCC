@@ -13,7 +13,6 @@ Reallocated singl_function (elt_size=8) to 100 items from 50.
 Reallocated wiz_functions (elt_size=8) to 9000 items from 6000.
 Database file #1: abntex2-options.bib
 Database file #2: biblio.bib
-Warning--I didn't find a database entry for "finfetchar"
 Reallocated singl_function (elt_size=8) to 100 items from 50.
 Reallocated glb_str_ptr (elt_size=8) to 20 items from 10.
 Reallocated global_strs (elt_size=20001) to 20 items from 10.
@@ -23,45 +22,44 @@ Reallocated glb_str_end (elt_size=8) to 20 items from 10.
 | Em caso de dúvidas ou problemas com este estilo procure |
 | http://abntex2.googlecode.com                           |
 +---------------------------------------------------------+
-You've used 41 entries,
+You've used 42 entries,
             6711 wiz_defined-function locations,
-            1438 strings with 17382 characters,
-and the built_in function-call counts, 41123 in all, are:
-= -- 3541
-> -- 1495
-< -- 125
-+ -- 655
-- -- 443
-* -- 2985
-:= -- 5237
-add.period$ -- 205
-call.type$ -- 41
-change.case$ -- 510
-chr.to.int$ -- 88
-cite$ -- 39
-duplicate$ -- 1904
-empty$ -- 3233
-format.name$ -- 2139
-if$ -- 10166
+            1445 strings with 17564 characters,
+and the built_in function-call counts, 41861 in all, are:
+= -- 3595
+> -- 1511
+< -- 129
++ -- 660
+- -- 448
+* -- 3030
+:= -- 5332
+add.period$ -- 210
+call.type$ -- 42
+change.case$ -- 517
+chr.to.int$ -- 92
+cite$ -- 40
+duplicate$ -- 1949
+empty$ -- 3306
+format.name$ -- 2162
+if$ -- 10354
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 692
-newline$ -- 165
-num.names$ -- 195
-pop$ -- 988
+missing$ -- 708
+newline$ -- 169
+num.names$ -- 200
+pop$ -- 1008
 preamble$ -- 1
-purify$ -- 181
+purify$ -- 184
 quote$ -- 0
-skip$ -- 2272
+skip$ -- 2314
 stack$ -- 1
-substring$ -- 1768
-swap$ -- 965
-text.length$ -- 65
+substring$ -- 1792
+swap$ -- 989
+text.length$ -- 68
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 20
+type$ -- 21
 warning$ -- 0
-while$ -- 333
+while$ -- 340
 width$ -- 0
-write$ -- 670
-(There was 1 warning)
+write$ -- 688

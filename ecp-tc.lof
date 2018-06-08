@@ -14,14 +14,19 @@
 \contentsline {figure}{\numberline {1.1}{\ignorespaces Structural comparison between (a) planar MOSFET and (b) FinFET.\relax }}{14}{figure.1.1}
 \contentsline {figure}{\numberline {1.2}{\ignorespaces Structural comparison between (a) bulk and (b) SOI FinFETs.\relax }}{15}{figure.1.2}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Transistor Variability\relax }}{18}{figure.2.1}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Metal gate fabrication ideal and real aspects.\relax }}{19}{figure.2.2}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Transistor Variability\relax }}{20}{figure.2.1}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Metal gate fabrication ideal and real aspects.\relax }}{21}{figure.2.2}
 \contentsline {figure}{\numberline {2.3}{\ignorespaces a) General ST hysteresis curve b) Classical CMOS ST Topology c) Typical signal filtering with ST.\relax }}{22}{figure.2.3}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Full Adders with internal inverters to be replaced highlighted.\relax }}{25}{figure.3.1}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Original and modified STs side-by-side\relax }}{26}{figure.3.2}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Technology layers and original Mirror CMOS Layout\relax }}{27}{figure.3.3}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Test Bench.\relax }}{28}{figure.3.4}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Full Adders with internal inverters to be replaced highlighted.\relax }}{24}{figure.3.1}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Original and modified STs side-by-side\relax }}{25}{figure.3.2}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Design flow of the experiments.\relax }}{26}{figure.3.3}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Transistor height and number of fins.\relax }}{27}{figure.3.4}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Technology layers and original Mirror CMOS Layout\relax }}{28}{figure.3.5}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Original TGA Layout.\relax }}{28}{figure.3.6}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Original TFA Layout.\relax }}{28}{figure.3.7}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Original Hybrid Layout.\relax }}{28}{figure.3.8}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Test Bench.\relax }}{29}{figure.3.9}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Robustness improvements for each Full Adder at nominal operation.\relax }}{31}{figure.4.1}
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Robustness improvements for each Full Adder at near-threshold operation.\relax }}{33}{figure.4.2}

@@ -44,6 +44,12 @@
   IEEE. \textbf{Power and Timing Modeling, Optimization and Simulation
   (PATMOS), 2016 26th International Workshop on}. [S.l.], 2016. p. 155--161.}
 
+\bibitem[Asenov 1999]{asenov1999random}
+\abntrefinfo{Asenov}{ASENOV}{1999}
+{ASENOV, A. Random dopant induced threshold voltage lowering and fluctuations
+  in sub 50 nm mosfets: a statistical 3datomistic'simulation study. In:  .
+  [S.l.]: IOP Publishing, 1999. v.~10, n.~2, p.~153.}
+
 \bibitem[Beckett 2002]{beckett2002fine}
 \abntrefinfo{Beckett}{BECKETT}{2002}
 {BECKETT, P. A fine-grained reconfigurable logic array based on double gate
