@@ -428,7 +428,7 @@ In this design a dynamic body-bias technique is applied through a feedback mecha
 \begin{subfigure}{.5\textwidth}
   \centering
   \includegraphics[width=.8\linewidth]{STcorrigido.eps}
-  \caption{Modified ST Inverter applied in this work}
+  \caption{Modified ST Inverter applied in this work. Source: from author.}
   \label{fig:sub2}
 \end{subfigure}
 \caption{Original and modified STs side-by-side}
@@ -442,20 +442,14 @@ The project was divided into two main steps: The layouts design and the electric
 \includegraphics[width=0.8\textwidth]{DesignFlow.pdf}
 \caption{Design flow of the experiments.}
 \label{DesignFlow}
+\legend{Source: from author.}
 \end{figure}
 
 \section{Layout Design}
 
 All Full Adders layouts were designed using the Virtuoso Electronic Design Automation (EDA) tool from Cadence\textregistered{} with the process design kit (PDK) of 7-nm FinFET or Arizona State Predictive PDK (ASAP7) from the Arizona State University in partnership with ARM \cite{clark2016asap7}. It is the only available 7nm PDK for academic use, resulting in a very realistic estimative. This PDK was chosen due to realistic design conjecture regarding the current design competencies. Due to limitations of ASAP7 technology, it is not possible to connect the NMOS bulks separately due to the shared substrate. Given that, the Schmitt Trigger behavior is preserved with only minor changes between charging and discharging delays due to the difference between PMOS and NMOS threshold voltages. The ST applied in this work is shown at Figure \ref{fig:sub2}.
 
-The main PDK rules and lithography assumptions considered in this work are shown in Table \ref{layers}. To exemplify the PDK layers, the traditional CMOS Full Adder layout is shown in Fig. \ref{fig:layers}, alongside TGA, TFA and Hybrid Adders, in Figures \ref{fig:TGA} \ref{fig:TFA} and \ref{fig:HYBRID}, respectively. For all layouts it was used a dense 7.5 M2 (Metal 2) track cell, baseline resulting in a 270nm cell height. This corresponds to three fins for each transistor as shown in Figure \ref{th}. To make the bulk connections it is necessary a TAP-Cell. It is responsible to connect the NMOS and PMOS bulks to supply/ground, respectively, being possible to connect the PMOS bulks to another node. It is a technology restriction needed for the proper function of the circuit. Its layout has a length of 108nm resulting in an area of 0.02916 \(\mu\)m^{2}.
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.8\textwidth]{transistorHeight.pdf}
-\caption{Transistor height and number of fins.}
-\label{th}
-\end{figure}
+The main PDK rules and lithography assumptions considered in this work are shown in Table \ref{layers}. To exemplify the PDK layers, the traditional CMOS Full Adder layout is shown in Fig. \ref{fig:layers}, alongside TGA, TFA and Hybrid Adders, in Figures \ref{fig:TGA} \ref{fig:TFA} and \ref{fig:HYBRID}, respectively. For all layouts it was used a dense 7.5 M2 (Metal 2) track cell, baseline resulting in a 270nm cell height. This corresponds to three fins for each transistor as shown in Figure \ref{th}. To make the back-gate connections it is necessary a TAP-Cell. It is responsible to connect the NMOS and PMOS back-gates to supply/ground, respectively, being possible to connect the PMOS back-gates to another node. It is a PDK restriction needed for the proper function of the circuit. Its layout has a length of 108nm resulting in an area of 0.02916 $\(\mu\)m^{2}$ as shown in Figure \ref{tap}.
 
 \begin{table}[H]
 \centering
@@ -480,6 +474,7 @@ The main PDK rules and lithography assumptions considered in this work are shown
 \includegraphics[width=\textwidth]{Layers.pdf}
 \caption{Technology layers and original Mirror CMOS Layout}
 \label{fig:layers}
+\legend{Source: from author.}
 \end{figure}
 
 \begin{figure}[H]
@@ -487,6 +482,7 @@ The main PDK rules and lithography assumptions considered in this work are shown
 \includegraphics[width=\textwidth]{TGA.png}
 \caption{Original TGA Layout.}
 \label{fig:TGA}
+\legend{Source: from author.}
 \end{figure}
 
 \begin{figure}[H]
@@ -494,6 +490,7 @@ The main PDK rules and lithography assumptions considered in this work are shown
 \includegraphics[width=\textwidth]{TFA.png}
 \caption{Original TFA Layout.}
 \label{fig:TFA}
+\legend{Source: from author.}
 \end{figure}
 
 \begin{figure}[H]
@@ -501,6 +498,23 @@ The main PDK rules and lithography assumptions considered in this work are shown
 \includegraphics[width=\textwidth]{HYBRID.png}
 \caption{Original Hybrid Layout.}
 \label{fig:HYBRID}
+\legend{Source: from author.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{transistorHeight.pdf}
+\caption{Transistor height and number of fins.}
+\label{th}
+\legend{Source: from author.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.2\textwidth]{TAP.png}
+\caption{TAP-Cell Layout.}
+\label{tap}
+\legend{Source: from author.}
 \end{figure}
 
 \section{Electrical Simulation}
@@ -543,17 +557,54 @@ The reference values from ASAP7 technology for electrical simulations are shown 
 
 \chapter{Results and Discussion}
 
-The results are organized into two main analysis: the set of full adders were evaluated at nominal conditions and operating at a near-threshold (Nt) region with supply voltage equal to 0.4V. In both cases, the process variability is considered and simulations with and without the ST technique is performed. To highlight the improvements and drawbacks of the ST technique for each FA, results also show the relation (\(\Delta\)) between the deviation of traditional and ST circuits.
+The results are organized into two main analysis: the set of full adders were evaluated at nominal voltage conditions and operating at a near-threshold (Nt) region with supply voltage equal to 0.4V. In both cases, the process variability is considered and simulations with and without the ST technique is performed. To highlight the improvements and drawbacks of the ST technique for each FA, results also show the relation (\(\Delta\)) between the deviation of traditional and ST circuits. For each output (Sum and Carry Out) delays and energy measures were considered. All analysis was made at layout level with the 7nm ASAP technology node, with all parasitics considered. The resulting FA layouts are shown from Figure \ref{fig:CMOSST} to \ref{fig:HYBRIDST}.
 
-\section{Nominal Operation}
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{CMOSST.png}
+\caption{Mirror CMOS Layout with the applied technique.}
+\label{fig:CMOSST}
+\legend{Source: from Author}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{TGAST.png}
+\caption{TGA Layout with the applied technique.}
+\label{fig:TGAST}
+\legend{Source: from Author}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{TFAST.png}
+\caption{TFA Layout with the applied technique.}
+\label{fig:TFAST}
+\legend{Source: from Author}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{HYBRIDST.png}
+\caption{Hybrid FA Layout with the applied technique.}
+\label{fig:HYBRIDST}
+\legend{Source: from Author}
+\end{figure}
+
+
+\section{Nominal Voltage Operation}
 
 At nominal supply voltage, carry-out generation is always the critical path, considering or not the variability effects. According to the Table \ref{delaysNominal} and Table \ref{energyNominal}, it is possible to observe an increase on the mean of delay and energy for all circuits when the ST technique is inserted in the design compared to traditional one.
 
 TFA presented the best performance and the lowest energy consumption for nominal voltage operation. However, TFA presented high maximum values and large standard deviation that are essential points to be considered. These points are a consequence of the heavy signal degradation on the TFA outputs, leaving the TFA for high-performance applications more indicated to technology nodes with low process variability sensibility. The CMOS adder showed the smallest standard deviations being the most recommended for technology nodes with high variability. 
 
-Also, these results for 7nm ASAP7 technology considering layout are in the face of the results found to 16nm Predictive Technology Model (PTM) High-Performance technology \cite{samuel2016}. 7nm layout with ASAP7 technology shows significant improvement on the energy robustness (over 18\%) at nominal voltage and in some cases also in the delay robustness to process variability. 
+The TGA showed the lowest maximum delays, resulting from the lowest average absolute standard deviations. Although, not presenting the lowest normalized deviation. The Hybrid showed high values for maximum delays (only after the TFA maximum) and the highest mean delays.   
 
-According to Table \ref{energyNominal}, ST circuits increased the mean energy about close two times considering the energy necessary to cover all timing arches to the SUM output. The effect is lighter on the Carry-Out total energy. But, although this penalty, the benefits of ST technique on the cell robustness against process variability are considerable. All the ST FA circuits have the deviation reduced. Hybrid presented the best improvement on energy robustness, with 30\% more stability. Fig. \ref{fig:improvNominal} resumes the improvement reached with the ST technique on Delay and Energy. Only TGA and TFA do not have total improvement, with some degradation on delay for the SUM output on TGA and the Carry-out on TFA. However, the deviation is reduced to all the other cases significantly.
+For delays, there was improvement over the Sum (Carry Out) output for the TFA (TGA) with a 37.43\% (15.77\%) higher variability robustness. The CMOS and Hybrid FAs did not show any considerable improvement/worsening. Although, the Carry Out (Sum) output for the TFA (TGA) showed a 25.64\% (11.65\%) robustness worsening.
+
+The results obtained in this work are in the face of the results found to 16nm Predictive Technology Model (PTM) High-Performance technology \cite{samuel2016}. 7nm layout with ASAP7 technology shows significant improvement on the energy robustness (over 18\%) at nominal voltage and in some cases also in the delay robustness to process variability. 
+
+According to Table \ref{energyNominal}, ST circuits increased the mean energy about close two times considering the energy necessary to cover all timing arches to the SUM output. The effect is lighter on the Carry-Out total energy. But, although this penalty, the benefits of ST technique on the cell robustness against process variability are considerable. All the ST FA circuits have the deviation reduced. Hybrid presented the best improvement on energy robustness, with 30\% more stability. Fig. \ref{fig:improvNominal} resumes the improvement reached with the ST technique on Delay and Energy.
 
 \begin{table}[!htbp]
 \centering
@@ -605,19 +656,19 @@ According to Table \ref{energyNominal}, ST circuits increased the mean energy ab
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.8\textwidth]{Nominalimprov.png}
-\caption{Robustness improvements for each Full Adder at nominal operation.}
+\includegraphics[width=\textwidth, trim={0 9cm 0 9cm},clip]{improvNominal.pdf}
+\caption{Robustness improvements for each Full Adder at nominal voltage operation.}
 \label{fig:improvNominal}
-%\legend{Source: \cite{dokania2015circuit}}
+\legend{Source: from author.}
 \end{figure}
 
 \section{Near-Threshold Operation}
 
-At near-threshold, variability compromises the FA circuits on some cases making the SUM output the critical path instead of the Carry-out generation, observing the maximum values found. Table \ref{delaysNT} presents the results of the near-threshold operation. 
+At near-threshold, variability compromises the FA circuits on some cases making the SUM output the critical path instead of the Carry-out generation, observing the maximum values found. Table \ref{delaysNT} presents the delay results of the near-threshold operation. 
 
-The energy results to near-threshold operation are presented in Table \ref{energyNT}. Operating at low voltage reduces the mean energy over 30\% for CMOS, TFA and Hybrid FAs and at least 15\% of TGA compared to nominal voltage operation. As stated on \cite{dokania2015circuit}, the ST technique at NT operation reduces the delay and energy deviation for all circuits. However, the deviation of the circuits is considerably higher at NT operation, emphasizing the need of circuit strategies to deal with variability. 
+The energy results to near-threshold operation are presented in Table \ref{energyNT}. Operating at low voltage reduces the mean energy over 30\% for CMOS, TFA and Hybrid FAs and at least 15\% of TGA compared to nominal voltage operation. As stated on \cite{dokania2015circuit}, the ST technique at NT operation reduces the delay and energy deviation for all circuits. However, the lag of the circuits is considerably higher at NT operation, emphasizing the need of circuit strategies to deal with variability. 
 
-TFA and TGA showed the highest deviations and unacceptable maximum delays, which is expected due to their pass-transistor logic and inherent signal degradation. The Hybrid adder showed higher deviations, delays and similar energy consumption in comparison to the CMOS Adder. Given that, the CMOS adder remains as a good choice for low power applications.
+TFA and TGA showed the highest deviations and high maximum delays, which is expected due to their pass-transistor logic and inherent signal degradation. The Hybrid adder showed higher deviations, delays and similar energy consumption in comparison to the CMOS Adder. Given that, the CMOS adder remains as a good choice for low power applications.
 
 Results make clear the advantage of the technique when considering energy variability robustness. Fig. \ref{fig:NTimprov} shows the comparative evaluation of the improvement reached by ST technique at NT operation. Even when there was a worsening on delay robustness, the energy robustness presented improvements. The technique can introduce more delay variability given that variability determines the ST behavior as well, influencing its delays, which stacks with the impact of multiple transistors in a series arrangement.
 
@@ -670,143 +721,85 @@ Results make clear the advantage of the technique when considering energy variab
 
 \begin{figure}[!htb]
 \centering
-\includegraphics[width=0.8\textwidth]{NTimprov.png}
+\includegraphics[width=\textwidth, trim={0 9cm 0 9cm},clip]{improvNT.pdf}
 \caption{Robustness improvements for each Full Adder at near-threshold operation.}
 \label{fig:NTimprov}
+\legend{Source: from author.}
 %\legend{Source: \cite{dokania2015circuit}}
 \end{figure}
 
 \section{Penalties}
 
-It is expected that a technique which replaces a 2-transistor sub-circuit to a 4-transistor one should bring an impact over metrics. Given so, the average impact at nominal operation was 30\% over the delay and their deviations. For energy, the impact is considerable, being on average over 85\% percent higher the energy consumption. For energy standard deviations there was a 40\% increase at nominal level and a minor 4\% increase at near-threshold level. Energy penalties are plotted at Images \ref{fig:energyNS} to \ref{fig:energyNTCO}.
+It is expected that a technique which replaces a 2-transistor sub-circuit to a 4-transistor one should bring an impact over metrics. Given so, the average impact at nominal voltage operation was 30\% over the delay and their absolute deviation values for nominal voltage and near-threshold operations. For nominal voltage operation, both outputs had similar penalties (35\% increase in delays). For near-threshold operation the Sum output had a considerable higher penalty (47\%) in comparison to the Carry Out output (12\%). For delay deviation both operation regimes had similar results with an 8\% increase for the Sum output and a 60\% increase for the Carry Out output, which is expected since Carry Out is the critical path.
+
+
+For energy, the impact is considerable, being on average over 85\% percent higher. For energy standard deviations there was a 40\% increase at nominal voltage and a minor 4\% increase at near-threshold level. At both operation regimes and at both outputs the penalty for energy was similar, with a 93\% increase for the Sum output and 80\% increase for the Carry Out output. For the energy devation, at nominal voltage operation there was a higher penalty for the Sum output (47\%) in comparison to the Carry Out output (35\%). At near-threshold operation both outputs had the same minor penalty of 4\% on deviations. 
+
+Overall, the worst penalties were the 47\% increase in delays in Sum output at near-threshold operation, 59\% increase on delay deviation in the Carry Out output at nominal operation, 93\% increase at energy consumption for Sum output at both operation regimes and its 47\% increase in energy deviation at nominal operation. Energy penalties are plotted at Figures \ref{fig:energyNS} to \ref{fig:energyNTCO}. 
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth, trim={0 9cm 0 9cm},clip]{energyNominalSum.pdf}
-\caption{Energy measures for the Sum output at Nominal operation.}
+\caption{Energy penalties for the Sum output at Nominal voltage operation.}
 \label{fig:energyNS}
+\legend{Source: from author.}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth, trim={0 9cm 0 9cm},clip]{energyNominalCarryOut.pdf}
-\caption{Energy measures for the Carry Out output at Nominal operation.}
+\caption{Energy penalties for the Carry Out output at Nominal voltage operation.}
 \label{fig:energyNCO}
+\legend{Source: from author.}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth, trim={0 9cm 0 9cm},clip]{energyNTSum.pdf}
-\caption{Energy measures for the Sum output at Near-Threshold operation.}
+\caption{Energy penalties for the Sum output at Near-Threshold operation.}
 \label{fig:energyNTS}
+\legend{Source: from author.}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth, trim={0 9cm 0 9cm},clip]{energyNTCarryOut.pdf}
-\caption{Energy measures for the Carry Out output at Near-Threshold operation.}
+\caption{Energy penalties for the Carry Out output at Near-Threshold operation.}
 \label{fig:energyNTCO}
+\legend{Source: from author.}
 \end{figure}
 
-For area penalties there was 150\%, 187.5\%, 100\% and 207\% increase for the CMOS, TGA, TFA and Hybrid Full Adders, respectively. Their respective areas, not considering the TAP-Cell area, are shown in Table \ref{penalties}. Such high area penalties are mainly due to technology rules such as the 108nm well-spacing and the necessity to use TAP-Cells to explicitly connect the transistors bulk to specific parts of the circuits or the supply/ground making the ST cell more prominent than expected. The FAs respective layouts are shown in Images \ref{CMOS} to \ref{hybrid}.
+For area penalties there was 150\%, 187.5\%, 100\% and 207\% increase for the CMOS, TGA, TFA and Hybrid Full Adders, respectively. Their respective areas, not considering the TAP-Cell area, are shown in Table \ref{penalties}. Such high area penalties are mainly due to technology rules such as the 108nm well-spacing and the necessity to use TAP-Cells to explicitly connect the transistors back-gates to specific parts of the circuits or the supply/ground making the ST cell more prominent than expected.
 
-\begin{table}[!htbp]
+\begin{table}[H]
 \centering
 \caption{Full Adders areas and respective technique area impact.}
 \label{penalties}
-\begin{tabular}{lcc}
+\begin{tabular}{lccc}
 \hline
-\textbf{Full Adder} & \textbf{Area (${\mu m}^2$)}    & \textbf{Ratio}         \\ \hline
-\textbf{CMOS}       & 0.34             & \multirow{2}{*}{2.5}   \\ \cline{1-2}
-\textbf{CMOS ST}    & 0.85             &                        \\ \hline
-\textbf{TGA}        & 0.54             & \multirow{2}{*}{2.875} \\ \cline{1-2}
-\textbf{TGA ST}     & 1.56             &                        \\ \hline
-\textbf{TFA}        & 0.47             & \multirow{2}{*}{2}     \\ \cline{1-2}
-\textbf{TFA ST}     & 0.95             &                        \\ \hline
-\textbf{HYBRID}     & 0.51             & \multirow{2}{*}{3.07}  \\ \cline{1-2}
-\textbf{HYBRID ST}  & 1.56             &                        \\ \hline
+\textbf{Full Adder} & \multicolumn{1}{l}{\textbf{\# of Transistors}} & \textbf{Area (${\mu m}^2$)} & \textbf{Ratio}        \\ \hline
+\textbf{CMOS}       & 28                                              & 0.32             & \multirow{2}{*}{2.36} \\ \cline{1-3}
+\textbf{CMOS ST}    & 32                                              & 0.76             &                       \\ \hline
+\textbf{TGA}        & 20                                              & 0.50             & \multirow{2}{*}{2.88} \\ \cline{1-3}
+\textbf{TGA ST}     & 28                                              & 1.43             &                       \\ \hline
+\textbf{TFA}        & 16                                              & 0.44             & \multirow{2}{*}{2.00} \\ \cline{1-3}
+\textbf{TFA ST}     & 20                                              & 0.87             &                       \\ \hline
+\textbf{HYBRID}     & 26                                              & 0.47             & \multirow{2}{*}{3.13} \\ \cline{1-3}
+\textbf{HYBRID ST}  & 34                                              & 1.46             &                       \\ \hline
 \end{tabular}
 \end{table}
-
-\begin{figure}[!h]
-\centering
-\begin{subfigure}[b]{\textwidth}
-   \includegraphics[width=1\linewidth]{CMOS.png}
-   \caption{}
-   \label{fig:Ng1} 
-\end{subfigure}
-
-\begin{subfigure}[b]{\textwidth}
-   \includegraphics[width=1\linewidth]{CMOSST.png}
-   \caption{}
-   \label{fig:Ng2}
-\end{subfigure}
-\caption{Original Mirror CMOS (a) and Mirror CMOS with ST technique (b) layouts.}
-\label{CMOS}
-\end{figure}
-
-\begin{figure}[!htbp]
-\centering
-\begin{subfigure}[b]{\textwidth}
-   \includegraphics[width=1\linewidth]{TGA.png}
-   \caption{}
-   \label{fig:Ng1} 
-\end{subfigure}
-
-\begin{subfigure}[b]{\textwidth}
-   \includegraphics[width=1\linewidth]{TGAST.png}
-   \caption{}
-   \label{fig:Ng2}
-\end{subfigure}
-
-\caption{Original TGA (a) and TGA with ST technique (b) layouts.}
-\label{TGA}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-\begin{subfigure}[b]{\textwidth}
-   \includegraphics[width=1\linewidth]{TFA.png}
-   \caption{}
-   \label{fig:Ng1} 
-\end{subfigure}
-
-\begin{subfigure}[b]{\textwidth}
-   \includegraphics[width=1\linewidth]{TFAST.png}
-   \caption{}
-   \label{fig:Ng2}
-\end{subfigure}
-
-\caption{Original TFA (a) and TFA with ST technique (b) layouts.}
-\label{TFA}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-\begin{subfigure}[b]{\textwidth}
-   \includegraphics[width=1\linewidth]{HYBRID.png}
-   \caption{}
-   \label{fig:Ng1} 
-\end{subfigure}
-
-\begin{subfigure}[b]{\textwidth}
-   \includegraphics[width=1\linewidth]{HYBRIDST.png}
-   \caption{}
-   \label{fig:Ng2}
-\end{subfigure}
-
-\caption{Original HYBRID (a) and HYBRID with ST technique (b) layouts.}
-\label{hybrid}
-\end{figure}
 
 \chapter{Conclusions}
 
 Variability has been a critical challenge in emerging technology nodes because it can deviate from the correct circuit's behavior and affects the manufacturing yield. All current work in developing and validating techniques have been done at electrical and transistor level. There is a need for novel techniques which to improve variability robustness at the layout level.
 
-Given that, a novel technique was tested. The method consists of replacing internal inverters with Schmitt Trigger inverters to increase the circuit’s noise-immunity. The ST technique presents considerable robustness improvements over all full adders. For nominal and near-threshold operation, TFA and Hybrid adders showed the highest accumulated improvements, respectively. As results show, the technique improves, sometimes drastically, the energy variability robustness for each Full Adder considered. For delay robustness, in some cases, there was a worsening in robustness mainly caused by area penalty and the pass-transistor logic. 
+Given that, a novel technique was tested. The method consists of replacing internal inverters with Schmitt Trigger inverters to increase the circuit’s noise-immunity. The ST technique presents considerable robustness improvements over all full adders. For nominal voltage and near-threshold operation, TFA and Hybrid adders showed the highest accumulated improvements, respectively. As results show, the technique improves, sometimes drastically, the energy variability robustness for each Full Adder considered. For delay robustness, in some cases, there was a worsening in robustness mainly caused by area penalty and the pass-transistor logic. 
 
 With the technique penalties in mind, it should only be utilized in applications that can bear the delays, energy consumption and area increase with variability robustness as a priority. These works demonstrate the need for new techniques at layout level to address variability for high performance/low power applications with low area penalties. It is important to note that, according to the state-of-art research, this is the first analysis of this technique made at layout level. For future works, a supply voltage calibration shall be made to find the best cost-benefit supply voltage.
 
+\section{Future Works}
+
+As future works it is proposed: a near-threshold voltage calibration to find the best cost-benefit supply voltage, to explore different full adder topologies and investigate other techniques to mitigate the impact of process variability.
 
 \bibliographystyle{abntex2-alf}
 \bibliography{biblio}
