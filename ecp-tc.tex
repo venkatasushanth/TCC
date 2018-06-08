@@ -283,7 +283,8 @@ Several works analyze the FinFET reliability. In \cite{FinFET01} it is shown, at
 
 In \cite{FinFET02} the hot carrier injection (HCI) effect is analyzed in pass-gate FinFET transistors. The tests were executed using commercial FinFET technology showing a 50\% chance of errors due to HCI in pass-gate transistors. In \cite{FinFET03} a analysis of the sensitivity of double-gate and FinFET devices to process variations is shown. It is concluded that for 20nm FinFET devices large channel doping concentration is necessary to obtain suitable values of threshold voltage if heavily doped polysilicon gates are used. Due to the small volume of the channel the channel doping will bring unnacceptable V\textsc{th} fluctuations. Given that, heavily doped polysilicon may not be a viable choice with the work function adjustment being a better approach. 
 
-In \cite{FinFET04} the modeling of the reliability degradation of a FinFET-based Static Random Access Memory (SRAM) is shown. It is concluded that the probability of failure due to Bias Temperature Instability (BTI) and Gate Oxide BreakDown (GOBD) is relatively lower in comparison to HCI-induced failures. They also shown the improvement of lifetime due to Error-Correcting Code (ECC) memory. 
+In \cite{FinFET04} the modeling of the reliability degradation of a FinFET-based Static Random Access Memory (SRAM) is shown. It is concluded that the probability of failure due to Bias Temperature Instability (BTI) and Gate Oxide BreakDown (GOBD) is relatively lower in comparison to HCI-induced failures. They also shown the improvement of lifetime due to Error-Correcting Code (ECC) memory. In \cite{FINFET05} a investigation on reliability characteristics of NMOS and PMOS FinFETs is conducted. Based on fabricated FinFETs transistor with 17-27 nm width, it was shown that the life time of FinFET is very dependable of its dimensions. The predicted lifetime for a 50nm gate length NMOS FinFET was 133 years, for the first HCI event. While a 27nm fin-width PMOS FinFET showed 26.84 years of lifetime wich is reduced to 2.76 years when reducing its fin-width from 27 to 17 nm for a NBTI event, showing the huge reliability challenge introduced by technology scaling.
+
 
 Given the majority of papers exploring the reliability factors and its effects but the few that actually study mitigation techniques, this paper aims to bring a layout level analysis of a novel technique for robustness improvement. There is no evaluation in the the literature of the impact of the ST technique at layout level as well as in FinFET technology.
 
@@ -337,7 +338,7 @@ Additionally, the technology scaling and manufacturing tolerances are not corres
 \includegraphics[width=\textwidth]{transistorVariability.jpg}
 \caption{Transistor Variability}
 \label{fig:Fig2}
-\legend{Source: \cite{walker2010optimizing}}
+\legend{Source: \citet{walker2010optimizing}}
 \end{figure}
 
 These three types of variabilities, in conjunction, may prevent circuits from meeting their performance and power goals. Table \ref{tab:02} demonstrates the design impact of performance and power due to different types of variability.
@@ -358,14 +359,14 @@ Dynamic Power & Difficult & Workload dependent & C,  \(\alpha\) & Shorter batter
 \legend{Source: \citet{rahimi2016variability}}
 \end{table}
 
-This work evaluates the effects caused by the physical variability. In FinFET, the physical variations are responsible for deviations in the device work function (WF), gate length (L\textsc{g}), fin height (H\textsc{fin}), fin thickness (T\textsc{si}) and parasitic resistances. It is shown in \cite{meinhardt2014impact} that work function fluctuation (WFF) is the main cause of threshold voltage (V\textsc{th}) variations. Alongside, in \cite{wang2011statistical} is shown the high correlation between the variability in the on (I\textsc{on}) and off (I\textsc{off}) currents and V\textsc{th} fluctuation in the presence of granularity of the metal gate. The main cause of WFF is due to its dependency over the orientation of its metal grains. In the real fabrication process, metal gate devices are generally produced using multiple types of metal with different work functions randomly aligned as depicted in Figure \ref{wff}. In the ideal fabrication process, metal gate devices have the gates manufactured with uniformly aligned metal and then, they have very low WFF deviation \cite{cristina2014impact}.
+This work evaluates the effects caused by the physical variability. In FinFET, the physical variations are responsible for deviations in the device work function (WF), gate length (L\textsc{g}), fin height (H\textsc{fin}), fin thickness (T\textsc{si}) and parasitic resistances. It is shown in \cite{meinhardt2014impact} that work function fluctuation (WFF) is the main cause of threshold voltage (V\textsc{th}) variations. Alongside, in \cite{wang2011statistical} is shown the high correlation between the variability in the on (I\textsc{on}) and off (I\textsc{off}) currents and V\textsc{th} fluctuation in the presence of granularity of the metal gate. The main cause of WFF is due to its dependency over the orientation of its metal grains. In the real fabrication process, metal gate devices are generally produced using multiple types of metal with different work functions randomly aligned as depicted in Figure \ref{wff}. In the ideal fabrication process, metal gate devices have the gates manufactured with uniformly aligned metal and then, they have very low WFF deviation \cite{meinhardt2014impact}.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{wff.png}
 \caption{Metal gate fabrication ideal and real aspects.}
 \label{wff}
-\legend{Source: \cite{meinhardt2014impact}}
+\legend{Source: \citet{meinhardt2014impact}}
 \end{figure}
   
 Schmitt triggers are commonly used as internal circuits on systems to provide enhanced noise tolerance and robustness against random variations in the input waveforms. On a typical input (non-Schmitt trigger), its binary value will switch at the same point on the rising and falling edges. With a slow rising edge, the input will change near the threshold point. When the switching occurs, it will require current from the supply source. With current being pushed from the supply, it can cause a voltage drop across the circuit causing a shift in the threshold voltage. 
@@ -377,7 +378,7 @@ If the threshold shifts, it will cross the input causing it to switch again. It 
 \includegraphics[width=0.8\textwidth]{Hysteresis.png}
 \caption{a) General ST hysteresis curve b) Classical CMOS ST Topology c) Typical signal filtering with ST.}
 \label{fig:Fig3}
-\legend{Source: \cite{WinNT}}
+\legend{Source: \citet{WinNT}}
 \end{figure}
 
 This technique is tested in several works: In \cite{ahmad2016single} it is presented a novel Schmitt-trigger-based single-ended 11 Transistor SRAM cell. It analyses its performance against seven different SRAM topologies. The novel cell showed the least energy consumption per operation with the smallest leakage power and a 6.9x higher Ion/Ioff ratio. Further PVT variability simulations confirmed the robustness of the design regarding read and write operation. The simulations were carried in 22nm predictive technology using HSPICE.
@@ -409,7 +410,7 @@ Inspired by CMOS and CPL Full Adders architectures, the Hybrid Full Adder \cite{
 \caption{Full Adders with internal inverters to be replaced highlighted.}
 \label{fig:Fig5}
 \legend{Transmission Function Adder (a), Transmission Gate Adder (b), Mirror CMOS Adder (c) and Hybrid Full Adder (d).
-Source: \cite{samuel2016}}
+Source: \citet{samuel2016}}
 \end{figure}
 
 A variety of CMOS Schmitt Trigger designs have been proposed and implemented over the years, with the conventional 6T-CMOS Schmitt Trigger proposed in \cite{doki1984cmos} exhibiting the wanted characteristics of different high-to-low and low-to-high transition threshold voltages, giving rise to hysteresis. The ST inverter circuit used in this work was inspired by \cite{zhang2003low} and modified in \cite{dokania2015circuit} to achieve the desired inverting characteristic, as shown in Figure \ref{fig:sub1}. It is designed for operation at a supply voltage of 0.4V in order to achieve low power consumption, and consists of the junction of two inverters where the output from the second one will be the bulk for the first one.  

@@ -141,6 +141,11 @@ Available from Internet: \url{http://www.ti.com/lit/an/scea046/scea046.pdf}.}
   \textbf{ICCAD-2005. IEEE/ACM International Conference on Computer-Aided
   Design, 2005.} [S.l.: s.n.], 2005. p. 207--210.}
 
+\bibitem[Liao et al. 2008]{FINFET05}
+\abntrefinfo{Liao et al.}{LIAO et al.}{2008}
+{LIAO, W. et al. Investigation of reliability characteristics in nmos and pmos
+  finfets. In:  . [S.l.]: IEEE, 2008. v.~29, n.~7, p. 788--790.}
+
 \bibitem[Manoj et al. 2007]{finfetdis}
 \abntrefinfo{Manoj et al.}{MANOJ et al.}{2007}
 {MANOJ, C.~R. et al. Device optimization of bulk finfets and its comparison
