@@ -176,6 +176,11 @@ Available from Internet: \url{http://www.ti.com/lit/an/scea046/scea046.pdf}.}
 {NAVI, K. et al. A novel low-power full-adder cell for low voltage. In:  .
   [S.l.]: Elsevier, 2009. v.~42, n.~4, p. 457--467.}
 
+\bibitem[Predictive Technology Model (PTM) [online]]{ptm}
+\abntrefinfo{Predictive\ldots}{PREDICTIVE\ldots}{}
+{PREDICTIVE Technology Model (PTM) [online].
+Available from Internet: \url{http://ptm.asu.edu/}.}
+
 \bibitem[Rahimi, Benini and Gupta 2016]{rahimi2016variability}
 \abntrefinfo{Rahimi, Benini and Gupta}{RAHIMI; BENINI; GUPTA}{2016}
 {RAHIMI, A.; BENINI, L.; GUPTA, R.~K. Variability mitigation in nanometer cmos

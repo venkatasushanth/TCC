@@ -14,5 +14,7 @@
 \contentsline {section}{\numberline {4.2}Near-Threshold Operation}{33}{section.4.2}
 \contentsline {section}{\numberline {4.3}Penalties}{35}{section.4.3}
 \contentsline {chapter}{5~Conclusions}{39}{CHAPTER.5}
-\contentsline {section}{\numberline {5.1}Future Works}{39}{section.5.1}
-\contentsline {chapter}{\xspace {}References}{40}{schapter.8}
+\contentsline {section}{\numberline {5.1}Future Works}{40}{section.5.1}
+\contentsline {chapter}{\xspace {}References}{41}{schapter.8}
+\contentsline {chapter}{\MakeUppercase {Annex} A~--- Exemplo de arquivo utilizado na simula\IeC {\c c}\IeC {\~a}o el\IeC {\'e}trica sem a t\IeC {\'e}cnica ST}{44}{CHAPTER.A}
+\contentsline {chapter}{\MakeUppercase {Annex} B~--- Exemplo de arquivo utilizado na simula\IeC {\c c}\IeC {\~a}o el\IeC {\'e}trica com a t\IeC {\'e}cnica ST}{47}{CHAPTER.B}
