@@ -263,13 +263,9 @@ In this context, this work employs a technique using Schmitt Trigger (ST) invert
 
 Promising new commercial technologies based on the Fin Field Effect Transistor (FinFET) devices have been introduced to maintain the technology scaling. The FinFET main geometric parameters are the gate length (L or L\textsc{g}), fin width (W\textsc{fin}), fin height (H\textsc{fin}) and Oxide Thickness (T\textsc{ox}). FinFET technology can be built on a traditional bulk or Silicon on Insulator (SOI) substrate with a conducting channel that rises above the level of the insulator, creating a thin silicon structure, the gate as shown in Figure \ref{mosfetvsfinfet} and \ref{bulkvssoi}. 
 
-The channel being surrounded from three dimensions by the gate results in a superior control, reduced short-channel effect (SCE) and eliminated random dopant fluctuation (RDF) effect due to the fully depleted channel that causes less sensitivity to process variations \cite{taur2013fundamentals}. FinFETs also present relative immunity to gate line-edge roughness, a major source of variability in planar nanoscale FETs \cite{finfetchar1}. The disadvantage over MOSFETs is the harder manufacturing process due to difficulty in the lithography steps as it is increasingly difficult to print small patterns, the increased variability impact due to the further minituarization of dimensions, in comparison to MOSFET and more constly manufacturing process due to the need of techniques to address the manufacturing imprecision and, in the case of SOI FinFET, to change the CMOS substrate process to support a SOI substrate manufacturing process \cite{finfetchar1} \cite{finfetdis}.
-
-
-
 \begin{figure}[H]
 \centering
-\includegraphics[width=\textwidth, trim={0 0cm 0 0cm},clip]{finfet.png}
+\includegraphics[width=\textwidth, trim={0 0cm 0 0cm},clip]{finfet.pdf}
 \caption{Structural comparison between (a) planar MOSFET and (b) FinFET.}
 \label{mosfetvsfinfet}
 \legend{Source: \citet{bhattacharya2014finfets}}
@@ -283,7 +279,7 @@ The channel being surrounded from three dimensions by the gate results in a supe
 \legend{Source: \citet{bhattacharya2014finfets}}
 \end{figure}
 
-
+The channel being surrounded from three dimensions by the gate results in a superior control, reduced short-channel effect (SCE) and eliminated random dopant fluctuation (RDF) effect due to the fully depleted channel that causes less sensitivity to process variations \cite{taur2013fundamentals}. FinFETs also present relative immunity to gate line-edge roughness, a major source of variability in planar nanoscale FETs \cite{finfetchar1}. The disadvantage over MOSFETs is the harder manufacturing process due to difficulty in the lithography steps as it is increasingly difficult to print small patterns, the increased variability impact due to the further minituarization of dimensions, in comparison to MOSFET and more constly manufacturing process due to the need of techniques to address the manufacturing imprecision and, in the case of SOI FinFET, to change the CMOS substrate process to support a SOI substrate manufacturing process \cite{finfetchar1} \cite{finfetdis}.
 
 Several works analyze the FinFET reliability. In \cite{FinFET01} it is shown, at 14/16nm fabricated bulk FinFET technology, that for high energy charged particles, the drive current is the dominant factor to the transient fault pulse width and cross-section. And low energy particles have a grater dependence on secondary transistor and circuit design factors (number of fins, transistor arrangement, etc). 
 
