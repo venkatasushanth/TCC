@@ -11,34 +11,32 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces Structural comparison between (a) planar MOSFET and (b) FinFET.\relax }}{14}{figure.1.1}
-\contentsline {figure}{\numberline {1.2}{\ignorespaces Structural comparison between (a) bulk and (b) SOI FinFETs.\relax }}{14}{figure.1.2}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Transistor Variability\relax }}{20}{figure.2.1}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Metal gate fabrication ideal and real aspects.\relax }}{21}{figure.2.2}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces a) General ST hysteresis curve b) Classical CMOS ST Topology c) Typical signal filtering with ST.\relax }}{22}{figure.2.3}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Structural comparison between (a) planar MOSFET and (b) FinFET.\relax }}{15}{figure.2.1}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Structural comparison between (a) bulk and (b) SOI FinFETs.\relax }}{15}{figure.2.2}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Full Adders with internal inverters to be replaced highlighted.\relax }}{24}{figure.3.1}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Original and modified STs side-by-side\relax }}{25}{figure.3.2}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Design flow of the experiments.\relax }}{26}{figure.3.3}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Technology layers and original Mirror CMOS Layout\relax }}{27}{figure.3.4}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Original TGA Layout.\relax }}{27}{figure.3.5}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Original TFA Layout.\relax }}{28}{figure.3.6}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Original Hybrid Layout.\relax }}{28}{figure.3.7}
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Transistor height and number of fins.\relax }}{28}{figure.3.8}
-\contentsline {figure}{\numberline {3.9}{\ignorespaces TAP-Cell Layout.\relax }}{29}{figure.3.9}
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Test Bench.\relax }}{30}{figure.3.10}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Transistor Variability\relax }}{19}{figure.3.1}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Metal gate fabrication ideal and real aspects.\relax }}{20}{figure.3.2}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces a) General ST hysteresis curve b) Classical CMOS ST Topology c) Typical signal filtering with ST.\relax }}{23}{figure.3.3}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Mirror CMOS Layout with the applied technique.\relax }}{31}{figure.4.1}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces TGA Layout with the applied technique.\relax }}{31}{figure.4.2}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces TFA Layout with the applied technique.\relax }}{31}{figure.4.3}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Hybrid FA Layout with the applied technique.\relax }}{31}{figure.4.4}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Robustness improvements for each Full Adder at nominal voltage operation.\relax }}{33}{figure.4.5}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Robustness improvements for each Full Adder at near-threshold operation.\relax }}{35}{figure.4.6}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Energy penalties for the Sum output at Nominal voltage operation.\relax }}{36}{figure.4.7}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Energy penalties for the Carry Out output at Nominal voltage operation.\relax }}{36}{figure.4.8}
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Energy penalties for the Sum output at Near-Threshold operation.\relax }}{37}{figure.4.9}
-\contentsline {figure}{\numberline {4.10}{\ignorespaces Energy penalties for the Carry Out output at Near-Threshold operation.\relax }}{37}{figure.4.10}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Full Adders with internal inverters to be replaced highlighted.\relax }}{26}{figure.4.1}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Original and modified STs side-by-side\relax }}{27}{figure.4.2}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Design flow of the experiments.\relax }}{28}{figure.4.3}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Technology layers and original Mirror CMOS Layout\relax }}{29}{figure.4.4}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Transistor height and number of fins.\relax }}{30}{figure.4.5}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces TAP-Cell Layout.\relax }}{30}{figure.4.6}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Test Bench.\relax }}{32}{figure.4.7}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Robustness improvements for each Full Adder at nominal voltage operation.\relax }}{35}{figure.5.1}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Robustness improvements for each Full Adder at near-threshold operation.\relax }}{36}{figure.5.2}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Energy penalties for the Sum output at Nominal voltage operation.\relax }}{37}{figure.5.3}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Energy penalties for the Carry Out output at Nominal voltage operation.\relax }}{38}{figure.5.4}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Energy penalties for the Sum output at Near-Threshold operation.\relax }}{38}{figure.5.5}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Energy penalties for the Carry Out output at Near-Threshold operation.\relax }}{39}{figure.5.6}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Mirror CMOS Full Adder layouts.\relax }}{40}{figure.5.7}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces TGA Full Adder layouts.\relax }}{40}{figure.5.8}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces TFA Full Adder layouts.\relax }}{41}{figure.5.9}
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Hybrid Full Adder layouts.\relax }}{41}{figure.5.10}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

@@ -81,7 +81,7 @@
 % \renewcommand{\nominataReitname}{Reitora}
 % \renewcommand{\nominataPRE}{Prof.~Jos{\'e} Carlos Ferraz Hennemann}
 % \renewcommand{\nominataPREname}{Pr{\'o}-Reitor de Ensino}
-% \renewcommand{\nominataPRAPG}{Prof\textsuperscript{a}.~Joc{\'e}lia Grazia}
+ \renewcommand{\nominataPRAPG}{Prof.~Vladimir Pinheiro do Nascimento}
 % \renewcommand{\nominataPRAPGname}{Pr{\'o}-Reitora Adjunta de P{\'o}s-Gradua{\c{c}}{\~a}o}
 % \renewcommand{\nominataDir}{Prof.~Philippe Olivier Alexandre Navaux}
 % \renewcommand{\nominataDirname}{Diretor do Instituto de Inform{\'a}tica}
@@ -150,14 +150,14 @@ Agradeço ao \LaTeX\ por não ter vírus de macro\ldots
 
 % resumo na língua do documento
 \begin{abstract}
-    The aggressive technology and voltage scaling which CMOS-based modern digital circuits are facing introduce challenges as short-channel effects, higher radiation and variability impact. As CMOS technology approaches its scaling limit, novel technology nodes, as FinFET, emerged to address such challenges. Although, even when short-channel and radiation effects are mitigated due to technology instrinsic characteristics, the variability impact escalates with technology scaling and the lack of manufacturing precision. To mitigate that, novel techniques are proposed and tested in the literature. This work analyzes the impact on variability robustness using a technique based on the replacement of full adders internal inverters by Schmitt Triggers. Some works point that the given technique helps to improve the variability robustness at the electrical level. Therefore, analysis has been performed at layout level using the 7nm FinFET technology node from ASAP7 library and the technique was applied on four full adder designs. Performance, energy and area are taken into account. Results show up to 64.74\% and 66.6\% improvement in average delay and energy variability robustness, respectively, being necessary a trade-off analysis between robustness improvements and the impact on delays, power consumption and area. 
+    The aggressive technology and voltage scaling which CMOS-based modern digital circuits are facing introduce challenges as short-channel effects, higher radiation and variability impact. As CMOS technology approaches its scaling limit, novel technology nodes, as FinFET, emerged to address such challenges. Although, even when short-channel and radiation effects are mitigated due to technology instrinsic characteristics, the variability impact escalates with technology scaling and the lack of manufacturing precision. To mitigate that, novel techniques are proposed and tested in the literature. This work analyzes the impact on variability robustness using a technique based on the replacement of full adders internal inverters by Schmitt Triggers. Some works point that the given technique helps to improve the variability robustness at the electrical level. Therefore, analysis has been performed at layout level using the 7nm FinFET technology node from ASAP7 library and the technique was applied on four full adder designs. Performance, energy and area are taken into account. Results show up to 65\% improvement on average delay and energy variability robustness, being necessary a trade-off analysis between robustness improvements and the impact on delays, power consumption and area. 
 \end{abstract}
 
 % resumo na outra língua
 % como parametros devem ser passados o titulo e as palavras-chave
 % na outra língua, separadas por vírgulas
 \begin{englishabstract}{Análise da Variabilidade utilizando Schmitt Triggers em Leiautes de Somadores Completos}{Nanotecnologia, Dispositivos FinFET, Variabilidade de Processo, ASAP7 PDK, Schmitt Trigger, Somador Completo}
-A miniaturização da tecnologia e diminuição das tensões de alimentação ao qual os circuitos digitais baseados na tecnologia CMOS estão enfrentando introduzem desafios como os efeitos de canal-curto e o maior impacto da radiação e da variabilidade. Como a tecnologia CMOS se aproxima de seus limites, novos nodos tecnologicos, como o FinFET, emergem para enfrentar esses desafios. Contudo, mesmo quando efeitos de canal-curto e efeitos de radiação são mitigados devido à características intrínsecas do nodo, o impacto da variabilidade escala com a miniatuarização da tecnologia e a falta de precisão de fabricação. Para mitigar esta variabilidade, novas técnicas são propostas e testadas na literatura. Este trabalho analiza o impacto na robustez à variabilidade de uma técnica baseada na substituição dos inversores internos de somadores completos por Schmitt Triggers. Alguns trabalhos apontam que esta técnica ajuda a melhorar a robustez à variabilidade no nível elétrico. Portanto, a análize foi efetuada em nível de leiaute utilizando o nodo tecnológico de 7nm FinFET da biblioteca ASAP7 e a técnica foi aplicada em quatro somadores completos diferentes. Desempenho, consumo de energia e area foram levados em conta. Resultados mostram melhorias de até 64.74\% e 66.6\% no atraso de propagação médio e energia. Contudo, é necessário realizar uma análise de custo-benefício entre as melhorias e o seu impacto nos atrasos de propagação, energia e área.
+A miniaturização da tecnologia e diminuição das tensões de alimentação ao qual os circuitos digitais baseados na tecnologia CMOS estão enfrentando introduzem desafios como os efeitos de canal-curto e o maior impacto da radiação e da variabilidade. Como a tecnologia CMOS se aproxima de seus limites, novos nodos tecnologicos, como o FinFET, emergem para enfrentar esses desafios. Contudo, mesmo quando efeitos de canal-curto e efeitos de radiação são mitigados devido à características intrínsecas do nodo, o impacto da variabilidade escala com a miniatuarização da tecnologia e a falta de precisão de fabricação. Para mitigar esta variabilidade, novas técnicas são propostas e testadas na literatura. Este trabalho analiza o impacto na robustez à variabilidade de uma técnica baseada na substituição dos inversores internos de somadores completos por Schmitt Triggers. Alguns trabalhos apontam que esta técnica ajuda a melhorar a robustez à variabilidade no nível elétrico. Portanto, a análize foi efetuada em nível de leiaute utilizando o nodo tecnológico de 7nm FinFET da biblioteca ASAP7 e a técnica foi aplicada em quatro somadores completos diferentes. Desempenho, consumo de energia e area foram levados em conta. Resultados mostram melhorias de até 65\% na robustez à variabilidade no atraso de propagação médio e energia. Contudo, é necessário realizar uma análise de custo-benefício entre as melhorias e o seu impacto nos atrasos de propagação, energia e área.
 \end{englishabstract}
 
 % lista de abreviaturas e siglas
@@ -221,7 +221,7 @@ A miniaturização da tecnologia e diminuição das tensões de alimentação ao
 \chapter{Introduction}
 The technology scaling over the years have significantly increased the density of transistors present on chips. Alongside, with the advance over transistor technology, new challenges were introduced due to the scale down, as aging effects, high power consumption due to leakage current and an increase in the sensibility to transient faults due to radiation and process variability \cite{abbas:15}.
 
-The same technology scaling that allowed the increase in transistor density also allowed a voltage scaling due to the shortening of gate dimensions, internal capacitances and resistances. These two combined events contributed to the emergence, growth and current dominance of mobile applications over its counterpart. This new context, introduced a concern for battery lifespan which these applications are dependent \cite{islam:10}. 
+The same technology scaling that allowed the increase in transistor density also allowed a voltage scaling due to the shortening of gate dimensions, internal capacitances and resistances. These two combined events contributed to the emergence, growth and current dominance of mobile applications over its counterpart. This new context introduced a concern for battery lifespan which these applications are dependent \cite{islam:10}. 
 
 The ascending number of mobile applications that depends on highly sophisticated processing schemes with a limited power-supply capability of today’s batteries brings conflicting needs. The need to explore high-performance designs and implementations to meet the speed constraints for real-time applications and, simultaneously, consider low-power design approaches to extend the battery life of portable devices \cite{shoarinejad:03}. 
 
@@ -259,7 +259,11 @@ Adder cells define the throughput and are employed in the processor’s executiv
 
 Moore’s law predicts that the number of transistors per square on integrated circuits will double every year and it has been guiding the industry trending for decades. However, continue with scaling in the bulk Complemenatry metal-oxide-semiconductor (CMOS) technology has been no straightforward task. At deep nanotechnology nodes, each chip may show different behavior due to process variations during the manufacturing steps. Variations that influence the circuits metrics such as performance and power consumption, hastening the circuit degradation and making it deviate from its correct operation \cite{abbas:15} \cite{nassif:08}. 
 
-In this context, this work employs a technique using Schmitt Trigger (ST) inverters for process variability mitigation on different Full Adder topologies with priority on power consumption variations. Performance, power, and area penalty were analyzed alongside variability robustness. 
+Few works present techniques at circuit level for variability mitigation. Among these works, there is \cite{dokania2015circuit} and \cite{samuel2016} which introduce and investigate, respectively, the impact of a novel technique for variability robustness improvement. In this context, this work employs such novel technique which consist of using Schmitt Trigger (ST) inverters for process variability mitigation on different Full Adder topologies with priority on power consumption variations. Performance, power, and area penalty were analyzed alongside variability robustness. 
+
+This work is divided into five further sections: FinFET Technology where its characteristics and major variability impact are explained, Variability Effects and Mitigation Techniques, with a theoretical foundation about variability. Motivation and Objectives, explaining in more details this work’s objective. Methodology, presenting how results were achieved with its experimental setup. The Results and Discussion presenting the simulation results and its analysis. And, lastly, the Conclusions.
+
+\chapter{FinFET Technology}
 
 Promising new commercial technologies based on the Fin Field Effect Transistor (FinFET) devices have been introduced to maintain the technology scaling. The FinFET main geometric parameters are the gate length (L or L\textsc{g}), fin width (W\textsc{fin}), fin height (H\textsc{fin}) and Oxide Thickness (T\textsc{ox}). FinFET technology can be built on a traditional bulk or Silicon on Insulator (SOI) substrate with a conducting channel that rises above the level of the insulator, creating a thin silicon structure, the gate as shown in Figure \ref{mosfetvsfinfet} and \ref{bulkvssoi}. 
 
@@ -287,36 +291,7 @@ In \cite{FinFET02} the hot carrier injection (HCI) effect is analyzed in pass-ga
 
 In \cite{FinFET04} the modeling of the reliability degradation of a FinFET-based Static Random Access Memory (SRAM) is shown. It is concluded that the probability of failure due to Bias Temperature Instability (BTI) and Gate Oxide BreakDown (GOBD) is relatively lower in comparison to HCI-induced failures. They also shown the improvement of lifetime due to Error-Correcting Code (ECC) memory. In \cite{FINFET05} a investigation on reliability characteristics of NMOS and PMOS FinFETs is conducted. Based on fabricated FinFETs transistor with 17-27 nm width, it was shown that the life time of FinFET is very dependable of its dimensions. The predicted lifetime for a 50nm gate length NMOS FinFET was 133 years, for the first HCI event. While a 27nm fin-width PMOS FinFET showed 26.84 years of lifetime wich is reduced to 2.76 years when reducing its fin-width from 27 to 17 nm for a NBTI event, showing the huge reliability challenge introduced by technology scaling.
 
-
 Given the majority of papers exploring the reliability factors and its effects but the few that actually study mitigation techniques, this paper aims to bring a layout level analysis of a novel technique for robustness improvement. There is no evaluation in the the literature of the impact of the ST technique at layout level as well as in FinFET technology.
-
-This work is divided into five further sections: Variability Effects and Mitigation Techniques, with a theoretical foundation about variability. Motivation and Objectives, explaining in more details this work’s objective. Methodology, presenting how results were achieved with its experimental setup. The Results and Discussion presenting the simulation results and its analysis. And, lastly, the Conclusions.
-
-\section{Related Works}
-
-At circuit level there is multiple techniques to predict and prevent errors: Tuning CMOS knobs, circuit topology optimizations, self-timed circuits, temporal and logical error masking, relaxed retiming and graceful degradation, and inexact circuits. Although, there are few approaches to decrease the process variability at its core. It is due to the technology dependency present in this problem \cite{rahimi2016variability}.
-
-It can be observed that many works try to indicate the most robust design for a given type of circuit. For example, in \cite{dokania2013investigation} twelve different Full Adder topologies are analyzed considering delay, power and Power-Delay-Product (PDP) variability. It is used a 16nm bulk CMOS technology node in SPICE simulations with Process, Voltage and Temperature (PVT) variability being considered and Monte Carlo simulations performed. The authors concluded that Cell A, CLRCL and Cell B full adders presented the best results for all three metrics (Delay, Power and PDP).
-
-In \cite{ames2016investigating} the effects of PVT variability in different full adder designs are investigated. The simulations are performed in HSPICE with the bulk CMOS 32nm node technology. With Transmission Gate Full Adder (TGA) and Transmission Function Adder (TFA) architectures showing acceptable behavior under PVT variability with the lowest power consumption sensibility amongst the tested full adders - 11x smaller in comparison with Complementary Pass Transistor Logic (CPL) Full Adder.
-
-In \cite{islam2011design} various popular 1-bit digital summing circuits functionality and robustness are analyzed in light of PVT variations with the best full adder being simulated in Carbon Nanotube Field Effect Transistor (CNFET) technology for comparison with the bulk CMOS version. The simulations are carried at the 22nm bulk CMOS and CNFET technology node in HSPICE. Its results show that the TGA has the strongest PVT variability robustness and its CNFET version provides over 3x, 1.14x and 1.1x less propagation delay, power dissipation and energy delay product (EDP) variations, respectively. This work does not consider the total power consumption of each full adder separately.
-
-Some articles analyze the adoption of new technologies: \cite{guduri2015design} proposes a hybrid of bulk CMOS and CNFET Full Adder at 16nm in deep subthreshold operation region for ultralow-power applications simulated in SPICE which showed some improvement over its bulk CMOS Full Adder counterpart achieving 5\% and 1\% improvement in power, power-delay and energy-delay products and their variability, respectively.  
-
-In \cite{islam2011variability} a new subthreshold-FinFET Full Adder is proposed and compared over multiple full adders showing huge metric improvements provided by the FinFET technology up to 2.22x improvement in power variability. It was simulated in 32nm predictive technology model on HSPICE. 
-
-It is notable that none of these works consider a layout approach for its simulations and do not address any novel general technique which can be applied to a range of different types of circuits. Although, some works introduce novel designs.
-
-\cite{federspiel201228nm} presents reliability comparison between 28nm bulk CMOS and Fully Depleted Silicon On Insulator (FDSOI) technologies at layout level, with FDSOI showing 32\% improved performance, 40\% reduced power consumption and improved matching, with its intrinsic reliability behavior similar to 28nm bulk at the device level. \cite{alioto2007delay} presents a study about the delay variability caused by supply variations in the TGA. The experiments were performed at 90nm and 180nm bulk CMOS Technology in Spectre at layout level. It showed that lower supply voltages bring more delay variability to the circuit with the TGA presenting worse results 15\% (25\%) for the 90 nm (180 nm) in comparison to static logic.
-
-Some works focus on evaluating techniques: In \cite{zimpeck2016finfet} three dimensioning methods are applied on multiple circuits and their impact on variability robustness is analyzed. The simulations were performed considering a 14nm FinFET technology using HSPICE tool. The authors concluded that the Optimized Transistor Sizing (OTS) technique has the best ratio between nominal PDP and PDP under process variability.
-
-\cite{ahmadi2017hybrid} introduces a new technique to improve the performance of digital circuits in the presence of variations. It consists of a hybrid of two former methods to prevent errors due to delay variations. The simulations were performed with a 45nm predictive technology using HSPICE and applied on ITC’99 and ISCAS’89 benchmarks circuits. The results show that this hybrid technique can tolerate process variations up to 27.3\% better than state-of-the-art techniques.
-
-Among these works there is \cite{dokania2015circuit} on which a novel technique based on the replacement of Full Adder’s internal inverters with low voltage Schmitt Triggers for PVT variability robustness improvement is originally introduced and applied on seven different full adder designs. The simulations were performed using the 16nm bulk CMOS predictive technology model in SPICE. It presented significant variability improvement up to 4.8x in PDP. Although, the improvements occur at the cost of an increase in the area and power dissipation of each design.  
-
-
 
 \chapter{Variability Effects and Mitigation Techniques}
 
@@ -370,7 +345,33 @@ This work evaluates the effects caused by the physical variability. In FinFET, t
 \label{wff}
 \legend{Source: \citet{meinhardt2014impact}}
 \end{figure}
-  
+
+\section{Related Works}
+
+At circuit level there is multiple techniques to predict and prevent errors: Tuning CMOS knobs, circuit topology optimizations, self-timed circuits, temporal and logical error masking, relaxed retiming and graceful degradation, and inexact circuits. Although, there are few approaches to decrease the process variability at its core. It is due to the technology dependency present in this problem \cite{rahimi2016variability}.
+
+It can be observed that many works try to indicate the most robust design for a given type of circuit. For example, in \cite{dokania2013investigation} twelve different Full Adder topologies are analyzed considering delay, power and Power-Delay-Product (PDP) variability. It is used a 16nm bulk CMOS technology node in SPICE simulations with Process, Voltage and Temperature (PVT) variability being considered and Monte Carlo simulations performed. The authors concluded that Cell A, CLRCL and Cell B full adders presented the best results for all three metrics (Delay, Power and PDP).
+
+In \cite{ames2016investigating} the effects of PVT variability in different full adder designs are investigated. The simulations are performed in HSPICE with the bulk CMOS 32nm node technology. With Transmission Gate Full Adder (TGA) and Transmission Function Adder (TFA) architectures showing acceptable behavior under PVT variability with the lowest power consumption sensibility amongst the tested full adders - 11x smaller in comparison with Complementary Pass Transistor Logic (CPL) Full Adder.
+
+In \cite{islam2011design} various popular 1-bit digital summing circuits functionality and robustness are analyzed in light of PVT variations with the best full adder being simulated in Carbon Nanotube Field Effect Transistor (CNFET) technology for comparison with the bulk CMOS version. The simulations are carried at the 22nm bulk CMOS and CNFET technology node in HSPICE. Its results show that the TGA has the strongest PVT variability robustness and its CNFET version provides over 3x, 1.14x and 1.1x less propagation delay, power dissipation and energy delay product (EDP) variations, respectively. This work does not consider the total power consumption of each full adder separately.
+
+Some articles analyze the adoption of new technologies: \cite{guduri2015design} proposes a hybrid of bulk CMOS and CNFET Full Adder at 16nm in deep subthreshold operation region for ultralow-power applications simulated in SPICE which showed some improvement over its bulk CMOS Full Adder counterpart achieving 5\% and 1\% improvement in power, power-delay and energy-delay products and their variability, respectively.  
+
+In \cite{islam2011variability} a new subthreshold-FinFET Full Adder is proposed and compared over multiple full adders showing huge metric improvements provided by the FinFET technology up to 2.22x improvement in power variability. It was simulated in 32nm predictive technology model on HSPICE. 
+
+It is notable that none of these works consider a layout approach for its simulations and do not address any novel general technique which can be applied to a range of different types of circuits. Although, some works introduce novel designs.
+
+\cite{federspiel201228nm} presents reliability comparison between 28nm bulk CMOS and Fully Depleted Silicon On Insulator (FDSOI) technologies at layout level, with FDSOI showing 32\% improved performance, 40\% reduced power consumption and improved matching, with its intrinsic reliability behavior similar to 28nm bulk at the device level. \cite{alioto2007delay} presents a study about the delay variability caused by supply variations in the TGA. The experiments were performed at 90nm and 180nm bulk CMOS Technology in Spectre at layout level. It showed that lower supply voltages bring more delay variability to the circuit with the TGA presenting worse results 15\% (25\%) for the 90 nm (180 nm) in comparison to static logic.
+
+Some works focus on evaluating techniques: In \cite{zimpeck2016finfet} three dimensioning methods are applied on multiple circuits and their impact on variability robustness is analyzed. The simulations were performed considering a 14nm FinFET technology using HSPICE tool. The authors concluded that the Optimized Transistor Sizing (OTS) technique has the best ratio between nominal PDP and PDP under process variability.
+
+\cite{ahmadi2017hybrid} introduces a new technique to improve the performance of digital circuits in the presence of variations. It consists of a hybrid of two former methods to prevent errors due to delay variations. The simulations were performed with a 45nm predictive technology using HSPICE and applied on ITC’99 and ISCAS’89 benchmarks circuits. The results show that this hybrid technique can tolerate process variations up to 27.3\% better than state-of-the-art techniques.
+
+Among these works there is \cite{dokania2015circuit} on which a novel technique based on the replacement of Full Adder’s internal inverters with low voltage Schmitt Triggers for PVT variability robustness improvement is originally introduced and applied on seven different full adder designs. The simulations were performed using the 16nm bulk CMOS predictive technology model in SPICE. It presented significant variability improvement up to 4.8x in PDP. Although, the improvements occur at the cost of an increase in the area and power dissipation of each design.  
+
+Alongside, in \cite{samuel2016} the ST technique is applied on four Full Adders. It presented promising results regarding the power deviation due to the process variability with a decrease up to 79\% with a drawback of a significant increase in average energy consumption. The simulations were performed with the 16nm technology predictive technology model in NGSPICE. 
+
 Schmitt triggers are commonly used as internal circuits on systems to provide enhanced noise tolerance and robustness against random variations in the input waveforms. On a typical input (non-Schmitt trigger), its binary value will switch at the same point on the rising and falling edges. With a slow rising edge, the input will change near the threshold point. When the switching occurs, it will require current from the supply source. With current being pushed from the supply, it can cause a voltage drop across the circuit causing a shift in the threshold voltage. 
 
 If the threshold shifts, it will cross the input causing it to switch again. It can go indefinitely causing oscillation. The same thing can happen if there is noise on the input. Schmitt Triggers are applied in these cases to filter noise introducing superior and inferior threshold voltages, as shown in Figure \ref{fig:Fig3}.c. The difference between the thresholds is called Hysteresis \cite{WinNT}, its curve is shown at \ref{fig:Fig3}.a. According to the Schmitt Trigger behavior, it can mitigate the influence of variations in the inputs product of PVT variability. In figure \ref{fig:Fig3}.c is shown a classical CMOS Schmitt Trigger design. 
@@ -386,8 +387,6 @@ If the threshold shifts, it will cross the input causing it to switch again. It 
 This technique is tested in several works: In \cite{ahmad2016single} it is presented a novel Schmitt-trigger-based single-ended 11 Transistor SRAM cell. It analyses its performance against seven different SRAM topologies. The novel cell showed the least energy consumption per operation with the smallest leakage power and a 6.9x higher Ion/Ioff ratio. Further PVT variability simulations confirmed the robustness of the design regarding read and write operation. The simulations were carried in 22nm predictive technology using HSPICE.
 
 \cite{moghaddam2017design} presents a Schmitt trigger (ST) buffer using CNFET. It was evaluated against other two buffers and showed, on average, 68\% higher critical charge and 53\% lower energy consumption and a huge gain considering PVT variability robustness. The simulations were carried in 16nm Stanford CNFET model using HSPICE.
-	
-Alongside, in \cite{samuel2016} the ST technique is applied on four Full Adders. It presented promising results regarding the power deviation due to the process variability with a decrease up to 79\% with a drawback of a significant increase in average energy consumption. The simulations were performed with the 16nm technology predictive technology model in NGSPICE. 
 
 \chapter{Methodology}
 
@@ -424,7 +423,7 @@ In this design a dynamic body-bias technique is applied through a feedback mecha
 \begin{subfigure}{.5\textwidth}
   \centering
   \includegraphics[width=.8\linewidth]{STOriginal.eps}
-  \caption{ST Inverter applied on \citet{dokania2015circuit}}
+  \caption{ST Inverter from \citet{dokania2015circuit}}
   \label{fig:sub1}
 \end{subfigure}%
 \begin{subfigure}{.5\textwidth}
@@ -451,7 +450,7 @@ The project was divided into two main steps: The layouts design and the electric
 
 All Full Adders layouts were designed using the Virtuoso Electronic Design Automation (EDA) tool from Cadence\textregistered{} with the process design kit (PDK) of 7-nm FinFET or Arizona State Predictive PDK (ASAP7) from the Arizona State University in partnership with ARM \cite{clark2016asap7}. It is the only available 7nm PDK for academic use, resulting in a very realistic estimative. This PDK was chosen due to realistic design conjecture regarding the current design competencies. Due to limitations of ASAP7 technology, it is not possible to connect the NMOS bulks separately due to the shared substrate. Given that, the Schmitt Trigger behavior is preserved with only minor changes between charging and discharging delays due to the difference between PMOS and NMOS threshold voltages. The ST applied in this work is shown at Figure \ref{fig:sub2}.
 
-The main PDK rules and lithography assumptions considered in this work are shown in Table \ref{layers}. To exemplify the PDK layers, the traditional CMOS Full Adder layout is shown in Fig. \ref{fig:layers}, alongside TGA, TFA and Hybrid Adders, in Figures \ref{fig:TGA} \ref{fig:TFA} and \ref{fig:HYBRID}, respectively. For all layouts it was used a dense 7.5 M2 (Metal 2) track cell, baseline resulting in a 270nm cell height. This corresponds to three fins for each transistor as shown in Figure \ref{th}. To make the back-gate connections it is necessary a TAP-Cell. It is responsible to connect the NMOS and PMOS back-gates to supply/ground, respectively, being possible to connect the PMOS back-gates to another node. It is a PDK restriction needed for the proper function of the circuit. Its layout has a length of 108nm resulting in an area of 0.02916 $\(\mu\)m^{2}$ as shown in Figure \ref{tap}.
+The main PDK rules and lithography assumptions considered in this work are shown in Table \ref{layers}. To exemplify the PDK layers, the traditional CMOS Full Adder layout is shown in Fig. \ref{fig:layers}. For all layouts it was used a dense 7.5 M2 (Metal 2) track cell, baseline resulting in a 270nm cell height. This corresponds to three fins for each transistor as shown in Figure \ref{th}. To make the back-gate connections it is necessary a TAP-Cell. It is responsible to connect the NMOS and PMOS back-gates to supply/ground, respectively, being possible to connect the PMOS back-gates to another node. It is a PDK restriction needed for the proper function of the circuit. Its layout has a length of 108nm resulting in an area of 0.02916 $\(\mu\)m^{2}$ as shown in Figure \ref{tap}.
 
 \begin{table}[H]
 \centering
@@ -481,30 +480,6 @@ The main PDK rules and lithography assumptions considered in this work are shown
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=\textwidth]{TGA.png}
-\caption{Original TGA Layout.}
-\label{fig:TGA}
-\legend{Source: from author.}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=\textwidth]{TFA.png}
-\caption{Original TFA Layout.}
-\label{fig:TFA}
-\legend{Source: from author.}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=\textwidth]{HYBRID.png}
-\caption{Original Hybrid Layout.}
-\label{fig:HYBRID}
-\legend{Source: from author.}
-\end{figure}
-
-\begin{figure}[H]
-\centering
 \includegraphics[width=0.8\textwidth]{transistorHeight.pdf}
 \caption{Transistor height and number of fins.}
 \label{th}
@@ -523,7 +498,7 @@ The main PDK rules and lithography assumptions considered in this work are shown
 
 The simulations were carried out in HSPICE considering the new netlist obtained after the physical verification flow and the parasitic capacitances extraction. Each full adder was designed with and without the Schmitt Triggers replacement to consider the penalties due to the adoption of the ST technique in terms of area, energy and performance.
 
-The process variability evaluation was taken, after the layout parasitic extraction through Calibre\textregistered{} from Mentor Graphics, through 2000 Monte Carlo (MC) simulations varying the threshold voltage of the PMOS and NMOS devices according to a Gaussian distribution considering a 3\(\sigma\) deviation and a 5\% variation on nominal values. For all experiments, it was observed maximum values, mean (\(\mu\)), standard deviation (\(\sigma\)) and normalized standard deviation (\(\sigma\)/\(\mu\)) for each metric: delay, power and energy, where \(\sigma\)/\(\mu\) represents the sensibility of the cell to process variability. 
+The process variability evaluation was taken, after the layout parasitic extraction through Calibre\textregistered{} from Mentor Graphics, through 2000 Monte Carlo (MC) simulations varying the threshold voltage of the PMOS and NMOS devices according to a Gaussian distribution considering a 3\(\sigma\) deviation of 5\% variation from nominal values. For all experiments, it was observed maximum values, mean (\(\mu\)), standard deviation (\(\sigma\)) and normalized standard deviation (\(\sigma\)/\(\mu\)) for each metric: delay, power and energy, where \(\sigma\)/\(\mu\) represents the sensibility of the cell to process variability. 
 
 The reference values from ASAP7 technology for electrical simulations are shown in Table \ref{electPar}. To avoid underestimating effects of realistic input waveforms on design metrics, the simulations were carried under a 5-bit ripple carry adder using copies of the 1-bit full adder cell with design metrics being calculated for the middle cell as shown in Figure \ref{fig:Fig6}. 
 
@@ -559,39 +534,39 @@ The reference values from ASAP7 technology for electrical simulations are shown 
 
 \chapter{Results and Discussion}
 
-The results are organized into two main analysis: the set of full adders were evaluated at nominal voltage conditions and operating at a near-threshold (Nt) region with supply voltage equal to 0.4V. In both cases, the process variability is considered and simulations with and without the ST technique is performed. To highlight the improvements and drawbacks of the ST technique for each FA, results also show the relation (\(\Delta\)) between the deviation of traditional and ST circuits. For each output (Sum and Carry Out) delays and energy measures were considered. All analysis was made at layout level with the 7nm ASAP technology node, with all parasitics considered. The resulting FA layouts are shown from Figure \ref{fig:CMOSST} to \ref{fig:HYBRIDST}.
+The results are organized into two main analysis: the set of full adders were evaluated at nominal voltage conditions and operating at a near-threshold (Nt) region with supply voltage equal to 0.4V. In both cases, the process variability is considered and simulations with and without the ST technique is performed. To highlight the improvements and drawbacks of the ST technique for each FA, results also show the relation (\(\Delta\)) between the deviation of traditional and ST circuits. For each output (Sum and Carry Out) delays and energy measures were considered. All analysis was made at layout level with the 7nm ASAP technology node, with all parasitics considered. 
 
-\begin{figure}[H]
-\centering
-\includegraphics[width=\textwidth]{CMOSST.png}
-\caption{Mirror CMOS Layout with the applied technique.}
-\label{fig:CMOSST}
-\legend{Source: from Author}
-\end{figure}
+% \begin{figure}[H]
+% \centering
+% \includegraphics[width=\textwidth]{CMOSST.png}
+% \caption{Mirror CMOS Layout with the applied technique.}
+% \label{fig:CMOSST}
+% \legend{Source: from Author}
+% \end{figure}
 
-\begin{figure}[H]
-\centering
-\includegraphics[width=\textwidth]{TGAST.png}
-\caption{TGA Layout with the applied technique.}
-\label{fig:TGAST}
-\legend{Source: from Author}
-\end{figure}
+% \begin{figure}[H]
+% \centering
+% \includegraphics[width=\textwidth]{TGAST.png}
+% \caption{TGA Layout with the applied technique.}
+% \label{fig:TGAST}
+% \legend{Source: from Author}
+% \end{figure}
 
-\begin{figure}[H]
-\centering
-\includegraphics[width=\textwidth]{TFAST.png}
-\caption{TFA Layout with the applied technique.}
-\label{fig:TFAST}
-\legend{Source: from Author}
-\end{figure}
+% \begin{figure}[H]
+% \centering
+% \includegraphics[width=\textwidth]{TFAST.png}
+% \caption{TFA Layout with the applied technique.}
+% \label{fig:TFAST}
+% \legend{Source: from Author}
+% \end{figure}
 
-\begin{figure}[H]
-\centering
-\includegraphics[width=\textwidth]{HYBRIDST.png}
-\caption{Hybrid FA Layout with the applied technique.}
-\label{fig:HYBRIDST}
-\legend{Source: from Author}
-\end{figure}
+% \begin{figure}[H]
+% \centering
+% \includegraphics[width=\textwidth]{HYBRIDST.png}
+% \caption{Hybrid FA Layout with the applied technique.}
+% \label{fig:HYBRIDST}
+% \legend{Source: from Author}
+% \end{figure}
 
 
 \section{Nominal Voltage Operation}
@@ -771,7 +746,7 @@ Overall, the worst penalties were the 47\% increase in delays in Sum output at n
 \legend{Source: from author.}
 \end{figure}
 
-For area penalties there was 136\%, 188\%, 100\% and 213\% increase for the CMOS, TGA, TFA and Hybrid Full Adders, respectively. Their respective areas, not considering the TAP-Cell area, are shown in Table \ref{penalties}. Such high area penalties are mainly due to technology rules such as the 108nm well-spacing and the necessity to use TAP-Cells to explicitly connect the transistors back-gates to specific parts of the circuits or the supply/ground making the ST cell more prominent than expected.
+For area penalties there was 136\%, 188\%, 100\% and 213\% increase for the CMOS, TGA, TFA and Hybrid Full Adders, respectively. Their respective areas are shown in Table \ref{penalties}. Such high area penalties are mainly due to technology rules such as the 108nm well-spacing and the necessity to use TAP-Cells to explicitly connect the transistors back-gates to specific parts of the circuits or the supply/ground making the ST cell more prominent than expected. The FA layouts are shown from Figure \ref{CMOS} to \ref{HYBRID}.
 
 \begin{table}[H]
 \centering
@@ -791,7 +766,77 @@ For area penalties there was 136\%, 188\%, 100\% and 213\% increase for the CMOS
 \end{tabular}
 \end{table}
 
+\begin{figure}[H]
+  \centering
+  \begin{subfigure}{\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{CMOS.png}
+    \caption{Original Mirror CMOS Full Adder layout.}
+  \end{subfigure}
 
+  \begin{subfigure}{\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{CMOSST.png}
+    \caption{Mirror CMOS Full Adder layout with the applied technique.}
+  \end{subfigure}  
+  \caption{Mirror CMOS Full Adder layouts.}
+ \label{CMOS}
+\legend{Source: from author.}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \begin{subfigure}{\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{TGA.png}
+    \caption{Original TGA Full Adder layout.}
+  \end{subfigure}
+
+  \begin{subfigure}{\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{TGAST.png}
+    \caption{TGA Full Adder layout with the applied technique.}
+  \end{subfigure}  
+  \caption{TGA Full Adder layouts.}
+  \label{TGA}
+\legend{Source: from author.}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \begin{subfigure}{\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{TFA.png}
+    \caption{Original TFA Full Adder layout.}
+  \end{subfigure}
+
+  \begin{subfigure}{\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{TFAST.png}
+    \caption{TFA Full Adder layout with the applied technique.}
+  \end{subfigure}  
+  \caption{TFA Full Adder layouts.}
+  \label{TFA}
+\legend{Source: from author.}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \begin{subfigure}{\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{HYBRID.png}
+    \caption{Original Hybrid Full Adder layout.}
+  \end{subfigure}
+
+  \begin{subfigure}{\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{HYBRIDST.png}
+    \caption{Hybrid Full Adder layout with the applied technique.}
+  \end{subfigure}  
+  \caption{Hybrid Full Adder layouts.}
+  \label{HYBRID}
+\legend{Source: from author.}
+\end{figure}
 
 \chapter{Conclusions}
 
