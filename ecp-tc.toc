@@ -3,19 +3,19 @@
 \babel@toc {english}{}
 \babel@toc {brazilian}{}
 \babel@toc {english}{}
-\contentsline {chapter}{1~Introduction}{12}{CHAPTER.1}
-\contentsline {chapter}{2~FinFET Technology}{15}{CHAPTER.2}
-\contentsline {chapter}{3~Variability Effects and Mitigation Techniques}{18}{CHAPTER.3}
-\contentsline {section}{\numberline {3.1}Related Works}{20}{section.3.1}
-\contentsline {chapter}{4~Methodology}{25}{CHAPTER.4}
-\contentsline {section}{\numberline {4.1}Layout Design}{28}{section.4.1}
-\contentsline {section}{\numberline {4.2}Electrical Simulation}{30}{section.4.2}
-\contentsline {chapter}{5~Results and Discussion}{33}{CHAPTER.5}
-\contentsline {section}{\numberline {5.1}Nominal Voltage Operation}{33}{section.5.1}
-\contentsline {section}{\numberline {5.2}Near-Threshold Operation}{35}{section.5.2}
-\contentsline {section}{\numberline {5.3}Penalties}{36}{section.5.3}
-\contentsline {chapter}{6~Conclusions}{42}{CHAPTER.6}
-\contentsline {section}{\numberline {6.1}Future Works}{43}{section.6.1}
-\contentsline {chapter}{\xspace {}References}{44}{schapter.8}
-\contentsline {chapter}{\MakeUppercase {Annex} A~--- Exemplo de arquivo utilizado na simula\IeC {\c c}\IeC {\~a}o el\IeC {\'e}trica sem a t\IeC {\'e}cnica ST}{47}{CHAPTER.A}
-\contentsline {chapter}{\MakeUppercase {Annex} B~--- Exemplo de arquivo utilizado na simula\IeC {\c c}\IeC {\~a}o el\IeC {\'e}trica com a t\IeC {\'e}cnica ST}{50}{CHAPTER.B}
+\contentsline {chapter}{1~Introduction}{10}{CHAPTER.1}
+\contentsline {chapter}{2~FinFET Technology}{13}{CHAPTER.2}
+\contentsline {chapter}{3~Variability Effects and Mitigation Techniques}{16}{CHAPTER.3}
+\contentsline {section}{\numberline {3.1}Related Works}{18}{section.3.1}
+\contentsline {chapter}{4~Methodology}{23}{CHAPTER.4}
+\contentsline {section}{\numberline {4.1}Layout Design}{26}{section.4.1}
+\contentsline {section}{\numberline {4.2}Electrical Simulation}{28}{section.4.2}
+\contentsline {chapter}{5~Results and Discussion}{31}{CHAPTER.5}
+\contentsline {section}{\numberline {5.1}Nominal Voltage Operation}{31}{section.5.1}
+\contentsline {section}{\numberline {5.2}Near-Threshold Operation}{33}{section.5.2}
+\contentsline {section}{\numberline {5.3}Penalties}{34}{section.5.3}
+\contentsline {chapter}{6~Conclusions}{40}{CHAPTER.6}
+\contentsline {section}{\numberline {6.1}Future Works}{41}{section.6.1}
+\contentsline {chapter}{\xspace {}References}{42}{schapter.7}
+\contentsline {chapter}{\MakeUppercase {Annex} A~--- Exemplo de arquivo utilizado na simula\IeC {\c c}\IeC {\~a}o el\IeC {\'e}trica sem a t\IeC {\'e}cnica ST}{45}{CHAPTER.A}
+\contentsline {chapter}{\MakeUppercase {Annex} B~--- Exemplo de arquivo utilizado na simula\IeC {\c c}\IeC {\~a}o el\IeC {\'e}trica com a t\IeC {\'e}cnica ST}{48}{CHAPTER.B}

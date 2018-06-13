@@ -134,19 +134,6 @@
 
 % dedicatoria
 \clearpage
-\begin{flushright}
-\mbox{}\vfill
-{\sffamily\itshape
-``If I have seen farther than others,\\
-it is because I stood on the shoulders of giants.''\\}
---- \textsc{Sir~Isaac Newton}
-\end{flushright}
-
-% agradecimentos
-\chapter*{Agradecimentos}
-Agradeço ao \LaTeX\ por não ter vírus de macro\ldots
-
-
 
 % resumo na língua do documento
 \begin{abstract}
@@ -496,9 +483,9 @@ The main PDK rules and lithography assumptions considered in this work are shown
 
 \section{Electrical Simulation}
 
-The simulations were carried out in HSPICE considering the new netlist obtained after the physical verification flow and the parasitic capacitances extraction. Each full adder was designed with and without the Schmitt Triggers replacement to consider the penalties due to the adoption of the ST technique in terms of area, energy and performance.
+The simulations were carried out in HSPICE considering the new netlist obtained after the physical verification flow and the parasitic capacitances extraction. Each full adder was designed with and without the Schmitt Triggers replacement to consider the penalties due to the adoption of the ST technique in terms of area, energy and performance. There was performed simulations at nominal supply level (0.7V) and near-threshold level (0.4V) with a frequency of 1GHz for the signals. 
 
-The process variability evaluation was taken, after the layout parasitic extraction through Calibre\textregistered{} from Mentor Graphics, through 2000 Monte Carlo (MC) simulations varying the threshold voltage of the PMOS and NMOS devices according to a Gaussian distribution considering a 3\(\sigma\) deviation of 5\% variation from nominal values. For all experiments, it was observed maximum values, mean (\(\mu\)), standard deviation (\(\sigma\)) and normalized standard deviation (\(\sigma\)/\(\mu\)) for each metric: delay, power and energy, where \(\sigma\)/\(\mu\) represents the sensibility of the cell to process variability. 
+The process variability evaluation was taken, after the layout parasitic extraction through Calibre\textregistered{} from Mentor Graphics, through 2000 Monte Carlo (MC) simulations \cite{2000Simulations} varying the threshold voltage of the PMOS and NMOS devices according to a Gaussian distribution considering a 3\(\sigma\) deviation of 5\% variation from the WFF nominal values. For all experiments, it was observed maximum values, mean (\(\mu\)), standard deviation (\(\sigma\)) and normalized standard deviation (\(\sigma\)/\(\mu\)) for each metric: delay, power and energy, where \(\sigma\)/\(\mu\) represents the sensibility of the cell to process variability. 
 
 The reference values from ASAP7 technology for electrical simulations are shown in Table \ref{electPar}. To avoid underestimating effects of realistic input waveforms on design metrics, the simulations were carried under a 5-bit ripple carry adder using copies of the 1-bit full adder cell with design metrics being calculated for the middle cell as shown in Figure \ref{fig:Fig6}. 
 
