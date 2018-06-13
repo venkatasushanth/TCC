@@ -252,7 +252,7 @@ This work is divided into five further sections: FinFET Technology where its cha
 
 \chapter{FinFET Technology}
 
-Promising new commercial technologies based on the Fin Field Effect Transistor (FinFET) devices have been introduced to maintain the technology scaling. The FinFET main geometric parameters are the gate length (L or L\textsc{g}), fin width (W\textsc{fin}), fin height (H\textsc{fin}) and Oxide Thickness (T\textsc{ox}). FinFET technology can be built on a traditional bulk or Silicon on Insulator (SOI) substrate with a conducting channel that rises above the level of the insulator, creating a thin silicon structure, the gate as shown in Figure \ref{mosfetvsfinfet} and \ref{bulkvssoi}. 
+Promising new commercial technologies based on the Fin Field Effect Transistor (FinFET) devices have been introduced to maintain the technology scaling. The FinFET main geometric parameters are the gate length (L or L\textsc{g}), fin width (W\textsc{fin}), fin height (H\textsc{fin}) and Oxide Thickness (T\textsc{ox}). FinFET technology can be built on a traditional bulk or Silicon on Insulator (SOI) substrate with a conducting channel that rises above the level of the insulator, creating a thin silicon structure, the gate as shown in Figure \ref{mosfetvsfinfet} and \ref{bulkvssoi}. FinFET devices can be shorted-gate (3 gate nodes) or independent-gate (4 gate nodes). The shorted gate model is similar to the traditional MOSFET given that the front-gate and back-gate are connected and controlled by the gate signal. The independent gate has 4 nodes, making possible to connect the front and back gate to different voltage values.
 
 \begin{figure}[H]
 \centering
@@ -323,7 +323,7 @@ Dynamic Power & Difficult & Workload dependent & C,  \(\alpha\) & Shorter batter
 \legend{Source: \citet{rahimi2016variability}}
 \end{table}
 
-This work evaluates the effects caused by the physical variability. In FinFET, the physical variations are responsible for deviations in the device work function (WF), gate length (L\textsc{g}), fin height (H\textsc{fin}), fin thickness (T\textsc{si}) and parasitic resistances. It is shown in \cite{meinhardt2014impact} that work function fluctuation (WFF) is the main cause of threshold voltage (V\textsc{th}) variations. Alongside, in \cite{wang2011statistical} is shown the high correlation between the variability in the on (I\textsc{on}) and off (I\textsc{off}) currents and V\textsc{th} fluctuation in the presence of granularity of the metal gate. The main cause of WFF is due to its dependency over the orientation of its metal grains. In the real fabrication process, metal gate devices are generally produced using multiple types of metal with different work functions randomly aligned as depicted in Figure \ref{wff}. In the ideal fabrication process, metal gate devices have the gates manufactured with uniformly aligned metal and then, they have very low WFF deviation \cite{meinhardt2014impact}.
+This work evaluates the effects caused by the physical variability. In FinFET, the physical variations are responsible for deviations in the device work function (WF), gate length (L\textsc{g}), fin height (H\textsc{fin}), fin thickness (T\textsc{si}) and parasitic resistances. It is shown in \cite{meinhardt2014impact} that work function fluctuation (WFF) is the main cause of threshold voltage (V\textsc{th}) variations. Alongside, in \cite{wang2011statistical} is shown the high correlation between the variability in the on (I\textsc{on}) and off (I\textsc{off}) currents and V\textsc{th} fluctuation in the presence of granularity of the metal gate. The main cause of WFF is due to its dependency over the orientation of its metal grains. In the real fabrication process, metal gate devices are generally produced using multiple types of metal with different work functions randomly aligned as depicted in Figure \ref{wff}. In the ideal fabrication process, metal gate devices have the gates manufactured with uniformly aligned metal and then, they have very low WFF deviation \cite{wffSource}.
 
 \begin{figure}[H]
 \centering
@@ -351,7 +351,7 @@ It is notable that none of these works consider a layout approach for its simula
 
 \cite{federspiel201228nm} presents reliability comparison between 28nm bulk CMOS and Fully Depleted Silicon On Insulator (FDSOI) technologies at layout level, with FDSOI showing 32\% improved performance, 40\% reduced power consumption and improved matching, with its intrinsic reliability behavior similar to 28nm bulk at the device level. \cite{alioto2007delay} presents a study about the delay variability caused by supply variations in the TGA. The experiments were performed at 90nm and 180nm bulk CMOS Technology in Spectre at layout level. It showed that lower supply voltages bring more delay variability to the circuit with the TGA presenting worse results 15\% (25\%) for the 90 nm (180 nm) in comparison to static logic.
 
-Some works focus on evaluating techniques: In \cite{zimpeck2016finfet} three dimensioning methods are applied on multiple circuits and their impact on variability robustness is analyzed. The simulations were performed considering a 14nm FinFET technology using HSPICE tool. The authors concluded that the Optimized Transistor Sizing (OTS) technique has the best ratio between nominal PDP and PDP under process variability.
+Some works focus on evaluating techniques: In \cite{zimpeck2016finfet} three transistor sizing techniques are applied on a set of cells and their impact on variability robustness is analyzed. The simulations were performed considering a 14nm FinFET technology using HSPICE tool. The authors concluded that the Optimized Transistor Sizing (OTS) technique has the best ratio between nominal PDP and PDP under process variability.
 
 \cite{ahmadi2017hybrid} introduces a new technique to improve the performance of digital circuits in the presence of variations. It consists of a hybrid of two former methods to prevent errors due to delay variations. The simulations were performed with a 45nm predictive technology using HSPICE and applied on ITC’99 and ISCAS’89 benchmarks circuits. The results show that this hybrid technique can tolerate process variations up to 27.3\% better than state-of-the-art techniques.
 
@@ -416,7 +416,7 @@ In this design a dynamic body-bias technique is applied through a feedback mecha
 \begin{subfigure}{.5\textwidth}
   \centering
   \includegraphics[width=.8\linewidth]{STcorrigido.eps}
-  \caption{Modified ST Inverter applied in this work. Source: from author.}
+  \caption{Modified ST Inverter applied in this work. Source: From the author.}
   \label{fig:sub2}
 \end{subfigure}
 \caption{Original and modified STs side-by-side}
@@ -430,7 +430,7 @@ The project was divided into two main steps: The layouts design and the electric
 \includegraphics[width=0.8\textwidth]{DesignFlow.pdf}
 \caption{Design flow of the experiments.}
 \label{DesignFlow}
-\legend{Source: from author.}
+\legend{Source: From the author.}
 \end{figure}
 
 \section{Layout Design}
@@ -462,7 +462,7 @@ The main PDK rules and lithography assumptions considered in this work are shown
 \includegraphics[width=\textwidth]{Layers.pdf}
 \caption{Technology layers and original Mirror CMOS Layout}
 \label{fig:layers}
-\legend{Source: from author.}
+\legend{Source: From the author.}
 \end{figure}
 
 \begin{figure}[H]
@@ -470,7 +470,7 @@ The main PDK rules and lithography assumptions considered in this work are shown
 \includegraphics[width=0.8\textwidth]{transistorHeight.pdf}
 \caption{Transistor height and number of fins.}
 \label{th}
-\legend{Source: from author.}
+\legend{Source: From the author.}
 \end{figure}
 
 \begin{figure}[H]
@@ -478,7 +478,7 @@ The main PDK rules and lithography assumptions considered in this work are shown
 \includegraphics[width=0.2\textwidth]{TAP.png}
 \caption{TAP-Cell Layout.}
 \label{tap}
-\legend{Source: from author.}
+\legend{Source: From the author.}
 \end{figure}
 
 \section{Electrical Simulation}
@@ -528,7 +528,7 @@ The results are organized into two main analysis: the set of full adders were ev
 % \includegraphics[width=\textwidth]{CMOSST.png}
 % \caption{Mirror CMOS Layout with the applied technique.}
 % \label{fig:CMOSST}
-% \legend{Source: from Author}
+% \legend{Source: From the author}
 % \end{figure}
 
 % \begin{figure}[H]
@@ -536,7 +536,7 @@ The results are organized into two main analysis: the set of full adders were ev
 % \includegraphics[width=\textwidth]{TGAST.png}
 % \caption{TGA Layout with the applied technique.}
 % \label{fig:TGAST}
-% \legend{Source: from Author}
+% \legend{Source: From the author}
 % \end{figure}
 
 % \begin{figure}[H]
@@ -544,7 +544,7 @@ The results are organized into two main analysis: the set of full adders were ev
 % \includegraphics[width=\textwidth]{TFAST.png}
 % \caption{TFA Layout with the applied technique.}
 % \label{fig:TFAST}
-% \legend{Source: from Author}
+% \legend{Source: From the author}
 % \end{figure}
 
 % \begin{figure}[H]
@@ -552,7 +552,7 @@ The results are organized into two main analysis: the set of full adders were ev
 % \includegraphics[width=\textwidth]{HYBRIDST.png}
 % \caption{Hybrid FA Layout with the applied technique.}
 % \label{fig:HYBRIDST}
-% \legend{Source: from Author}
+% \legend{Source: From the author}
 % \end{figure}
 
 
@@ -623,7 +623,7 @@ According to Table \ref{energyNominal}, ST circuits increased the mean energy ab
 \includegraphics[width=\textwidth, trim={0 9cm 0 9cm},clip]{improvNominal.pdf}
 \caption{Robustness improvements for each Full Adder at nominal voltage operation.}
 \label{fig:improvNominal}
-\legend{Source: from author.}
+\legend{Source: From the author.}
 \end{figure}
 
 \section{Near-Threshold Operation}
@@ -688,7 +688,7 @@ Results make clear the advantage of the technique when considering energy variab
 \includegraphics[width=\textwidth, trim={0 9cm 0 9cm},clip]{improvNT.pdf}
 \caption{Robustness improvements for each Full Adder at near-threshold operation.}
 \label{fig:NTimprov}
-\legend{Source: from author.}
+\legend{Source: From the author.}
 %\legend{Source: \cite{dokania2015circuit}}
 \end{figure}
 
@@ -706,7 +706,7 @@ Overall, the worst penalties were the 47\% increase in delays in Sum output at n
 \includegraphics[width=\textwidth, trim={0 9cm 0 9cm},clip]{energyNominalSum.pdf}
 \caption{Energy penalties for the Sum output at Nominal voltage operation.}
 \label{fig:energyNS}
-\legend{Source: from author.}
+\legend{Source: From the author.}
 \end{figure}
 
 \begin{figure}[H]
@@ -714,7 +714,7 @@ Overall, the worst penalties were the 47\% increase in delays in Sum output at n
 \includegraphics[width=\textwidth, trim={0 9cm 0 9cm},clip]{energyNominalCarryOut.pdf}
 \caption{Energy penalties for the Carry Out output at Nominal voltage operation.}
 \label{fig:energyNCO}
-\legend{Source: from author.}
+\legend{Source: From the author.}
 \end{figure}
 
 \begin{figure}[H]
@@ -722,7 +722,7 @@ Overall, the worst penalties were the 47\% increase in delays in Sum output at n
 \includegraphics[width=\textwidth, trim={0 9cm 0 9cm},clip]{energyNTSum.pdf}
 \caption{Energy penalties for the Sum output at Near-Threshold operation.}
 \label{fig:energyNTS}
-\legend{Source: from author.}
+\legend{Source: From the author.}
 \end{figure}
 
 \begin{figure}[H]
@@ -730,7 +730,7 @@ Overall, the worst penalties were the 47\% increase in delays in Sum output at n
 \includegraphics[width=\textwidth, trim={0 9cm 0 9cm},clip]{energyNTCarryOut.pdf}
 \caption{Energy penalties for the Carry Out output at Near-Threshold operation.}
 \label{fig:energyNTCO}
-\legend{Source: from author.}
+\legend{Source: From the author.}
 \end{figure}
 
 For area penalties there was 136\%, 188\%, 100\% and 213\% increase for the CMOS, TGA, TFA and Hybrid Full Adders, respectively. Their respective areas are shown in Table \ref{penalties}. Such high area penalties are mainly due to technology rules such as the 108nm well-spacing and the necessity to use TAP-Cells to explicitly connect the transistors back-gates to specific parts of the circuits or the supply/ground making the ST cell more prominent than expected. The FA layouts are shown from Figure \ref{CMOS} to \ref{HYBRID}.
@@ -768,7 +768,7 @@ For area penalties there was 136\%, 188\%, 100\% and 213\% increase for the CMOS
   \end{subfigure}  
   \caption{Mirror CMOS Full Adder layouts.}
  \label{CMOS}
-\legend{Source: from author.}
+\legend{Source: From the author.}
 \end{figure}
 
 \begin{figure}[H]
@@ -786,7 +786,7 @@ For area penalties there was 136\%, 188\%, 100\% and 213\% increase for the CMOS
   \end{subfigure}  
   \caption{TGA Full Adder layouts.}
   \label{TGA}
-\legend{Source: from author.}
+\legend{Source: From the author.}
 \end{figure}
 
 \begin{figure}[H]
@@ -804,7 +804,7 @@ For area penalties there was 136\%, 188\%, 100\% and 213\% increase for the CMOS
   \end{subfigure}  
   \caption{TFA Full Adder layouts.}
   \label{TFA}
-\legend{Source: from author.}
+\legend{Source: From the author.}
 \end{figure}
 
 \begin{figure}[H]
@@ -822,7 +822,7 @@ For area penalties there was 136\%, 188\%, 100\% and 213\% increase for the CMOS
   \end{subfigure}  
   \caption{Hybrid Full Adder layouts.}
   \label{HYBRID}
-\legend{Source: from author.}
+\legend{Source: From the author.}
 \end{figure}
 
 \chapter{Conclusions}
@@ -831,9 +831,49 @@ Variability has been a critical challenge in emerging technology nodes because i
 
 Given that, a novel technique was tested. The method consists of replacing internal inverters with Schmitt Trigger inverters to increase the circuit’s noise-immunity. The ST technique presents considerable robustness improvements over all full adders. For nominal voltage and near-threshold operation, TFA and Hybrid adders showed the highest accumulated improvements, respectively. As results show, the technique improves, sometimes drastically, the energy variability robustness for each Full Adder considered. For delay robustness, in some cases, there was a worsening in robustness mainly caused by area penalty and the pass-transistor logic. 
 
-Resuming, considering average variability robustness improvements with no worsenings, the Hybrid FA showed the best results for nominal voltage operation (17.64\%) and near-threshold operation (30.47\%). Considering only delay robustness there is no definitive best case at nominal voltage operation given that there was no considerable improvement at CMOS and Hybrid FAs and there was considerable worsening over one of the inputs at TGA and TFA. At near-threshold level the Hybrid FA brings the best average delay improvement (16.45\%). Considering only energy robustness improvements, the Hybrid FA showed the best average improvement (33.56\%) at nominal voltage operation. At near-threshold level, the TFA showed the best energy robustness improvement (61.88\%).
+Resuming, considering average variability robustness improvements with no worsenings, the Hybrid FA showed the best results for nominal voltage operation (17.64\%) and near-threshold operation (30.47\%). Considering only delay robustness there is no definitive best case at nominal voltage operation given that there was no considerable improvement at CMOS and Hybrid FAs and there was considerable worsening over one of the inputs at TGA and TFA. At near-threshold level the Hybrid FA brings the best average delay improvement (16.45\%). Considering only energy robustness improvements, the Hybrid FA showed the best average improvement (33.56\%) at nominal voltage operation. At near-threshold level, the TFA showed the best energy robustness improvement (61.88\%). An overview is shown at Table \ref{bestworst}.
 
-Considering penalties, the FA that suffered less penalty, at nominal voltage level, was the TGA, with 26\% increase on delays and 14\% increase in absolute delay deviations. At near-threshold level, the TFA showed improvements, with a 7\% decrease on delays and 17\% decrease on absolute deviations. Those improvements are due to the pass-transistor logic present on the TFA in a way that the extra path to supply/ground, comparing a inverter with the ST, aids the signal restoring. Alongside that, the TFA was the FA that presented the lowest area penalty. For energy penalties, the CMOS showed the lowest penalties, with 52\% increase in energy consumption and 24\% increase in absolute deviations. For near-threshold operation, the CMOS Adder shows again the lowest increase in energy consumption with the TFA showing a 10\% decrease in energy absolute deviation.
+\begin{table}[H]
+\centering
+\caption{General most and less sensible Full Adder over variability}
+\label{bestworst}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{llcc}
+\hline
+\multicolumn{2}{l}{\textbf{}} & \textbf{Nominal} & \textbf{NT} \\ \hline
+\multicolumn{2}{l}{\textbf{Highest Accumulated Robustness Improvement}} & Hybrid (70\%) & Hybrid (122\%) \\ \hline
+\multicolumn{2}{l}{\textbf{Highest Accumulated Robustness Improvement}} & TGA (39.15\%) & CMOS (62.38\%) \\ \hline
+\multirow{2}{*}{\textbf{Lowest Variability Sensitivity without the ST technique}} & Delay & CMOS (22.46\%) & CMOS (72.43\%) \\ \cline{2-4} 
+ & Energy & CMOS (20\%) & TFA (25.85\%) \\ \hline
+\multirow{2}{*}{\textbf{Lowest Variability Sensitivity with the ST technique}} & Delay & CMOS (21.82\%) & CMOS (61.3\%) \\ \cline{2-4} 
+ & Energy & Hybrid (15.6\%) & TFA (10.41\%) \\ \hline
+\multirow{2}{*}{\textbf{Highest Variability Sensitivity without the ST technique}} & Delay & TFA (68.27\%) & TFA (258.45\%) \\ \cline{2-4} 
+ & Energy & TGA (25.33\%) & TGA (31\%) \\ \hline
+\multirow{2}{*}{\textbf{Highest Variability Sensitivity with the ST technique}} & Delay & TFA (67.18\%) & TFA (188.84\%) \\ \cline{2-4} 
+ & Energy & TGA (20.16\%) & CMOS (22\%) \\ \hline
+\end{tabular}%
+}
+\end{table}
+
+Considering penalties, the FA that suffered less penalty, at nominal voltage level, was the TGA, with 26\% increase on delays and 14\% increase in absolute delay deviations. At near-threshold level, the TFA showed improvements, with a 7\% decrease on delays and 17\% decrease on absolute deviations. Those improvements are due to the pass-transistor logic present on the TFA in a way that the extra path to supply/ground, comparing a inverter with the ST, aids the signal restoring. Alongside that, the TFA was the FA that presented the lowest area penalty. For energy penalties, the CMOS showed the lowest penalties, with 52\% increase in energy consumption and 24\% increase in absolute deviations. For near-threshold operation, the CMOS Adder shows again the lowest increase in energy consumption with the TFA showing a 10\% decrease in energy absolute deviation. A penalty overview is shown at Table \ref{penalty}.
+
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+\begin{table}[H]
+\centering
+\caption{General technique penalty.}
+\label{penalty}
+\begin{tabular}{llcc}
+\hline
+\multicolumn{1}{c}{\textbf{(\%)}} & \multicolumn{1}{c}{\textbf{Metrics}} & \textbf{Nominal} & \textbf{NT} \\ \hline
+\multirow{3}{*}{\textbf{Average Lowest Penalty}} & Area & \multicolumn{2}{c}{TFA (100\%)} \\ \cline{2-4} 
+ & Delay & TGA (19.63\%) & TFA (-11.35\%) \\ \cline{2-4} 
+ & Energy & CMOS (38\%) & HYBRID (38.45\%) \\ \hline
+\multirow{3}{*}{\textbf{Average Highest Penalty}} & Area & \multicolumn{2}{c}{Hybrid (213\%)} \\ \cline{2-4} 
+ & Delay & TFA (46.71\%) & TGA (61\%) \\ \cline{2-4} 
+ & Energy & TFA (95.17\%) & TFA (56.18\%) \\ \hline
+\end{tabular}
+\end{table}
 
 With the technique penalties in mind, it should only be utilized in applications that can bear the delays, energy consumption and area increase with variability robustness as a priority. These works demonstrate the need for new techniques at layout level to address variability for high performance/low power applications with low area penalties. It is important to note that, according to the state-of-art research, this is the first analysis of this technique made at layout level. For future works, a supply voltage calibration shall be made to find the best cost-benefit supply voltage.
 

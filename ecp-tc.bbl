@@ -32,6 +32,12 @@
   improve the performance of digital circuits in the presence of variations.
   In:  . [S.l.]: IEEE, 2017. v.~64, n.~1, p. 100--110.}
 
+\bibitem[Alioto, Consoli and Palumbo 2015]{2000Simulations}
+\abntrefinfo{Alioto, Consoli and Palumbo}{ALIOTO; CONSOLI; PALUMBO}{2015}
+{ALIOTO, M.; CONSOLI, E.; PALUMBO, G. Variations in nanometer cmos flip-flops:
+  Part ii #x2014;energy variability and impact of other sources of variations.
+  In:  . [S.l.: s.n.], 2015. v.~62, n.~3, p. 835--843.}
+
 \bibitem[Alioto and Palumbo 2007]{alioto2007delay}
 \abntrefinfo{Alioto and Palumbo}{ALIOTO; PALUMBO}{2007}
 {ALIOTO, M.; PALUMBO, G. Delay variability due to supply variations in
@@ -72,6 +78,13 @@
 {COCKRILL, C. \textbf{Understanding Schmitt Triggers - Application Report}.
   2011.
 Available from Internet: \url{http://www.ti.com/lit/an/scea046/scea046.pdf}.}
+
+\bibitem[Dadgour et al. 2010]{wffSource}
+\abntrefinfo{Dadgour et al.}{DADGOUR et al.}{2010}
+{DADGOUR, H.~F. et al. Grain-orientation induced work function variation in
+  nanoscale metal-gate transistors #x2014;part i: Modeling, analysis, and
+  experimental validation. In:  . [S.l.: s.n.], 2010. v.~57, n.~10, p.
+  2504--2514.}
 
 \bibitem[Devadas and Kishore 2017]{devadas2017design}
 \abntrefinfo{Devadas and Kishore}{DEVADAS; KISHORE}{2017}
