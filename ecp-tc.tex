@@ -150,41 +150,46 @@ A miniaturização da tecnologia e diminuição das tensões de alimentação ao
 % lista de abreviaturas e siglas
 % o parametro deve ser a abreviatura mais longa
 \begin{listofabbrv}{SPMD}
-        \item[FA] Full Adder
-        \item[PVT] Process, Voltage and Temperature
+        \item[BTI] Bias Temperature Instability
         \item[CMOS] Complementary-Metal-Oxide-Semiconductor
-        \item[ST] Schmitt Trigger
-        \item[FinFET] Fin Field Effect Transistor
-        \item[SOI] Silicon On Insulator
-        \item[SCE] Short-Channel Effect
-        \item[RDP] Random Dopant Fluctuation
-        \item[NBTI] Negative Bias Temperature Instability
-        \item[PBTI] Positive Bias Temperature Instability
-        \item[WF] Work Function
-        \item[WFF] Work Function Fluctuation
-        \item[L\textsc{g}] Gate Length
-        \item[H\textsc{fin}] Fin Height
-        \item[T\textsc{si}] Fin Thickness
-        \item[V\textsc{th}] Threshold Voltage
-        \item[I\textsc{on}] On-Current
-        \item[I\textsc{off}] Off-Current
-        \item[PDP] Power-Delay-Product
-        \item[CPL] Complementary Pass-transistor Logic
-        \item[TGA] Transmission Gate Adder
-        \item[TFA] Transmission Function Adder
-        \item[EDP] Energy-Delay-Product
         \item[CNFET] Carbon Nanotube Field Effect Transistor
-        \item[FDSOI] Fully Depleted Silicon On Insulator
-        \item[OTS] Optimized Transistor Sizing
-        \item[SRAM] Static Random-Access Memory
-        \item[PMOS] P-channel Metal-Oxide-Semiconductor
-        \item[NMOS] N-channel Metal-Oxide-Semiconductor
+        \item[CPL] Complementary Pass-transistor Logic
+        \item[ECC] Error Correcting Code
         \item[EDA] Electronic Design Automation
-        \item[PDK] Process Design Kit
+        \item[EDP] Energy-Delay-Product
+        \item[FA] Full Adder
+        \item[FDSOI] Fully Depleted Silicon On Insulator
+        \item[FinFET] Fin Field Effect Transistor
+        \item[GOBD] Gate Oxide BreakDown
+        \item[HCI] Hot Carrier Injection
+        \item[H\textsc{fin}] Fin Height
+        \item[I\textsc{off}] Off-Current
+        \item[I\textsc{on}] On-Current
+        \item[L\textsc{g}] Gate Length
         \item[M2] Metal 2
         \item[MC] Monte Carlo
-        \item[PTM] Predictive Technology Model
+        \item[NBTI] Negative Bias Temperature Instability
+        \item[NMOS] N-channel Metal-Oxide-Semiconductor
         \item[NT] Near-Threshold
+        \item[OTS] Optimized Transistor Sizing
+        \item[PBTI] Positive Bias Temperature Instability
+        \item[PDK] Process Design Kit
+        \item[PDP] Power-Delay-Product
+        \item[PMOS] P-channel Metal-Oxide-Semiconductor
+        \item[PTM] Predictive Technology Model
+        \item[PVT] Process, Voltage and Temperature
+        \item[RDP] Random Dopant Fluctuation
+        \item[SCE] Short-Channel Effect
+        \item[SOI] Silicon On Insulator
+        \item[SRAM] Static Random-Access Memory
+        \item[ST] Schmitt Trigger
+        \item[TFA] Transmission Function Adder
+        \item[TGA] Transmission Gate Adder
+        \item[T\textsc{ox}] Oxide Thickness
+        \item[T\textsc{si}] Fin Thickness
+        \item[V\textsc{th}] Threshold Voltage
+        \item[WF] Work Function
+        \item[WFF] Work Function Fluctuation
 \end{listofabbrv}
 
 % idem para a lista de símbolos
@@ -252,7 +257,7 @@ This work is divided into five further sections: FinFET Technology where its cha
 
 \chapter{FinFET Technology}
 
-Promising new commercial technologies based on the Fin Field Effect Transistor (FinFET) devices have been introduced to maintain the technology scaling. The FinFET main geometric parameters are the gate length (L or L\textsc{g}), fin width (W\textsc{fin}), fin height (H\textsc{fin}) and Oxide Thickness (T\textsc{ox}). FinFET technology can be built on a traditional bulk or Silicon on Insulator (SOI) substrate with a conducting channel that rises above the level of the insulator, creating a thin silicon structure, the gate as shown in Figure \ref{mosfetvsfinfet} and \ref{bulkvssoi}. FinFET devices can be shorted-gate (3 gate nodes) or independent-gate (4 gate nodes). The shorted gate model is similar to the traditional MOSFET given that the front-gate and back-gate are connected and controlled by the gate signal. The independent gate has 4 nodes, making possible to connect the front and back gate to different voltage values.
+Promising new commercial technologies based on the Fin Field Effect Transistor (FinFET) devices have been introduced to maintain the technology scaling. The FinFET main geometric parameters are the gate length (L or L\textsc{g}), fin width (W\textsc{fin}, T\textsc{fin} or T\textsc{si}), fin height (H\textsc{fin}) and Oxide Thickness (T\textsc{ox}). FinFET technology can be built on a traditional bulk or Silicon on Insulator (SOI) substrate with a conducting channel that rises above the level of the insulator, creating a thin silicon structure, the gate as shown in Figure \ref{mosfetvsfinfet} and \ref{bulkvssoi}. FinFET devices can be shorted-gate (3 gate nodes) or independent-gate (4 gate nodes). The shorted gate model is similar to the traditional MOSFET given that the front-gate and back-gate are connected and controlled by the gate signal. The independent gate has 4 nodes, making possible to connect the front and back gate to different voltage values.
 
 \begin{figure}[H]
 \centering
@@ -397,7 +402,7 @@ Inspired by CMOS and CPL Full Adders architectures, the Hybrid Full Adder \cite{
 \includegraphics[width=1\textwidth]{FAs.png}
 \caption{Full Adders with internal inverters to be replaced highlighted.}
 \label{fig:Fig5}
-\legend{Transmission Function Adder (a), Transmission Gate Adder (b), Mirror CMOS Adder (c) and Hybrid Full Adder (d).
+\legend{Transmission Gate Adder (a), Transmission Function Adder (b), Mirror CMOS Adder (c) and Hybrid Full Adder (d).
 Source: \citet{samuel2016}}
 \end{figure}
 
@@ -766,7 +771,7 @@ For area penalties there was 136\%, 188\%, 100\% and 213\% increase for the CMOS
     \includegraphics[width=\linewidth]{CMOSST.png}
     \caption{Mirror CMOS Full Adder layout with the applied technique.}
   \end{subfigure}  
-  \caption{Mirror CMOS Full Adder layouts.}
+  \caption{Mirror CMOS Full Adder layouts (The cells have the same height, although the scaling is not maintained).}
  \label{CMOS}
 \legend{Source: From the author.}
 \end{figure}
@@ -784,7 +789,7 @@ For area penalties there was 136\%, 188\%, 100\% and 213\% increase for the CMOS
     \includegraphics[width=\linewidth]{TGAST.png}
     \caption{TGA Full Adder layout with the applied technique.}
   \end{subfigure}  
-  \caption{TGA Full Adder layouts.}
+  \caption{TGA Full Adder layouts (The cells have the same height, although the scaling is not maintained).}
   \label{TGA}
 \legend{Source: From the author.}
 \end{figure}
@@ -802,7 +807,7 @@ For area penalties there was 136\%, 188\%, 100\% and 213\% increase for the CMOS
     \includegraphics[width=\linewidth]{TFAST.png}
     \caption{TFA Full Adder layout with the applied technique.}
   \end{subfigure}  
-  \caption{TFA Full Adder layouts.}
+  \caption{TFA Full Adder layouts (The cells have the same height, although the scaling is not maintained).}
   \label{TFA}
 \legend{Source: From the author.}
 \end{figure}
@@ -820,7 +825,7 @@ For area penalties there was 136\%, 188\%, 100\% and 213\% increase for the CMOS
     \includegraphics[width=\linewidth]{HYBRIDST.png}
     \caption{Hybrid Full Adder layout with the applied technique.}
   \end{subfigure}  
-  \caption{Hybrid Full Adder layouts.}
+  \caption{Hybrid Full Adder layouts (The cells have the same height, although the scaling is not maintained).}
   \label{HYBRID}
 \legend{Source: From the author.}
 \end{figure}

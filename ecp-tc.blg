@@ -1,4 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2017/Arch Linux)
+This is BibTeX, Version 0.99d (TeX Live 2018/Arch Linux)
 Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: ecp-tc.aux
 The style file: abntex2-alf.bst
@@ -17,7 +17,6 @@ Reallocated singl_function (elt_size=8) to 100 items from 50.
 Reallocated glb_str_ptr (elt_size=8) to 20 items from 10.
 Reallocated global_strs (elt_size=20001) to 20 items from 10.
 Reallocated glb_str_end (elt_size=8) to 20 items from 10.
-Warning--campo year vazio ou faltando em ptm
 +---------------------------------------------------------+
 | Estilo bibliográfico abntex2-alf.bst versão v-1.9.1           |
 | Em caso de dúvidas ou problemas com este estilo procure |
@@ -25,43 +24,42 @@ Warning--campo year vazio ou faltando em ptm
 +---------------------------------------------------------+
 You've used 46 entries,
             6711 wiz_defined-function locations,
-            1468 strings with 18249 characters,
-and the built_in function-call counts, 46497 in all, are:
-= -- 4070
-> -- 1647
+            1469 strings with 18255 characters,
+and the built_in function-call counts, 46153 in all, are:
+= -- 3963
+> -- 1662
 < -- 161
-+ -- 753
-- -- 487
-* -- 3343
-:= -- 5898
-add.period$ -- 227
++ -- 736
+- -- 492
+* -- 3339
+:= -- 5874
+add.period$ -- 229
 call.type$ -- 46
-change.case$ -- 565
+change.case$ -- 566
 chr.to.int$ -- 105
-cite$ -- 45
-duplicate$ -- 2179
-empty$ -- 3611
-format.name$ -- 2354
-if$ -- 11515
+cite$ -- 44
+duplicate$ -- 2185
+empty$ -- 3608
+format.name$ -- 2377
+if$ -- 11387
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 774
+missing$ -- 776
 newline$ -- 186
-num.names$ -- 215
-pop$ -- 1101
+num.names$ -- 220
+pop$ -- 1103
 preamble$ -- 1
 purify$ -- 202
 quote$ -- 0
-skip$ -- 2685
+skip$ -- 2576
 stack$ -- 1
-substring$ -- 1990
-swap$ -- 1099
+substring$ -- 1979
+swap$ -- 1104
 text.length$ -- 78
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 35
-warning$ -- 1
-while$ -- 368
+type$ -- 24
+warning$ -- 0
+while$ -- 372
 width$ -- 0
-write$ -- 754
-(There was 1 warning)
+write$ -- 756

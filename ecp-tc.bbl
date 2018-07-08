@@ -68,6 +68,11 @@
 {BHATTACHARYA, D.; JHA, N.~K. Finfets: From devices to architectures. In:  .
   [S.l.]: Hindawi, 2014. v.~2014.}
 
+\bibitem[Cao 2018]{ptm}
+\abntrefinfo{Cao}{CAO}{2018}
+{CAO, Y. \textbf{Predictive Technology Model (PTM [online])}. 2018.
+Available from Internet: \url{http://ptm.asu.edu/}.}
+
 \bibitem[Clark et al. 2016]{clark2016asap7}
 \abntrefinfo{Clark et al.}{CLARK et al.}{2016}
 {CLARK, L.~T. et al. Asap7: A 7-nm finfet predictive process design kit. In:  .
@@ -188,11 +193,6 @@ Available from Internet: \url{http://www.ti.com/lit/an/scea046/scea046.pdf}.}
 \abntrefinfo{Navi et al.}{NAVI et al.}{2009}
 {NAVI, K. et al. A novel low-power full-adder cell for low voltage. In:  .
   [S.l.]: Elsevier, 2009. v.~42, n.~4, p. 457--467.}
-
-\bibitem[Predictive Technology Model (PTM) [online]]{ptm}
-\abntrefinfo{Predictive\ldots}{PREDICTIVE\ldots}{}
-{PREDICTIVE Technology Model (PTM) [online].
-Available from Internet: \url{http://ptm.asu.edu/}.}
 
 \bibitem[Rahimi, Benini and Gupta 2016]{rahimi2016variability}
 \abntrefinfo{Rahimi, Benini and Gupta}{RAHIMI; BENINI; GUPTA}{2016}
