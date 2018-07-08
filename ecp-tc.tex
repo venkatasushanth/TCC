@@ -699,42 +699,43 @@ Results make clear the advantage of the technique when considering energy variab
 
 \section{Penalties}
 
-It is expected that a technique which replaces a 2-transistor sub-circuit to a 4-transistor one should bring an impact over metrics. Given so, the average impact at nominal voltage operation was 30\% over the delay and their absolute deviation values for nominal voltage and near-threshold operations. For nominal voltage operation, both outputs had similar penalties (35\% increase in delays). For near-threshold operation the Sum output had a considerable higher penalty (47\%) in comparison to the Carry Out output (12\%). For delay deviation both operation regimes had similar results with an 8\% increase for the Sum output and a 60\% increase for the Carry Out output, which is expected since Carry Out is the critical path.
+It is expected that a technique which replaces a 2-transistor sub-circuit to a 4-transistor one should bring an impact over metrics. Given so, the average impact at nominal voltage operation was 30\% over the delay and their absolute deviation values for nominal voltage and near-threshold operations. For nominal voltage operation, both outputs had similar penalties (35\% increase in delays). For near-threshold operation the Sum output had a considerable higher penalty (47\%) in comparison to the Carry Out output (12\%). For delay deviation both operation regimes had similar results with an 8\% increase for the Sum output and a 60\% increase for the Carry Out output, which is expected since Carry Out is the critical path. Delay penalties are plotted in Figures \ref{fig:delayNominal} and \ref{fig:delayNT}.
 
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{delayNominal.png}
+\caption{Delay penalties at nominal operation due to the technique application.}
+\label{fig:delayNominal}
+\legend{Source: From the author.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{delayNT.png}
+\caption{Delay penalties at near-threshold operation due to the technique application.}
+\label{fig:delayNT}
+\legend{Source: From the author.}
+\end{figure}
 
 For energy, the impact is considerable, being on average over 85\% percent higher. For energy standard deviations there was a 40\% increase at nominal voltage and a minor 4\% increase at near-threshold level. At both operation regimes and at both outputs the penalty for energy was similar, with a 93\% increase for the Sum output and 80\% increase for the Carry Out output. For the energy devation, at nominal voltage operation there was a higher penalty for the Sum output (47\%) in comparison to the Carry Out output (35\%). At near-threshold operation both outputs had the same minor penalty of 4\% on deviations. 
 
-Overall, the worst penalties were the 47\% increase in delays in Sum output at near-threshold operation, 59\% increase on delay deviation in the Carry Out output at nominal operation, 93\% increase at energy consumption for Sum output at both operation regimes and its 47\% increase in energy deviation at nominal operation. Energy penalties are plotted at Figures \ref{fig:energyNS} to \ref{fig:energyNTCO}. 
+Overall, the worst penalties were the 47\% increase in delays in Sum output at near-threshold operation, 59\% increase on delay deviation in the Carry Out output at nominal operation, 93\% increase at energy consumption for Sum output at both operation regimes and its 47\% increase in energy deviation at nominal operation. Energy penalties are plotted at Figures \ref{fig:energyNominal} to \ref{fig:energyNT}. 
+
+
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=\textwidth, trim={0 9cm 0 9cm},clip]{energyNominalSum.pdf}
-\caption{Energy penalties for the Sum output at Nominal voltage operation.}
-\label{fig:energyNS}
+\includegraphics[width=\textwidth]{energyNominal.png}
+\caption{Energy penalties at nominal operation due to the technique application.}
+\label{fig:energyNominal}
 \legend{Source: From the author.}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=\textwidth, trim={0 9cm 0 9cm},clip]{energyNominalCarryOut.pdf}
-\caption{Energy penalties for the Carry Out output at Nominal voltage operation.}
-\label{fig:energyNCO}
-\legend{Source: From the author.}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=\textwidth, trim={0 9cm 0 9cm},clip]{energyNTSum.pdf}
-\caption{Energy penalties for the Sum output at Near-Threshold operation.}
-\label{fig:energyNTS}
-\legend{Source: From the author.}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=\textwidth, trim={0 9cm 0 9cm},clip]{energyNTCarryOut.pdf}
-\caption{Energy penalties for the Carry Out output at Near-Threshold operation.}
-\label{fig:energyNTCO}
+\includegraphics[width=\textwidth]{energyNT.png}
+\caption{Energy penalties at near-threshold operation due to the technique application.}
+\label{fig:energyNT}
 \legend{Source: From the author.}
 \end{figure}
 

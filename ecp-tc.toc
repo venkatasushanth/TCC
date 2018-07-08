@@ -14,8 +14,8 @@
 \contentsline {section}{\numberline {5.1}Nominal Voltage Operation}{31}{section.5.1}
 \contentsline {section}{\numberline {5.2}Near-Threshold Operation}{33}{section.5.2}
 \contentsline {section}{\numberline {5.3}Penalties}{34}{section.5.3}
-\contentsline {chapter}{6~Conclusions}{40}{CHAPTER.6}
-\contentsline {section}{\numberline {6.1}Future Works}{42}{section.6.1}
-\contentsline {chapter}{\xspace {}References}{43}{schapter.7}
-\contentsline {chapter}{\MakeUppercase {Annex} A~--- Exemplo de arquivo utilizado na simula\IeC {\c c}\IeC {\~a}o el\IeC {\'e}trica sem a t\IeC {\'e}cnica ST}{47}{CHAPTER.A}
-\contentsline {chapter}{\MakeUppercase {Annex} B~--- Exemplo de arquivo utilizado na simula\IeC {\c c}\IeC {\~a}o el\IeC {\'e}trica com a t\IeC {\'e}cnica ST}{50}{CHAPTER.B}
+\contentsline {chapter}{6~Conclusions}{39}{CHAPTER.6}
+\contentsline {section}{\numberline {6.1}Future Works}{41}{section.6.1}
+\contentsline {chapter}{\xspace {}References}{42}{schapter.7}
+\contentsline {chapter}{\MakeUppercase {Annex} A~--- Exemplo de arquivo utilizado na simula\IeC {\c c}\IeC {\~a}o el\IeC {\'e}trica sem a t\IeC {\'e}cnica ST}{46}{CHAPTER.A}
+\contentsline {chapter}{\MakeUppercase {Annex} B~--- Exemplo de arquivo utilizado na simula\IeC {\c c}\IeC {\~a}o el\IeC {\'e}trica com a t\IeC {\'e}cnica ST}{49}{CHAPTER.B}
